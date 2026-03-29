@@ -4,51 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ═══════════════════════════════════════
-       SEO PRIMARIO
-  ════════════════════════════════════════ -->
+  <!-- SEO -->
   <title>RBLXNews — Noticias, Guías y Tutoriales de Roblox en Español</title>
-  <meta name="description" content="RBLXNews es el portal de noticias independiente sobre Roblox en español. Encuentra guías de juegos, tutoriales de Roblox Studio, consejos de seguridad, códigos promocionales y todo lo que necesitas saber sobre Roblox." />
-  <link rel="canonical" href="https://rblxnews.github.io/index.html" />
+  <meta name="description" content="RBLXNews es el portal independiente sobre Roblox en español. Guías de juegos, seguridad, códigos, avatares, eventos y todo lo que necesitas saber sobre Roblox." />
+  <link rel="canonical" href="https://rblxnews.github.io/" />
   <meta name="robots" content="index, follow" />
 
-  <!-- ═══════════════════════════════════════
-       OPEN GRAPH
-  ════════════════════════════════════════ -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="RBLXNews — Noticias, Guías y Tutoriales de Roblox en Español" />
-  <meta property="og:description" content="El portal de referencia sobre Roblox para la comunidad hispanohablante. Noticias, guías, seguridad y mucho más." />
+  <meta property="og:title" content="RBLXNews — Noticias y Guías de Roblox en Español" />
+  <meta property="og:description" content="El portal de referencia sobre Roblox para la comunidad hispanohablante." />
   <meta property="og:url" content="https://rblxnews.github.io/" />
   <meta property="og:image" content="https://rblxnews.github.io/img/og-home.jpg" />
   <meta property="og:site_name" content="RBLXNews" />
   <meta property="og:locale" content="es_CO" />
 
-  <!-- ═══════════════════════════════════════
-       TWITTER CARD
-  ════════════════════════════════════════ -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="RBLXNews — Noticias de Roblox en Español" />
   <meta name="twitter:description" content="El portal de referencia sobre Roblox para la comunidad hispanohablante." />
   <meta name="twitter:image" content="https://rblxnews.github.io/img/og-home.jpg" />
 
-  <!-- ═══════════════════════════════════════
-       SCHEMA.ORG — WebSite + Sitelinks Search
-  ════════════════════════════════════════ -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "RBLXNews",
     "url": "https://rblxnews.github.io/",
-    "description": "Portal independiente de noticias, guías y tutoriales sobre Roblox para la comunidad hispanohablante.",
+    "description": "Portal independiente de noticias, guías y tutoriales sobre Roblox en español.",
     "inLanguage": "es",
     "publisher": {
       "@type": "Organization",
       "name": "RBLXNews",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://rblxnews.github.io/img/logo.png"
-      }
+      "logo": { "@type": "ImageObject", "url": "https://rblxnews.github.io/img/logo.png" }
     }
   }
   </script>
@@ -58,190 +47,118 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet" />
 
   <style>
-    /* ═══════════════════════════════════════
-       DESIGN TOKENS
-    ════════════════════════════════════════ */
+    /* ================================================
+       TOKENS — paleta clara gaming-friendly
+    ================================================ */
     :root {
       --red:       #E8192C;
-      --red-dark:  #a0101e;
-      --dark:      #0c0c10;
-      --surface:   #13131a;
-      --card:      #1a1a24;
-      --card-hover:#1f1f2e;
-      --border:    #252535;
-      --accent:    #00C2FF;
-      --yellow:    #FFD600;
-      --green:     #00E676;
-      --text:      #e8e8f2;
-      --muted:     #7878a0;
-      --max-w:     1280px;
+      --red-dark:  #c0101f;
+      --red-light: #fff0f1;
+      --blue:      #1565C0;
+      --blue-lt:   #e8f0fe;
+      --dark:      #1a1a2e;
+      --gray-900:  #2d2d3a;
+      --gray-700:  #4a4a5a;
+      --gray-500:  #7878a0;
+      --gray-200:  #e8e8f2;
+      --gray-100:  #f4f4f8;
+      --white:     #ffffff;
+      --bg:        #f7f7fb;
+      --border:    #dddde8;
+      --green:     #1b8a4e;
+      --yellow:    #d97706;
+      --shadow-sm: 0 1px 4px rgba(0,0,0,.07);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.10);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,.14);
+      --r-sm: 8px;
+      --r-md: 14px;
+      --r-lg: 20px;
+      --max-w: 1200px;
     }
 
-    /* ═══════════════════════════════════════
+    /* ================================================
        RESET & BASE
-    ════════════════════════════════════════ */
+    ================================================ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
+    html { scroll-behavior: smooth; }
     body {
-      background: var(--dark);
-      color: var(--text);
+      background: var(--bg);
+      color: var(--dark);
       font-family: 'Nunito', sans-serif;
+      font-size: 16px;
       line-height: 1.7;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      /* Subtle noise texture for depth */
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
     }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { display: block; max-width: 100%; height: auto; }
 
-    /* ═══════════════════════════════════════
-       TOPBAR
-    ════════════════════════════════════════ */
+    /* ================================================
+       TOPBAR — solo texto informativo + links legales
+    ================================================ */
     .topbar {
-      background: #07070d;
-      border-bottom: 1px solid var(--border);
-      padding: 5px 20px;
+      background: var(--dark);
+      padding: 6px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       font-size: 11px;
-      color: var(--muted);
-      letter-spacing: 0.4px;
     }
-    .topbar-left { display: flex; gap: 18px; }
-    .topbar-left a { color: var(--muted); transition: color .15s; }
-    .topbar-left a:hover { color: var(--accent); }
-    .topbar-right { display: flex; gap: 14px; align-items: center; }
-    .btn-login {
-      background: var(--red);
-      color: #fff;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 900;
-      font-size: 10px;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-      padding: 4px 14px;
-      border-radius: 4px;
-      border: none;
-      cursor: pointer;
-      transition: background .15s;
-    }
-    .btn-login:hover { background: var(--red-dark); }
+    .topbar a { color: var(--gray-200); transition: color .15s; }
+    .topbar a:hover { color: #fff; text-decoration: none; }
+    .topbar-left { display: flex; gap: 20px; }
+    .topbar-right { color: var(--gray-500); }
 
-    /* ═══════════════════════════════════════
-       NAV
-    ════════════════════════════════════════ */
+    /* ================================================
+       NAVEGACIÓN — exactamente 4 links reales
+    ================================================ */
     .main-nav {
-      background: var(--surface);
+      background: var(--white);
       border-bottom: 3px solid var(--red);
       padding: 0 24px;
       display: flex;
       align-items: center;
-      gap: 0;
       position: sticky;
       top: 0;
       z-index: 200;
-      box-shadow: 0 4px 24px #00000060;
+      box-shadow: var(--shadow-sm);
     }
     .logo {
       font-family: 'Fredoka One', cursive;
-      font-size: 30px;
+      font-size: 26px;
       color: var(--red);
-      padding: 10px 28px 10px 0;
-      letter-spacing: -1px;
+      padding: 12px 24px 12px 0;
+      letter-spacing: -0.5px;
       white-space: nowrap;
       flex-shrink: 0;
-      text-shadow: 0 0 40px #e8192c40;
+      line-height: 1;
+      text-decoration: none;
     }
-    .logo span { color: #fff; }
-    .nav-links {
-      display: flex;
-      flex: 1;
-      gap: 0;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-    .nav-links::-webkit-scrollbar { display: none; }
+    .logo span { color: var(--dark); }
+    .nav-links { display: flex; flex: 1; }
     .nav-links a {
-      color: var(--muted);
-      font-size: 12px;
+      color: var(--gray-700);
+      font-size: 13px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.6px;
-      padding: 16px 14px;
+      letter-spacing: 0.5px;
+      padding: 17px 14px;
       border-bottom: 3px solid transparent;
       transition: all .15s;
       white-space: nowrap;
     }
     .nav-links a:hover,
     .nav-links a.active {
-      color: #fff;
+      color: var(--red);
       border-bottom-color: var(--red);
-    }
-    .nav-search {
-      display: flex;
-      align-items: center;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 6px 12px;
-      gap: 8px;
-      flex-shrink: 0;
-      margin-left: 16px;
-    }
-    .nav-search input {
-      background: none;
-      border: none;
-      outline: none;
-      color: var(--text);
-      font-family: 'Nunito', sans-serif;
-      font-size: 13px;
-      width: 150px;
-    }
-    .nav-search input::placeholder { color: var(--muted); }
-
-    /* ═══════════════════════════════════════
-       TICKER
-    ════════════════════════════════════════ */
-    .ticker {
-      background: var(--red);
-      display: flex;
-      overflow: hidden;
-      align-items: center;
-    }
-    .ticker-label {
-      background: var(--red-dark);
-      color: #fff;
-      font-size: 9px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 7px 16px;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .ticker-track { overflow: hidden; flex: 1; }
-    .ticker-inner {
-      display: inline-flex;
-      white-space: nowrap;
-      animation: ticker 35s linear infinite;
-      font-size: 12px;
-      font-weight: 700;
-      color: #fff;
-      padding: 7px 0;
-      gap: 48px;
-    }
-    .ticker-inner span::before { content: "● "; opacity: 0.55; }
-    @keyframes ticker {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
+      text-decoration: none;
     }
 
-    /* ═══════════════════════════════════════
+    /* ================================================
        LAYOUT WRAPPER
-    ════════════════════════════════════════ */
+    ================================================ */
     .container {
       max-width: var(--max-w);
       margin: 0 auto;
@@ -249,56 +166,39 @@
       width: 100%;
     }
 
-    /* ═══════════════════════════════════════
-       HERO — Featured article (large card)
-    ════════════════════════════════════════ */
-    .hero-section {
-      padding: 28px 0 0;
-    }
+    /* ================================================
+       HERO — artículo destacado + 2 secundarios
+    ================================================ */
+    .hero-section { padding: 32px 0 0; }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.9fr 1fr;
-      gap: 6px;
+      grid-template-columns: 1.85fr 1fr;
+      gap: 20px;
     }
 
-    /* Main hero card */
+    /* Tarjeta principal */
     .hero-main {
-      position: relative;
-      border-radius: 10px;
+      border-radius: var(--r-lg);
       overflow: hidden;
-      min-height: 420px;
+      background: var(--white);
+      box-shadow: var(--shadow-md);
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      cursor: pointer;
-      background: linear-gradient(140deg, #120a28 0%, #1e1030 50%, #0a1828 100%);
-      transition: transform .2s;
+      color: inherit;
+      transition: transform .2s, box-shadow .2s;
     }
-    .hero-main:hover { transform: scale(1.005); }
-    .hero-main::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse at 75% 25%, #ff350030 0%, transparent 55%),
-        radial-gradient(ellipse at 20% 80%, #00c2ff20 0%, transparent 55%);
+    .hero-main:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); text-decoration: none; }
+    .hero-main .hero-img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      /* Fallback color mientras carga la imagen */
+      background: linear-gradient(135deg, #e8f0fe, #dde8ff);
     }
-    .hero-emoji {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 160px;
-      opacity: 0.14;
-      filter: blur(2px);
-      pointer-events: none;
-      user-select: none;
-    }
-    .hero-main .badge {
-      position: absolute;
-      top: 18px;
-      left: 18px;
+    .hero-body { padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+    .badge {
+      display: inline-block;
       background: var(--red);
       color: #fff;
       font-size: 10px;
@@ -306,109 +206,79 @@
       text-transform: uppercase;
       letter-spacing: 0.8px;
       padding: 4px 12px;
-      border-radius: 4px;
+      border-radius: 20px;
+      width: fit-content;
     }
-    .hero-main .content {
-      position: relative;
-      padding: 28px;
-      background: linear-gradient(to top, #000000e0 0%, #00000080 50%, transparent 100%);
-    }
-    .hero-main .content h1 {
+    .hero-main h1 {
       font-family: 'Fredoka One', cursive;
-      font-size: clamp(22px, 3.5vw, 34px);
-      line-height: 1.15;
-      color: #fff;
-      margin-bottom: 10px;
+      font-size: clamp(20px, 2.5vw, 27px);
+      line-height: 1.2;
+      color: var(--dark);
     }
-    .hero-main .content p {
-      font-size: 14px;
-      color: #ccc;
-      margin-bottom: 14px;
-      line-height: 1.5;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
+    .hero-main .hero-desc { font-size: 14px; color: var(--gray-700); line-height: 1.55; }
     .meta-row {
       display: flex;
       gap: 14px;
-      align-items: center;
-      font-size: 11px;
-      color: var(--muted);
+      font-size: 12px;
+      color: var(--gray-500);
       flex-wrap: wrap;
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
     }
-    .meta-row .cat { color: var(--accent); font-weight: 800; }
+    .meta-row .cat { color: var(--red); font-weight: 800; }
 
-    /* Hero side stack */
-    .hero-side {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .hero-side-card {
-      flex: 1;
-      border-radius: 8px;
+    /* Stack lateral */
+    .hero-side { display: flex; flex-direction: column; gap: 16px; }
+    .side-card {
+      border-radius: var(--r-md);
       overflow: hidden;
-      cursor: pointer;
-      position: relative;
-      min-height: 130px;
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      transition: transform .15s;
+      flex: 1;
+      color: inherit;
+      transition: transform .15s, box-shadow .15s;
     }
-    .hero-side-card:hover { transform: scale(1.015); }
-    .hero-side-card .se {
-      position: absolute; inset: 0;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 72px; opacity: 0.18; pointer-events: none;
+    .side-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); text-decoration: none; }
+    .side-card .side-img {
+      width: 100%;
+      height: 115px;
+      object-fit: cover;
+      background: linear-gradient(135deg, #f4f4f8, #e8e8f2);
     }
-    .hero-side-card .sc {
-      position: relative;
-      padding: 12px 14px;
-      background: linear-gradient(to top, #000000d0 0%, transparent 100%);
-    }
-    .hero-side-card .sc .scat { font-size: 10px; color: var(--accent); font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
-    .hero-side-card .sc h2 { font-family: 'Fredoka One', cursive; font-size: 15px; color: #fff; line-height: 1.25; }
-    .bg1 { background: linear-gradient(135deg, #12082a, #2a1250); }
-    .bg2 { background: linear-gradient(135deg, #0a1e0a, #102e18); }
-    .bg3 { background: linear-gradient(135deg, #2a0a0a, #500f0f); }
-    .bg4 { background: linear-gradient(135deg, #081828, #103060); }
-    .bg5 { background: linear-gradient(135deg, #1e1800, #3a3000); }
-    .bg6 { background: linear-gradient(135deg, #001e28, #004048); }
+    .side-body { padding: 12px 14px 14px; }
+    .side-cat { font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; color: var(--blue); margin-bottom: 5px; }
+    .side-card h2 { font-family: 'Fredoka One', cursive; font-size: 15px; line-height: 1.25; color: var(--dark); }
 
-    /* ═══════════════════════════════════════
-       AD SLOT (placeholder)
-    ════════════════════════════════════════ */
+    /* ================================================
+       AD SLOT
+    ================================================ */
     .ad-slot {
-      background: #0e0e18;
-      border: 1px dashed #2a2a44;
-      border-radius: 8px;
+      background: var(--gray-100);
+      border: 1px dashed var(--border);
+      border-radius: var(--r-sm);
       padding: 18px;
       text-align: center;
-      color: #3a3a5a;
+      color: var(--gray-500);
       font-size: 12px;
-      margin: 24px 0;
+      margin: 28px 0;
     }
     .ad-slot p { margin: 0; }
 
-    /* ═══════════════════════════════════════
+    /* ================================================
        SECTION HEADERS
-    ════════════════════════════════════════ */
-    .section-header {
+    ================================================ */
+    .section-head {
       display: flex;
       align-items: center;
       gap: 12px;
-      padding-bottom: 12px;
+      padding-bottom: 14px;
       border-bottom: 2px solid var(--border);
-      margin-bottom: 20px;
+      margin: 34px 0 20px;
     }
-    .section-header h2 {
-      font-family: 'Fredoka One', cursive;
-      font-size: 22px;
-      color: #fff;
-    }
+    .section-head h2 { font-family: 'Fredoka One', cursive; font-size: 22px; color: var(--dark); }
     .s-tag {
       background: var(--red);
       color: #fff;
@@ -416,432 +286,180 @@
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      padding: 3px 9px;
-      border-radius: 3px;
+      padding: 3px 10px;
+      border-radius: 20px;
     }
-    .see-all {
-      margin-left: auto;
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: opacity .15s;
-    }
-    .see-all:hover { opacity: 0.7; }
 
-    /* ═══════════════════════════════════════
-       CATEGORIES PILLS
-    ════════════════════════════════════════ */
-    .cats-section { padding: 28px 0 8px; }
+    /* ================================================
+       CATEGORÍAS
+    ================================================ */
+    .cats-section { padding: 28px 0 0; }
     .cats-row {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       gap: 10px;
     }
     .cat-pill {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px 8px;
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 14px 8px;
       text-align: center;
-      cursor: pointer;
-      transition: all .2s;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
+      color: inherit;
+      transition: all .18s;
     }
-    .cat-pill:hover {
-      border-color: var(--accent);
-      background: var(--card-hover);
-      transform: translateY(-2px);
-    }
-    .cat-pill .cpico { font-size: 30px; }
-    .cat-pill .cpname { font-size: 10px; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; }
+    .cat-pill:hover { border-color: var(--red); background: var(--red-light); transform: translateY(-2px); text-decoration: none; }
+    .cat-pill .cpico { font-size: 28px; }
+    .cat-pill .cpname { font-size: 10px; font-weight: 900; color: var(--gray-700); text-transform: uppercase; letter-spacing: 0.3px; }
 
-    /* ═══════════════════════════════════════
-       NEWS GRID — 10 articles
-    ════════════════════════════════════════ */
-    .news-section { padding: 28px 0; }
-
-    /* Main layout: content + sidebar */
-    .content-with-sidebar {
+    /* ================================================
+       GRID DE 10 ARTÍCULOS + SIDEBAR
+    ================================================ */
+    .content-layout {
       display: grid;
-      grid-template-columns: 1fr 300px;
+      grid-template-columns: 1fr 290px;
       gap: 32px;
       align-items: start;
     }
-
-    /* Article grid inside content column */
     .articles-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      gap: 18px;
     }
-
-    /* Featured article (spans 2 cols) */
     .article-card {
-      background: var(--card);
+      background: var(--white);
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: var(--r-md);
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      cursor: pointer;
-      transition: transform .18s, box-shadow .18s, border-color .18s;
-      text-decoration: none;
       color: inherit;
+      box-shadow: var(--shadow-sm);
+      transition: transform .18s, box-shadow .18s;
     }
-    .article-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 40px #00000070;
-      border-color: #3a3a54;
-    }
-    .article-card.featured {
-      grid-column: span 2;
-      flex-direction: row;
-    }
-    .article-card .card-thumb {
-      height: 150px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 60px;
-      position: relative;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-    .article-card.featured .card-thumb {
-      height: auto;
-      width: 220px;
-      min-height: 180px;
-      font-size: 72px;
-    }
-    .card-thumb::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: inherit;
-      opacity: 0.3;
-    }
-    .article-card .card-body {
-      padding: 14px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      flex: 1;
-    }
-    .card-cat {
-      font-size: 10px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .article-card h3 {
-      font-family: 'Fredoka One', cursive;
-      font-size: 16px;
-      line-height: 1.3;
-      color: #fff;
-      flex: 1;
-    }
-    .article-card.featured h3 { font-size: 19px; }
-    .card-excerpt {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.5;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .card-meta {
-      font-size: 11px;
-      color: var(--muted);
-      display: flex;
-      gap: 10px;
-      margin-top: auto;
-      padding-top: 8px;
-      border-top: 1px solid var(--border);
-    }
-    .read-more {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12px;
-      font-weight: 800;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.4px;
-      margin-top: 8px;
-    }
-    .read-more::after { content: '→'; }
+    .article-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); text-decoration: none; }
+    .article-card.featured { grid-column: span 2; flex-direction: row; }
 
-    /* ═══════════════════════════════════════
+    .card-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, #f4f4f8, #e8e8f2);
+    }
+    .article-card.featured .card-img { width: 230px; height: auto; min-height: 180px; }
+
+    .card-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+    .card-cat { font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; }
+    .article-card h3 { font-family: 'Fredoka One', cursive; font-size: 16px; line-height: 1.3; color: var(--dark); }
+    .article-card.featured h3 { font-size: 18px; }
+    .card-excerpt { font-size: 13px; color: var(--gray-700); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .card-meta { font-size: 11px; color: var(--gray-500); display: flex; gap: 10px; margin-top: auto; padding-top: 10px; border-top: 1px solid var(--border); }
+    .read-more { font-size: 12px; font-weight: 800; color: var(--red); margin-top: 4px; display: inline-block; }
+    .read-more::after { content: ' →'; }
+
+    /* ================================================
        SIDEBAR
-    ════════════════════════════════════════ */
-    .sidebar { display: flex; flex-direction: column; gap: 16px; }
-    .sw {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .sw-head {
-      background: #1e1e2e;
-      padding: 12px 16px;
-      font-family: 'Fredoka One', cursive;
-      font-size: 15px;
-      color: #fff;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+    ================================================ */
+    .sidebar { display: flex; flex-direction: column; gap: 18px; }
+    .sw { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .sw-head { background: var(--dark); color: #fff; padding: 12px 16px; font-family: 'Fredoka One', cursive; font-size: 15px; }
     .sw-body { padding: 14px 16px; }
 
-    /* Top games */
-    .tg-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 9px 0;
-      border-bottom: 1px solid var(--border);
-      cursor: pointer;
-    }
+    .tg-item { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); }
     .tg-item:last-child { border-bottom: none; }
-    .tg-rank {
-      font-family: 'Fredoka One', cursive;
-      font-size: 20px;
-      color: var(--border);
-      min-width: 22px;
-      text-align: center;
-    }
+    .tg-rank { font-family: 'Fredoka One', cursive; font-size: 20px; color: var(--border); min-width: 22px; text-align: center; }
     .tg-item:nth-child(1) .tg-rank { color: var(--red); }
     .tg-item:nth-child(2) .tg-rank { color: var(--yellow); }
-    .tg-item:nth-child(3) .tg-rank { color: var(--accent); }
-    .tg-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
+    .tg-item:nth-child(3) .tg-rank { color: var(--blue); }
+    .tg-icon { width: 36px; height: 36px; border-radius: var(--r-sm); background: var(--gray-100); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
     .tg-info { flex: 1; }
-    .tg-name { font-size: 13px; font-weight: 800; color: #fff; }
+    .tg-name { font-size: 13px; font-weight: 800; color: var(--dark); }
     .tg-players { font-size: 11px; color: var(--green); font-weight: 700; }
     .tg-change { font-size: 11px; font-weight: 800; }
-    .up { color: var(--green); }
-    .down { color: var(--red); }
+    .up { color: var(--green); } .down { color: var(--red); }
 
-    /* Events */
-    .ev-item {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border);
-    }
+    .ev-item { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--border); }
     .ev-item:last-child { border-bottom: none; }
-    .ev-date {
-      background: var(--red);
-      border-radius: 6px;
-      padding: 6px 8px;
-      text-align: center;
-      min-width: 42px;
-      flex-shrink: 0;
-    }
+    .ev-date { background: var(--red); border-radius: var(--r-sm); padding: 6px 8px; text-align: center; min-width: 42px; flex-shrink: 0; }
     .ev-day { font-family: 'Fredoka One', cursive; font-size: 20px; color: #fff; line-height: 1; }
-    .ev-mon { font-size: 9px; color: #ffbbbb; text-transform: uppercase; font-weight: 700; }
-    .ev-info .ev-title { font-size: 13px; font-weight: 800; color: #fff; }
-    .ev-info .ev-desc { font-size: 11px; color: var(--muted); }
+    .ev-mon { font-size: 9px; color: #ffcccc; text-transform: uppercase; font-weight: 700; }
+    .ev-title { font-size: 13px; font-weight: 800; color: var(--dark); }
+    .ev-desc { font-size: 11px; color: var(--gray-500); }
 
-    /* Newsletter widget */
-    .nl-widget { text-align: center; padding: 20px 16px; }
-    .nl-widget .nl-icon { font-size: 40px; margin-bottom: 10px; }
-    .nl-widget p { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
-    .nl-email {
-      width: 100%;
-      background: var(--dark);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 9px 12px;
-      color: var(--text);
-      font-family: 'Nunito', sans-serif;
-      font-size: 13px;
-      margin-bottom: 10px;
-      outline: none;
-    }
-    .nl-email::placeholder { color: var(--muted); }
-    .nl-email:focus { border-color: var(--accent); }
-    .nl-btn {
-      width: 100%;
-      background: var(--red);
-      color: #fff;
-      border: none;
-      padding: 10px;
-      border-radius: 6px;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 900;
-      font-size: 13px;
-      cursor: pointer;
-      transition: background .15s;
-    }
-    .nl-btn:hover { background: var(--red-dark); }
+    .rel-item { display: flex; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); color: inherit; }
+    .rel-item:last-child { border-bottom: none; }
+    .rel-item:hover .rel-title { color: var(--red); }
+    .rel-num { font-family: 'Fredoka One', cursive; font-size: 22px; color: var(--border); min-width: 28px; }
+    .rel-title { font-size: 13px; font-weight: 700; color: var(--dark); line-height: 1.3; }
+    .rel-cat { font-size: 11px; color: var(--gray-500); margin-top: 3px; }
 
-    /* ═══════════════════════════════════════
+    /* ================================================
        TRENDING STRIP
-    ════════════════════════════════════════ */
-    .trending-section { padding: 0 0 36px; }
-    .trending-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 10px;
-    }
-    .trend-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 14px;
-      cursor: pointer;
-      transition: all .15s;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-    .trend-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .trend-num {
-      font-family: 'Fredoka One', cursive;
-      font-size: 32px;
-      color: var(--border);
-      line-height: 1;
-      margin-bottom: 8px;
-    }
+    ================================================ */
+    .trending-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 40px; }
+    .trend-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-md); padding: 16px; color: inherit; transition: all .15s; box-shadow: var(--shadow-sm); }
+    .trend-card:hover { border-color: var(--red); box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none; }
+    .trend-num { font-family: 'Fredoka One', cursive; font-size: 34px; color: var(--border); line-height: 1; margin-bottom: 8px; }
     .trend-card:nth-child(1) .trend-num { color: var(--red); }
     .trend-card:nth-child(2) .trend-num { color: var(--yellow); }
-    .trend-card:nth-child(3) .trend-num { color: var(--accent); }
-    .trend-card .trend-cat { font-size: 10px; color: var(--muted); font-weight: 800; text-transform: uppercase; margin-bottom: 6px; }
-    .trend-card h3 { font-family: 'Fredoka One', cursive; font-size: 15px; color: #fff; line-height: 1.25; }
+    .trend-card:nth-child(3) .trend-num { color: var(--blue); }
+    .trend-cat { font-size: 10px; color: var(--gray-500); font-weight: 800; text-transform: uppercase; margin-bottom: 6px; }
+    .trend-card h3 { font-family: 'Fredoka One', cursive; font-size: 14px; color: var(--dark); line-height: 1.3; }
 
-    /* ═══════════════════════════════════════
-       FOOTER
-    ════════════════════════════════════════ */
-    footer {
-      background: #07070d;
-      border-top: 3px solid var(--red);
-      padding: 48px 24px 28px;
-      margin-top: auto;
-    }
-    .footer-grid {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.5fr repeat(3, 1fr);
-      gap: 40px;
-      margin-bottom: 36px;
-    }
-    .footer-brand .fl {
-      font-family: 'Fredoka One', cursive;
-      font-size: 28px;
-      color: var(--red);
-      margin-bottom: 10px;
-    }
-    .footer-brand .fl span { color: #fff; }
-    .footer-brand p { font-size: 13px; color: var(--muted); line-height: 1.6; }
-    .footer-col h4 {
-      font-family: 'Fredoka One', cursive;
-      font-size: 15px;
-      color: #fff;
-      margin-bottom: 14px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border);
-    }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .footer-col li a { font-size: 13px; color: var(--muted); transition: color .15s; }
-    .footer-col li a:hover { color: var(--accent); }
-    .footer-bottom {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 12px;
-      color: var(--muted);
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .footer-legal { display: flex; gap: 20px; flex-wrap: wrap; }
-    .footer-legal a { color: var(--muted); font-size: 12px; }
-    .footer-legal a:hover { color: var(--accent); }
-
-    /* ═══════════════════════════════════════
-       COOKIE CONSENT BANNER
-    ════════════════════════════════════════ */
+    /* ================================================
+       COOKIE BANNER
+    ================================================ */
     #cookie-banner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      background: #0e0e1a;
-      border-top: 2px solid var(--red);
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      box-shadow: 0 -8px 32px #00000080;
-      animation: slideUp .4s ease-out;
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;
+      background: var(--dark); border-top: 3px solid var(--red);
+      padding: 16px 24px; display: flex; align-items: center;
+      gap: 20px; flex-wrap: wrap; justify-content: space-between;
+      box-shadow: 0 -6px 30px rgba(0,0,0,.25);
+      animation: slideUp .35s ease-out;
     }
-    @keyframes slideUp {
-      from { transform: translateY(100%); opacity: 0; }
-      to   { transform: translateY(0);   opacity: 1; }
-    }
+    @keyframes slideUp { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     #cookie-banner.hidden { display: none; }
-    .cookie-text { font-size: 13px; color: var(--muted); flex: 1; min-width: 260px; line-height: 1.5; }
-    .cookie-text a { color: var(--accent); }
-    .cookie-text strong { color: var(--text); }
+    .cookie-text { font-size: 13px; color: var(--gray-200); flex: 1; min-width: 260px; line-height: 1.5; }
+    .cookie-text a { color: #7eb3ff; }
+    .cookie-text strong { color: #fff; }
     .cookie-btns { display: flex; gap: 10px; flex-shrink: 0; }
-    .btn-accept {
-      background: var(--red);
-      color: #fff;
-      border: none;
-      padding: 9px 22px;
-      border-radius: 6px;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 900;
-      font-size: 13px;
-      cursor: pointer;
-      transition: background .15s;
-    }
+    .btn-accept { background: var(--red); color: #fff; border: none; padding: 9px 22px; border-radius: var(--r-sm); font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 13px; cursor: pointer; transition: background .15s; }
     .btn-accept:hover { background: var(--red-dark); }
-    .btn-reject {
-      background: transparent;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      padding: 9px 18px;
-      border-radius: 6px;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 700;
-      font-size: 13px;
-      cursor: pointer;
-      transition: all .15s;
-    }
-    .btn-reject:hover { color: var(--text); border-color: var(--muted); }
+    .btn-reject { background: transparent; color: var(--gray-200); border: 1px solid var(--gray-700); padding: 9px 18px; border-radius: var(--r-sm); font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 13px; cursor: pointer; transition: all .15s; }
+    .btn-reject:hover { color: #fff; border-color: var(--gray-200); }
 
-    /* ═══════════════════════════════════════
+    /* ================================================
+       FOOTER
+    ================================================ */
+    footer { background: var(--dark); padding: 44px 24px 24px; margin-top: auto; }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr repeat(3, 1fr); gap: 36px; padding-bottom: 32px; border-bottom: 1px solid #2d2d3a; margin-bottom: 24px; }
+    .footer-brand .fl { font-family: 'Fredoka One', cursive; font-size: 26px; color: var(--red); margin-bottom: 10px; }
+    .footer-brand .fl span { color: #fff; }
+    .footer-brand p { font-size: 13px; color: var(--gray-500); line-height: 1.6; }
+    .footer-col h4 { font-family: 'Fredoka One', cursive; font-size: 14px; color: #fff; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid #2d2d3a; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col li a { font-size: 13px; color: var(--gray-500); transition: color .15s; }
+    .footer-col li a:hover { color: #fff; text-decoration: none; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--gray-500); flex-wrap: wrap; gap: 10px; }
+    .footer-legal { display: flex; gap: 18px; }
+    .footer-legal a { color: var(--gray-500); font-size: 12px; }
+    .footer-legal a:hover { color: #fff; }
+
+    /* ================================================
        RESPONSIVE
-    ════════════════════════════════════════ */
+    ================================================ */
     @media (max-width: 1024px) {
       .hero-grid { grid-template-columns: 1fr; }
-      .hero-side { display: none; }
-      .content-with-sidebar { grid-template-columns: 1fr; }
+      .hero-side { flex-direction: row; }
+      .side-card { flex: 1; }
+      .content-layout { grid-template-columns: 1fr; }
       .sidebar { display: none; }
       .trending-grid { grid-template-columns: repeat(3, 1fr); }
       .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -849,120 +467,83 @@
     @media (max-width: 768px) {
       .articles-grid { grid-template-columns: 1fr 1fr; }
       .article-card.featured { grid-column: span 2; flex-direction: column; }
-      .article-card.featured .card-thumb { width: 100%; height: 160px; }
+      .article-card.featured .card-img { width: 100%; height: 180px; }
       .cats-row { grid-template-columns: repeat(3, 1fr); }
       .trending-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-side { flex-direction: column; }
       .topbar { display: none; }
     }
     @media (max-width: 480px) {
       .articles-grid { grid-template-columns: 1fr; }
-      .article-card.featured { grid-column: span 1; }
+      .article-card.featured { grid-column: span 1; flex-direction: column; }
+      .article-card.featured .card-img { width: 100%; }
       .trending-grid { grid-template-columns: 1fr 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 24px; }
-      .cats-row { grid-template-columns: repeat(3, 1fr); }
-      .nav-search { display: none; }
+      .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+      .cats-row { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════
-     TOPBAR
-════════════════════════════════════════ -->
+<!-- TOPBAR — sin botones rotos, solo links de texto -->
 <div class="topbar" role="banner">
   <div class="topbar-left">
     <a href="about.html">Sobre Nosotros</a>
-    <a href="contact.html">Contacto</a>
     <a href="privacy.html">Privacidad</a>
+    <a href="contact.html">Contacto</a>
   </div>
-  <div class="topbar-right">
-    <span>🌐 Español</span>
-    <button class="btn-login">Mi Cuenta</button>
-  </div>
+  <div class="topbar-right">Portal independiente · Est. 2024</div>
 </div>
 
-<!-- ═══════════════════════════════════════
-     NAVEGACIÓN PRINCIPAL
-════════════════════════════════════════ -->
+<!-- NAV — exactamente 4 links reales, sin búsqueda ni login -->
 <nav class="main-nav" role="navigation" aria-label="Navegación principal">
-  <a href="index.html" class="logo" aria-label="RBLXNews - Inicio">RBLX<span>News</span></a>
+  <a href="index.html" class="logo" aria-label="RBLXNews — Inicio">RBLX<span>News</span></a>
   <div class="nav-links">
-    <a href="index.html" class="active" aria-current="page">Inicio</a>
+    <a href="index.html"  class="active" aria-current="page">Inicio</a>
     <a href="about.html">Sobre Nosotros</a>
     <a href="privacy.html">Privacidad</a>
     <a href="contact.html">Contacto</a>
   </div>
-  <div class="nav-search" role="search">
-    <span aria-hidden="true">🔍</span>
-    <input type="search" placeholder="Buscar artículos..." aria-label="Buscar en RBLXNews" />
-  </div>
 </nav>
 
-<!-- TICKER -->
-<div class="ticker" aria-label="Noticias en tiempo real" role="marquee">
-  <div class="ticker-label">🔴 Ahora</div>
-  <div class="ticker-track">
-    <div class="ticker-inner" aria-hidden="true">
-      <span>Blox Fruits supera 5 millones de jugadores simultáneos</span>
-      <span>Egg Hunt 2025 confirmado: empieza el 28 de marzo</span>
-      <span>Roblox Studio actualiza su motor de física con nuevas APIs</span>
-      <span>Nuevos Promo Codes disponibles esta semana</span>
-      <span>Berry Avenue alcanza 2 millones de visitas diarias</span>
-      <span>Roblox anuncia soporte mejorado para Android y iOS</span>
-      <span>Blox Fruits supera 5 millones de jugadores simultáneos</span>
-      <span>Egg Hunt 2025 confirmado: empieza el 28 de marzo</span>
-      <span>Roblox Studio actualiza su motor de física con nuevas APIs</span>
-      <span>Nuevos Promo Codes disponibles esta semana</span>
-      <span>Berry Avenue alcanza 2 millones de visitas diarias</span>
-      <span>Roblox anuncia soporte mejorado para Android y iOS</span>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════
-     HERO SECTION
-════════════════════════════════════════ -->
+<!-- ════════════ HERO ════════════ -->
 <section class="hero-section" aria-labelledby="hero-title">
   <div class="container">
     <div class="hero-grid">
 
-      <!-- Main featured article -->
-      <a href="articulo-1-roleplay.html" class="hero-main" aria-label="Artículo destacado: Los mejores juegos de Roleplay en Roblox">
-        <div class="hero-emoji" aria-hidden="true">⚔️</div>
-        <span class="badge">🔥 Artículo Destacado</span>
-        <div class="content">
+      <a href="articulo-1-roleplay.html" class="hero-main" aria-label="Ir al artículo destacado">
+        <img
+          src="img/articulo-1.jpg"
+          alt="Los mejores juegos de roleplay en Roblox 2025"
+          class="hero-img"
+          width="760" height="280"
+          loading="eager"
+        />
+        <div class="hero-body">
+          <span class="badge">🔥 Artículo Destacado</span>
           <h1 id="hero-title">Los mejores juegos de Roleplay en Roblox 2025 y su economía interna</h1>
-          <p>Analizamos Brookhaven, Bloxburg, Berry Avenue y más: qué los hace especiales, cómo funciona su economía interna y cuál deberías jugar primero.</p>
+          <p class="hero-desc">Analizamos Brookhaven, Bloxburg, Berry Avenue y más: qué los hace especiales, cómo funciona su economía interna y cuál deberías jugar primero.</p>
           <div class="meta-row">
             <span class="cat">🎭 Juegos</span>
-            <span>26 Mar 2025</span>
-            <span>📖 8 min</span>
-            <span>👁️ 1.2M vistas</span>
+            <span>📅 26 Mar 2025</span>
+            <span>📖 8 min lectura</span>
           </div>
         </div>
       </a>
 
-      <!-- Side stack -->
-      <div class="hero-side" aria-hidden="true">
-        <a href="articulo-2-roblox-studio.html" class="hero-side-card bg1">
-          <div class="se">🛠️</div>
-          <div class="sc">
-            <div class="scat">Creación</div>
+      <div class="hero-side">
+        <a href="articulo-2-roblox-studio.html" class="side-card">
+          <img src="img/articulo-2.jpg" alt="Roblox Studio 2025 nuevas herramientas de creación" class="side-img" width="400" height="115" loading="lazy" />
+          <div class="side-body">
+            <div class="side-cat">🛠️ Creación</div>
             <h2>Roblox Studio 2025: las nuevas herramientas que cambian el juego</h2>
           </div>
         </a>
-        <a href="articulo-3-seguridad.html" class="hero-side-card bg3">
-          <div class="se">🛡️</div>
-          <div class="sc">
-            <div class="scat">Seguridad</div>
-            <h2>Guía completa para proteger tu cuenta y evitar estafas</h2>
-          </div>
-        </a>
-        <a href="articulo-4-avatares.html" class="hero-side-card bg5">
-          <div class="se">👗</div>
-          <div class="sc">
-            <div class="scat">Avatares</div>
-            <h2>Los mejores accesorios gratis para tu avatar de Roblox</h2>
+        <a href="articulo-3-seguridad.html" class="side-card">
+          <img src="img/articulo-3.jpg" alt="Proteger cuenta de Roblox y evitar estafas" class="side-img" width="400" height="115" loading="lazy" />
+          <div class="side-body">
+            <div class="side-cat">🛡️ Seguridad</div>
+            <h2>Guía completa: protege tu cuenta y evita estafas en Roblox</h2>
           </div>
         </a>
       </div>
@@ -971,177 +552,157 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     CATEGORÍAS
-════════════════════════════════════════ -->
-<section class="cats-section" aria-label="Categorías de contenido">
+<!-- ════════════ CATEGORÍAS ════════════ -->
+<section class="cats-section" aria-label="Categorías">
   <div class="container">
-    <nav class="cats-row" aria-label="Categorías">
-      <a href="articulo-1-roleplay.html" class="cat-pill">
-        <span class="cpico">⚔️</span><span class="cpname">Batalla</span>
-      </a>
-      <a href="articulo-1-roleplay.html" class="cat-pill">
-        <span class="cpico">🏠</span><span class="cpname">Roleplay</span>
-      </a>
-      <a href="articulo-7-eventos.html" class="cat-pill">
-        <span class="cpico">🎪</span><span class="cpname">Eventos</span>
-      </a>
-      <a href="articulo-4-avatares.html" class="cat-pill">
-        <span class="cpico">👗</span><span class="cpname">Avatares</span>
-      </a>
-      <a href="articulo-2-roblox-studio.html" class="cat-pill">
-        <span class="cpico">🛠️</span><span class="cpname">Creación</span>
-      </a>
-      <a href="articulo-3-seguridad.html" class="cat-pill">
-        <span class="cpico">🛡️</span><span class="cpname">Seguridad</span>
-      </a>
+    <nav class="cats-row" aria-label="Navegación por categorías">
+      <a href="articulo-1-roleplay.html"      class="cat-pill"><span class="cpico">🎭</span><span class="cpname">Roleplay</span></a>
+      <a href="articulo-3-seguridad.html"     class="cat-pill"><span class="cpico">🛡️</span><span class="cpname">Seguridad</span></a>
+      <a href="articulo-7-eventos.html"       class="cat-pill"><span class="cpico">🎪</span><span class="cpname">Eventos</span></a>
+      <a href="articulo-4-avatares.html"      class="cat-pill"><span class="cpico">👗</span><span class="cpname">Avatares</span></a>
+      <a href="articulo-2-roblox-studio.html" class="cat-pill"><span class="cpico">🛠️</span><span class="cpname">Creación</span></a>
+      <a href="articulo-9-monetizacion.html"  class="cat-pill"><span class="cpico">💰</span><span class="cpname">Dinero</span></a>
     </nav>
   </div>
 </section>
 
 <!-- AD SLOT 1 -->
 <div class="container">
-  <div class="ad-slot" role="complementary" aria-label="Espacio publicitario">
-    <!-- Google AdSense: reemplaza este div con tu etiqueta <ins class="adsbygoogle"> -->
+  <div class="ad-slot" role="complementary" aria-label="Publicidad">
+    <!-- Reemplaza con: <ins class="adsbygoogle" ...></ins> -->
     <p>[ Google AdSense — 728×90 Leaderboard ]</p>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════
-     NOTICIAS PRINCIPALES — 10 artículos
-════════════════════════════════════════ -->
-<section class="news-section" aria-labelledby="news-heading">
+<!-- ════════════ ARTÍCULOS PRINCIPALES ════════════ -->
+<section aria-labelledby="news-heading">
   <div class="container">
-
-    <div class="section-header">
+    <div class="section-head">
       <h2 id="news-heading">Últimos Artículos</h2>
       <span class="s-tag">Nuevo</span>
-      <a href="#" class="see-all" aria-label="Ver todos los artículos">Ver Todo →</a>
     </div>
 
-    <div class="content-with-sidebar">
+    <div class="content-layout">
 
-      <!-- ARTICLE GRID -->
+      <!-- GRID DE 10 ARTÍCULOS -->
       <div>
         <div class="articles-grid" role="list">
 
-          <!-- ARTÍCULO 1 — Featured (span 2) -->
-          <a href="articulo-1-roleplay.html" class="article-card featured bg1" role="listitem" aria-label="Artículo: Los mejores juegos de Roleplay">
-            <div class="card-thumb bg1">🎭</div>
+          <!-- 1 — FEATURED -->
+          <a href="articulo-1-roleplay.html" class="article-card featured" role="listitem">
+            <img src="img/articulo-1.jpg" alt="Los mejores juegos de roleplay en Roblox 2025" class="card-img" width="230" loading="lazy" />
             <div class="card-body">
-              <span class="card-cat" style="color:var(--accent);">🎭 Juegos</span>
+              <span class="card-cat" style="color:var(--red);">🎭 Juegos</span>
               <h3>Los mejores juegos de Roleplay en Roblox 2025 y su economía interna</h3>
-              <p class="card-excerpt">Brookhaven, Bloxburg, Berry Avenue y más: análisis completo con comparativa de economías internas y consejos para principiantes.</p>
-              <div class="card-meta">
-                <span>📅 26 Mar</span><span>📖 8 min</span><span>👁️ 1.2M</span>
-              </div>
+              <p class="card-excerpt">Brookhaven, Bloxburg, Berry Avenue y más: análisis completo con comparativa de economías internas.</p>
+              <div class="card-meta"><span>📅 26 Mar</span><span>📖 8 min</span></div>
               <span class="read-more">Leer artículo</span>
             </div>
           </a>
 
-          <!-- ARTÍCULO 2 -->
-          <a href="articulo-2-roblox-studio.html" class="article-card bg1" role="listitem">
-            <div class="card-thumb bg4">🛠️</div>
+          <!-- 2 -->
+          <a href="articulo-2-roblox-studio.html" class="article-card" role="listitem">
+            <img src="img/articulo-2.jpg" alt="Roblox Studio 2025 IA y nuevas herramientas" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
-              <span class="card-cat" style="color:var(--accent);">🛠️ Creación</span>
+              <span class="card-cat" style="color:var(--blue);">🛠️ Creación</span>
               <h3>Roblox Studio 2025: nuevas herramientas para creadores</h3>
-              <p class="card-excerpt">IA generativa, materiales PBR y editor de animaciones rediseñado. Todo lo que debes saber.</p>
+              <p class="card-excerpt">IA generativa, materiales PBR y editor de animaciones rediseñado.</p>
               <div class="card-meta"><span>📅 20 Mar</span><span>📖 9 min</span></div>
               <span class="read-more">Leer artículo</span>
             </div>
           </a>
 
-          <!-- ARTÍCULO 3 -->
+          <!-- 3 -->
           <a href="articulo-3-seguridad.html" class="article-card" role="listitem">
-            <div class="card-thumb bg3">🛡️</div>
+            <img src="img/articulo-3.jpg" alt="Cómo proteger tu cuenta de Roblox de estafas" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--green);">🛡️ Seguridad</span>
               <h3>Cómo proteger tu cuenta de Roblox y evitar estafas</h3>
-              <p class="card-excerpt">Activa el 2FA, identifica las estafas más comunes y recupera tu cuenta si fue comprometida.</p>
+              <p class="card-excerpt">Activa el 2FA, identifica estafas comunes y recupera tu cuenta si fue comprometida.</p>
               <div class="card-meta"><span>📅 15 Mar</span><span>📖 10 min</span></div>
               <span class="read-more">Leer artículo</span>
             </div>
           </a>
 
-          <!-- ARTÍCULO 4 -->
+          <!-- 4 -->
           <a href="articulo-4-avatares.html" class="article-card" role="listitem">
-            <div class="card-thumb bg5">👗</div>
+            <img src="img/articulo-4.jpg" alt="Accesorios y ropa gratis para tu avatar de Roblox" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--yellow);">👗 Avatares</span>
               <h3>Los mejores accesorios y ropa gratis para tu avatar</h3>
-              <p class="card-excerpt">Cómo conseguir los mejores ítems sin gastar Robux: catálogo gratuito, UGC y eventos.</p>
+              <p class="card-excerpt">Consigue los mejores ítems sin gastar Robux: catálogo, UGC y eventos.</p>
               <div class="card-meta"><span>📅 18 Mar</span><span>📖 7 min</span></div>
               <span class="read-more">Leer artículo</span>
             </div>
           </a>
 
-          <!-- ARTÍCULO 5 -->
+          <!-- 5 -->
           <a href="articulo-5-codigos.html" class="article-card" role="listitem">
-            <div class="card-thumb bg2">🎟️</div>
+            <img src="img/articulo-5.jpg" alt="Promo Codes de Roblox cómo canjearlos" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--green);">🎟️ Códigos</span>
               <h3>Cómo encontrar y canjear Promo Codes en Roblox de forma segura</h3>
-              <p class="card-excerpt">Guía completa: dónde encontrar códigos legítimos, cómo canjearlos y errores a evitar.</p>
+              <p class="card-excerpt">Fuentes legítimas, proceso de canje paso a paso y errores a evitar.</p>
               <div class="card-meta"><span>📅 22 Mar</span><span>📖 6 min</span></div>
               <span class="read-more">Leer artículo</span>
             </div>
           </a>
 
-          <!-- ARTÍCULO 6 -->
+          <!-- 6 -->
           <a href="articulo-6-optimizacion.html" class="article-card" role="listitem">
-            <div class="card-thumb bg6">⚡</div>
+            <img src="img/articulo-6.jpg" alt="Cómo mejorar FPS y rendimiento en Roblox" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--yellow);">⚡ Tutoriales</span>
-              <h3>Cómo optimizar Roblox y mejorar los FPS en PC y móvil</h3>
-              <p class="card-excerpt">Ajustes de gráficos, configuración de red y trucos para eliminar el lag en cualquier dispositivo.</p>
+              <h3>Cómo mejorar el rendimiento y los FPS en Roblox</h3>
+              <p class="card-excerpt">Ajustes de gráficos, red y RAM para eliminar el lag en PC y móvil.</p>
               <div class="card-meta"><span>📅 12 Mar</span><span>📖 8 min</span></div>
               <span class="read-more">Leer artículo</span>
             </div>
           </a>
 
-          <!-- ARTÍCULO 7 -->
+          <!-- 7 -->
           <a href="articulo-7-eventos.html" class="article-card" role="listitem">
-            <div class="card-thumb bg4">🎪</div>
+            <img src="img/articulo-7.jpg" alt="Mejores eventos de la comunidad Roblox 2025" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
-              <span class="card-cat" style="color:var(--accent);">🎪 Eventos</span>
+              <span class="card-cat" style="color:var(--blue);">🎪 Eventos</span>
               <h3>Las mejores actualizaciones de eventos de la comunidad Roblox en 2025</h3>
-              <p class="card-excerpt">Egg Hunt, RDC, eventos de temporada y todo lo que la comunidad no para de hablar este año.</p>
-              <div class="card-meta"><span>📅 10 Mar</span><span>📖 6 min</span></div>
+              <p class="card-excerpt">Egg Hunt, RDC y colaboraciones: todo lo que ha movido a la comunidad.</p>
+              <div class="card-meta"><span>📅 10 Mar</span><span>📖 7 min</span></div>
               <span class="read-more">Leer artículo</span>
             </div>
           </a>
 
-          <!-- ARTÍCULO 8 -->
+          <!-- 8 -->
           <a href="articulo-8-avatar.html" class="article-card" role="listitem">
-            <div class="card-thumb bg5">👑</div>
+            <img src="img/articulo-8.jpg" alt="Avatar premium gratis en Roblox guía de diseño" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--yellow);">👑 Avatares</span>
-              <h3>Cómo crear un avatar de aspecto premium en Roblox sin gastar nada</h3>
-              <p class="card-excerpt">Guía práctica para combinar artículos gratuitos y crear un look que parezca de Robux.</p>
+              <h3>Cómo crear un avatar de aspecto premium sin gastar nada</h3>
+              <p class="card-excerpt">Principios de diseño y combinaciones de artículos gratuitos para destacar.</p>
               <div class="card-meta"><span>📅 8 Mar</span><span>📖 7 min</span></div>
               <span class="read-more">Leer artículo</span>
             </div>
           </a>
 
-          <!-- ARTÍCULO 9 -->
+          <!-- 9 -->
           <a href="articulo-9-monetizacion.html" class="article-card" role="listitem">
-            <div class="card-thumb bg2">💰</div>
+            <img src="img/articulo-9.jpg" alt="Ganar dinero desarrollando en Roblox programa DevEx" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--green);">💰 Monetización</span>
               <h3>Cómo ganar dinero desarrollando en Roblox: guía del programa DevEx</h3>
-              <p class="card-excerpt">Robux reales, el programa de intercambio de divisas y qué necesitas para empezar a monetizar.</p>
+              <p class="card-excerpt">Requisitos, tasas de conversión y modelos de monetización más exitosos.</p>
               <div class="card-meta"><span>📅 5 Mar</span><span>📖 9 min</span></div>
               <span class="read-more">Leer artículo</span>
             </div>
           </a>
 
-          <!-- ARTÍCULO 10 -->
+          <!-- 10 -->
           <a href="articulo-10-futuro.html" class="article-card" role="listitem">
-            <div class="card-thumb bg1">🚀</div>
+            <img src="img/articulo-10.jpg" alt="El futuro del metaverso de Roblox IA y mundos" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--red);">🚀 Análisis</span>
-              <h3>El futuro del metaverso de Roblox: IA, mundos generativos y lo que viene</h3>
-              <p class="card-excerpt">Analizamos la hoja de ruta de Roblox Corporation y qué significa para los jugadores hispanohablantes.</p>
+              <h3>El futuro del metaverso de Roblox: IA y mundos generativos</h3>
+              <p class="card-excerpt">Analizamos la hoja de ruta de Roblox Corporation para los próximos años.</p>
               <div class="card-meta"><span>📅 1 Mar</span><span>📖 11 min</span></div>
               <span class="read-more">Leer artículo</span>
             </div>
@@ -1150,271 +711,144 @@
         </div><!-- /articles-grid -->
 
         <!-- AD SLOT 2 -->
-        <div class="ad-slot" style="margin-top:24px;" role="complementary" aria-label="Espacio publicitario">
+        <div class="ad-slot" style="margin-top:24px;" role="complementary" aria-label="Publicidad">
           <p>[ Google AdSense — 336×280 Rectangle ]</p>
         </div>
-      </div>
+      </div><!-- /col izquierda -->
 
       <!-- SIDEBAR -->
-      <aside class="sidebar" aria-label="Barra lateral">
+      <aside class="sidebar" aria-label="Barra lateral con información adicional">
 
-        <!-- Top Games -->
         <div class="sw">
           <div class="sw-head">🏆 Top Juegos Ahora</div>
           <div class="sw-body">
-            <div class="tg-item">
-              <div class="tg-rank">1</div>
-              <div class="tg-icon bg3">⚔️</div>
-              <div class="tg-info">
-                <div class="tg-name">Blox Fruits</div>
-                <div class="tg-players">● 4.2M jugando</div>
-              </div>
-              <span class="tg-change up">▲12%</span>
-            </div>
-            <div class="tg-item">
-              <div class="tg-rank">2</div>
-              <div class="tg-icon bg4">🏠</div>
-              <div class="tg-info">
-                <div class="tg-name">Brookhaven RP</div>
-                <div class="tg-players">● 2.8M jugando</div>
-              </div>
-              <span class="tg-change up">▲5%</span>
-            </div>
-            <div class="tg-item">
-              <div class="tg-rank">3</div>
-              <div class="tg-icon bg2">🐾</div>
-              <div class="tg-info">
-                <div class="tg-name">Adopt Me!</div>
-                <div class="tg-players">● 2.1M jugando</div>
-              </div>
-              <span class="tg-change down">▼3%</span>
-            </div>
-            <div class="tg-item">
-              <div class="tg-rank">4</div>
-              <div class="tg-icon bg6">🍓</div>
-              <div class="tg-info">
-                <div class="tg-name">Berry Avenue</div>
-                <div class="tg-players">● 1.6M jugando</div>
-              </div>
-              <span class="tg-change up">▲18%</span>
-            </div>
-            <div class="tg-item">
-              <div class="tg-rank">5</div>
-              <div class="tg-icon bg5">💀</div>
-              <div class="tg-info">
-                <div class="tg-name">Murder Mystery 2</div>
-                <div class="tg-players">● 1.5M jugando</div>
-              </div>
-              <span class="tg-change up">▲8%</span>
-            </div>
+            <div class="tg-item"><div class="tg-rank">1</div><div class="tg-icon">⚔️</div><div class="tg-info"><div class="tg-name">Blox Fruits</div><div class="tg-players">● 4.2M jugando</div></div><span class="tg-change up">▲12%</span></div>
+            <div class="tg-item"><div class="tg-rank">2</div><div class="tg-icon">🏠</div><div class="tg-info"><div class="tg-name">Brookhaven RP</div><div class="tg-players">● 2.8M jugando</div></div><span class="tg-change up">▲5%</span></div>
+            <div class="tg-item"><div class="tg-rank">3</div><div class="tg-icon">🐾</div><div class="tg-info"><div class="tg-name">Adopt Me!</div><div class="tg-players">● 2.1M jugando</div></div><span class="tg-change down">▼3%</span></div>
+            <div class="tg-item"><div class="tg-rank">4</div><div class="tg-icon">🍓</div><div class="tg-info"><div class="tg-name">Berry Avenue</div><div class="tg-players">● 1.6M jugando</div></div><span class="tg-change up">▲18%</span></div>
+            <div class="tg-item"><div class="tg-rank">5</div><div class="tg-icon">💀</div><div class="tg-info"><div class="tg-name">Murder Mystery 2</div><div class="tg-players">● 1.5M jugando</div></div><span class="tg-change up">▲8%</span></div>
           </div>
         </div>
 
-        <!-- Próximos Eventos -->
         <div class="sw">
           <div class="sw-head">🎪 Próximos Eventos</div>
           <div class="sw-body">
-            <div class="ev-item">
-              <div class="ev-date"><div class="ev-day">28</div><div class="ev-mon">Mar</div></div>
-              <div class="ev-info">
-                <div class="ev-title">Egg Hunt 2025</div>
-                <div class="ev-desc">Colecciona todos los huevos hasta el 15 Abr</div>
-              </div>
-            </div>
-            <div class="ev-item">
-              <div class="ev-date"><div class="ev-day">01</div><div class="ev-mon">Abr</div></div>
-              <div class="ev-info">
-                <div class="ev-title">April Fools en Roblox</div>
-                <div class="ev-desc">Sorpresas en juegos seleccionados</div>
-              </div>
-            </div>
-            <div class="ev-item">
-              <div class="ev-date"><div class="ev-day">15</div><div class="ev-mon">Abr</div></div>
-              <div class="ev-info">
-                <div class="ev-title">RDC 2025</div>
-                <div class="ev-desc">Conferencia anual de desarrolladores</div>
-              </div>
-            </div>
+            <div class="ev-item"><div class="ev-date"><div class="ev-day">28</div><div class="ev-mon">Mar</div></div><div><div class="ev-title">Egg Hunt 2025</div><div class="ev-desc">Colecciona huevos hasta el 15 Abr</div></div></div>
+            <div class="ev-item"><div class="ev-date"><div class="ev-day">01</div><div class="ev-mon">Abr</div></div><div><div class="ev-title">April Fools en Roblox</div><div class="ev-desc">Sorpresas en juegos seleccionados</div></div></div>
+            <div class="ev-item"><div class="ev-date"><div class="ev-day">15</div><div class="ev-mon">Abr</div></div><div><div class="ev-title">RDC 2025</div><div class="ev-desc">Conferencia de desarrolladores</div></div></div>
           </div>
         </div>
 
-        <!-- Newsletter -->
         <div class="sw">
-          <div class="sw-head">📬 Boletín Semanal</div>
-          <div class="sw-body nl-widget">
-            <div class="nl-icon">📰</div>
-            <p>Recibe los mejores artículos de RBLXNews cada semana en tu correo. Sin spam.</p>
-            <input class="nl-email" type="email" placeholder="tu@correo.com" aria-label="Correo electrónico para suscripción" />
-            <button class="nl-btn" type="button">Suscribirse gratis</button>
+          <div class="sw-head">🔥 Más Leídos</div>
+          <div class="sw-body">
+            <a href="articulo-3-seguridad.html" class="rel-item"><div class="rel-num">1</div><div><div class="rel-title">Cómo proteger tu cuenta de Roblox</div><div class="rel-cat">Seguridad</div></div></a>
+            <a href="articulo-5-codigos.html"   class="rel-item"><div class="rel-num">2</div><div><div class="rel-title">Promo Codes activos y cómo canjearlos</div><div class="rel-cat">Códigos</div></div></a>
+            <a href="articulo-1-roleplay.html"  class="rel-item"><div class="rel-num">3</div><div><div class="rel-title">Los mejores juegos de roleplay 2025</div><div class="rel-cat">Juegos</div></div></a>
+            <a href="articulo-9-monetizacion.html" class="rel-item"><div class="rel-num">4</div><div><div class="rel-title">Cómo ganar dinero con DevEx</div><div class="rel-cat">Monetización</div></div></a>
           </div>
         </div>
 
-        <!-- Ad Sidebar -->
-        <div class="ad-slot" style="margin:0;" role="complementary" aria-label="Espacio publicitario">
+        <div class="ad-slot" style="margin:0;" role="complementary" aria-label="Publicidad">
           <p>[ Google AdSense — 300×250 ]</p>
         </div>
 
       </aside>
-    </div>
-  </div>
+    </div><!-- /content-layout -->
+  </div><!-- /container -->
 </section>
 
-<!-- ═══════════════════════════════════════
-     TRENDING STRIP
-════════════════════════════════════════ -->
-<section class="trending-section" aria-labelledby="trending-heading">
+<!-- ════════════ TRENDING ════════════ -->
+<section aria-labelledby="trending-heading" style="padding:0 0 16px;">
   <div class="container">
-    <div class="section-header">
-      <h2 id="trending-heading">Más Leídos</h2>
+    <div class="section-head">
+      <h2 id="trending-heading">Más Leídos de la Semana</h2>
       <span class="s-tag">🔥 Top 5</span>
     </div>
     <div class="trending-grid">
-      <a href="articulo-3-seguridad.html" class="trend-card">
-        <div class="trend-num">1</div>
-        <div class="trend-cat">Seguridad</div>
-        <h3>Guía completa para proteger tu cuenta de Roblox</h3>
-      </a>
-      <a href="articulo-5-codigos.html" class="trend-card">
-        <div class="trend-num">2</div>
-        <div class="trend-cat">Códigos</div>
-        <h3>Promo Codes activos y cómo canjearlos de forma segura</h3>
-      </a>
-      <a href="articulo-1-roleplay.html" class="trend-card">
-        <div class="trend-num">3</div>
-        <div class="trend-cat">Juegos</div>
-        <h3>Los mejores juegos de roleplay en Roblox 2025</h3>
-      </a>
-      <a href="articulo-4-avatares.html" class="trend-card">
-        <div class="trend-num">4</div>
-        <div class="trend-cat">Avatares</div>
-        <h3>Accesorios gratis para tu avatar: guía completa</h3>
-      </a>
-      <a href="articulo-9-monetizacion.html" class="trend-card">
-        <div class="trend-num">5</div>
-        <div class="trend-cat">Monetización</div>
-        <h3>Cómo ganar dinero real desarrollando en Roblox con DevEx</h3>
-      </a>
+      <a href="articulo-3-seguridad.html"    class="trend-card"><div class="trend-num">1</div><div class="trend-cat">Seguridad</div><h3>Guía para proteger tu cuenta de Roblox en 2025</h3></a>
+      <a href="articulo-5-codigos.html"      class="trend-card"><div class="trend-num">2</div><div class="trend-cat">Códigos</div><h3>Promo Codes: cómo encontrarlos y canjearlos</h3></a>
+      <a href="articulo-1-roleplay.html"     class="trend-card"><div class="trend-num">3</div><div class="trend-cat">Juegos</div><h3>Los mejores juegos de roleplay en Roblox</h3></a>
+      <a href="articulo-8-avatar.html"       class="trend-card"><div class="trend-num">4</div><div class="trend-cat">Avatares</div><h3>Avatar premium gratis: guía de diseño</h3></a>
+      <a href="articulo-9-monetizacion.html" class="trend-card"><div class="trend-num">5</div><div class="trend-cat">Monetización</div><h3>Cómo ganar dinero real desarrollando en Roblox</h3></a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     FOOTER
-════════════════════════════════════════ -->
+<!-- ════════════ FOOTER ════════════ -->
 <footer role="contentinfo">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="fl">RBLX<span>News</span></div>
-      <p>El portal independiente de noticias, guías y tutoriales sobre Roblox para la comunidad de habla hispana. No afiliado con Roblox Corporation.</p>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="fl">RBLX<span>News</span></div>
+        <p>Portal independiente de noticias, guías y tutoriales sobre Roblox para la comunidad de habla hispana. No afiliado con Roblox Corporation.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Artículos</h4>
+        <ul>
+          <li><a href="articulo-1-roleplay.html">Guía de Roleplay</a></li>
+          <li><a href="articulo-2-roblox-studio.html">Roblox Studio 2025</a></li>
+          <li><a href="articulo-3-seguridad.html">Seguridad</a></li>
+          <li><a href="articulo-4-avatares.html">Avatares Gratis</a></li>
+          <li><a href="articulo-5-codigos.html">Promo Codes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Más Contenido</h4>
+        <ul>
+          <li><a href="articulo-6-optimizacion.html">Optimización FPS</a></li>
+          <li><a href="articulo-7-eventos.html">Eventos 2025</a></li>
+          <li><a href="articulo-8-avatar.html">Avatar Premium</a></li>
+          <li><a href="articulo-9-monetizacion.html">Ganar Dinero</a></li>
+          <li><a href="articulo-10-futuro.html">Futuro de Roblox</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>El Portal</h4>
+        <ul>
+          <li><a href="about.html">Sobre Nosotros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="privacy.html">Política de Privacidad</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Artículos</h4>
-      <ul>
-        <li><a href="articulo-1-roleplay.html">Guía de Roleplay</a></li>
-        <li><a href="articulo-2-roblox-studio.html">Roblox Studio 2025</a></li>
-        <li><a href="articulo-3-seguridad.html">Seguridad</a></li>
-        <li><a href="articulo-4-avatares.html">Avatares Gratis</a></li>
-        <li><a href="articulo-5-codigos.html">Promo Codes</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <span>© 2025 RBLXNews · Sitio independiente, no afiliado con Roblox Corporation</span>
+      <nav class="footer-legal" aria-label="Pie de página legal">
+        <a href="about.html">Sobre Nosotros</a>
+        <a href="privacy.html">Privacidad</a>
+        <a href="contact.html">Contacto</a>
+      </nav>
     </div>
-    <div class="footer-col">
-      <h4>Más Contenido</h4>
-      <ul>
-        <li><a href="articulo-6-optimizacion.html">Optimización FPS</a></li>
-        <li><a href="articulo-7-eventos.html">Eventos 2025</a></li>
-        <li><a href="articulo-8-avatar.html">Avatar Premium Gratis</a></li>
-        <li><a href="articulo-9-monetizacion.html">Ganar Dinero en Roblox</a></li>
-        <li><a href="articulo-10-futuro.html">Futuro de Roblox</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>El Portal</h4>
-      <ul>
-        <li><a href="about.html">Sobre Nosotros</a></li>
-        <li><a href="contact.html">Contacto</a></li>
-        <li><a href="privacy.html">Política de Privacidad</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 RBLXNews · Sitio independiente, no afiliado con Roblox Corporation</span>
-    <nav class="footer-legal" aria-label="Legal">
-      <a href="about.html">Sobre Nosotros</a>
-      <a href="privacy.html">Privacidad</a>
-      <a href="contact.html">Contacto</a>
-    </nav>
   </div>
 </footer>
 
-<!-- ═══════════════════════════════════════
-     COOKIE CONSENT BANNER
-════════════════════════════════════════ -->
+<!-- COOKIE CONSENT — JS sin dependencias -->
 <div id="cookie-banner" role="dialog" aria-label="Aviso de cookies" aria-live="polite">
   <p class="cookie-text">
     <strong>🍪 Aviso de cookies.</strong>
-    Este sitio utiliza cookies propias y de terceros (incluyendo <strong>Google AdSense</strong>) para mostrarte publicidad relevante y analizar el tráfico.
-    Al continuar navegando, aceptas su uso conforme a nuestra
-    <a href="privacy.html">Política de Privacidad</a>.
+    Usamos cookies propias y de <strong>Google AdSense</strong> para publicidad relevante.
+    Al navegar aceptas su uso según nuestra <a href="privacy.html">Política de Privacidad</a>.
   </p>
   <div class="cookie-btns">
-    <button class="btn-reject" id="cookie-reject" aria-label="Rechazar cookies no esenciales">Solo esenciales</button>
-    <button class="btn-accept" id="cookie-accept" aria-label="Aceptar todas las cookies">Aceptar todo</button>
+    <button class="btn-reject" id="cookie-reject">Solo esenciales</button>
+    <button class="btn-accept" id="cookie-accept">Aceptar todo</button>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════
-     SCRIPTS
-════════════════════════════════════════ -->
 <script>
-  /* ── Cookie Consent ── */
   (function () {
-    var banner  = document.getElementById('cookie-banner');
-    var btnAccept = document.getElementById('cookie-accept');
-    var btnReject = document.getElementById('cookie-reject');
-    var COOKIE_KEY = 'rblxnews_cookie_consent';
-
-    function getConsent() {
-      try { return localStorage.getItem(COOKIE_KEY); } catch(e) { return null; }
-    }
-    function setConsent(value) {
-      try { localStorage.setItem(COOKIE_KEY, value); } catch(e) {}
-    }
-
-    // Hide banner if already decided
-    if (getConsent()) {
-      banner.classList.add('hidden');
-    }
-
-    btnAccept.addEventListener('click', function () {
-      setConsent('accepted');
-      banner.classList.add('hidden');
-      // Load AdSense script here after consent if needed
-      // e.g. loadAdSense();
-    });
-
-    btnReject.addEventListener('click', function () {
-      setConsent('rejected');
-      banner.classList.add('hidden');
-    });
-  })();
-
-  /* ── Newsletter mock ── */
-  (function () {
-    var btn = document.querySelector('.nl-btn');
-    var input = document.querySelector('.nl-email');
-    if (!btn || !input) return;
-    btn.addEventListener('click', function () {
-      var email = input.value.trim();
-      if (!email || !email.includes('@')) {
-        input.style.borderColor = 'var(--red)';
-        input.focus();
-        return;
-      }
-      input.style.borderColor = 'var(--green)';
-      btn.textContent = '✅ ¡Suscrito!';
-      btn.disabled = true;
-      input.disabled = true;
-    });
+    var b = document.getElementById('cookie-banner');
+    var K = 'rblxnews_consent';
+    try { if (localStorage.getItem(K)) b.classList.add('hidden'); } catch(e) {}
+    document.getElementById('cookie-accept').onclick = function () {
+      try { localStorage.setItem(K, 'accepted'); } catch(e) {}
+      b.classList.add('hidden');
+    };
+    document.getElementById('cookie-reject').onclick = function () {
+      try { localStorage.setItem(K, 'rejected'); } catch(e) {}
+      b.classList.add('hidden');
+    };
   })();
 </script>
 
