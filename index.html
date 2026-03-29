@@ -3,489 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO -->
   <title>RBLXNews — Noticias, Guías y Tutoriales de Roblox en Español</title>
   <meta name="description" content="RBLXNews es el portal independiente sobre Roblox en español. Guías de juegos, seguridad, códigos, avatares, eventos y todo lo que necesitas saber sobre Roblox." />
   <link rel="canonical" href="https://rblxnews.github.io/" />
   <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="RBLXNews — Noticias y Guías de Roblox en Español" />
   <meta property="og:description" content="El portal de referencia sobre Roblox para la comunidad hispanohablante." />
   <meta property="og:url" content="https://rblxnews.github.io/" />
-  <meta property="og:image" content="https://rblxnews.github.io/img/og-home.jpg" />
+  <meta property="og:image" content="https://rblxnews.github.io/img/banner.jpg" />
   <meta property="og:site_name" content="RBLXNews" />
   <meta property="og:locale" content="es_CO" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="RBLXNews — Noticias de Roblox en Español" />
   <meta name="twitter:description" content="El portal de referencia sobre Roblox para la comunidad hispanohablante." />
-  <meta name="twitter:image" content="https://rblxnews.github.io/img/og-home.jpg" />
-
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "RBLXNews",
-    "url": "https://rblxnews.github.io/",
-    "description": "Portal independiente de noticias, guías y tutoriales sobre Roblox en español.",
-    "inLanguage": "es",
-    "publisher": {
-      "@type": "Organization",
-      "name": "RBLXNews",
-      "logo": { "@type": "ImageObject", "url": "https://rblxnews.github.io/img/logo.png" }
-    }
-  }
-  </script>
-
+  <meta name="twitter:image" content="https://rblxnews.github.io/img/banner.jpg" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"RBLXNews","url":"https://rblxnews.github.io/","description":"Portal independiente de noticias, guías y tutoriales sobre Roblox en español.","inLanguage":"es","publisher":{"@type":"Organization","name":"RBLXNews","logo":{"@type":"ImageObject","url":"https://rblxnews.github.io/img/logo.png"}}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet" />
-
-  <style>
-    /* ================================================
-       TOKENS — paleta clara gaming-friendly
-    ================================================ */
-    :root {
-      --red:       #E8192C;
-      --red-dark:  #c0101f;
-      --red-light: #fff0f1;
-      --blue:      #1565C0;
-      --blue-lt:   #e8f0fe;
-      --dark:      #1a1a2e;
-      --gray-900:  #2d2d3a;
-      --gray-700:  #4a4a5a;
-      --gray-500:  #7878a0;
-      --gray-200:  #e8e8f2;
-      --gray-100:  #f4f4f8;
-      --white:     #ffffff;
-      --bg:        #f7f7fb;
-      --border:    #dddde8;
-      --green:     #1b8a4e;
-      --yellow:    #d97706;
-      --shadow-sm: 0 1px 4px rgba(0,0,0,.07);
-      --shadow-md: 0 4px 16px rgba(0,0,0,.10);
-      --shadow-lg: 0 8px 32px rgba(0,0,0,.14);
-      --r-sm: 8px;
-      --r-md: 14px;
-      --r-lg: 20px;
-      --max-w: 1200px;
-    }
-
-    /* ================================================
-       RESET & BASE
-    ================================================ */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--dark);
-      font-family: 'Nunito', sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    a { color: var(--blue); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    img { display: block; max-width: 100%; height: auto; }
-
-    /* ================================================
-       TOPBAR — solo texto informativo + links legales
-    ================================================ */
-    .topbar {
-      background: var(--dark);
-      padding: 6px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 11px;
-    }
-    .topbar a { color: var(--gray-200); transition: color .15s; }
-    .topbar a:hover { color: #fff; text-decoration: none; }
-    .topbar-left { display: flex; gap: 20px; }
-    .topbar-right { color: var(--gray-500); }
-
-    /* ================================================
-       NAVEGACIÓN — exactamente 4 links reales
-    ================================================ */
-    .main-nav {
-      background: var(--white);
-      border-bottom: 3px solid var(--red);
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 200;
-      box-shadow: var(--shadow-sm);
-    }
-    .logo {
-      font-family: 'Fredoka One', cursive;
-      font-size: 26px;
-      color: var(--red);
-      padding: 12px 24px 12px 0;
-      letter-spacing: -0.5px;
-      white-space: nowrap;
-      flex-shrink: 0;
-      line-height: 1;
-      text-decoration: none;
-    }
-    .logo span { color: var(--dark); }
-    .nav-links { display: flex; flex: 1; }
-    .nav-links a {
-      color: var(--gray-700);
-      font-size: 13px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      padding: 17px 14px;
-      border-bottom: 3px solid transparent;
-      transition: all .15s;
-      white-space: nowrap;
-    }
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--red);
-      border-bottom-color: var(--red);
-      text-decoration: none;
-    }
-
-    /* ================================================
-       LAYOUT WRAPPER
-    ================================================ */
-    .container {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 20px;
-      width: 100%;
-    }
-
-    /* ================================================
-       HERO — artículo destacado + 2 secundarios
-    ================================================ */
-    .hero-section { padding: 32px 0 0; }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.85fr 1fr;
-      gap: 20px;
-    }
-
-    /* Tarjeta principal */
-    .hero-main {
-      border-radius: var(--r-lg);
-      overflow: hidden;
-      background: var(--white);
-      box-shadow: var(--shadow-md);
-      display: flex;
-      flex-direction: column;
-      color: inherit;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .hero-main:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); text-decoration: none; }
-    .hero-main .hero-img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-      display: block;
-      /* Fallback color mientras carga la imagen */
-      background: linear-gradient(135deg, #e8f0fe, #dde8ff);
-    }
-    .hero-body { padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
-    .badge {
-      display: inline-block;
-      background: var(--red);
-      color: #fff;
-      font-size: 10px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      padding: 4px 12px;
-      border-radius: 20px;
-      width: fit-content;
-    }
-    .hero-main h1 {
-      font-family: 'Fredoka One', cursive;
-      font-size: clamp(20px, 2.5vw, 27px);
-      line-height: 1.2;
-      color: var(--dark);
-    }
-    .hero-main .hero-desc { font-size: 14px; color: var(--gray-700); line-height: 1.55; }
-    .meta-row {
-      display: flex;
-      gap: 14px;
-      font-size: 12px;
-      color: var(--gray-500);
-      flex-wrap: wrap;
-      margin-top: auto;
-      padding-top: 10px;
-      border-top: 1px solid var(--border);
-    }
-    .meta-row .cat { color: var(--red); font-weight: 800; }
-
-    /* Stack lateral */
-    .hero-side { display: flex; flex-direction: column; gap: 16px; }
-    .side-card {
-      border-radius: var(--r-md);
-      overflow: hidden;
-      background: var(--white);
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      color: inherit;
-      transition: transform .15s, box-shadow .15s;
-    }
-    .side-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); text-decoration: none; }
-    .side-card .side-img {
-      width: 100%;
-      height: 115px;
-      object-fit: cover;
-      background: linear-gradient(135deg, #f4f4f8, #e8e8f2);
-    }
-    .side-body { padding: 12px 14px 14px; }
-    .side-cat { font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; color: var(--blue); margin-bottom: 5px; }
-    .side-card h2 { font-family: 'Fredoka One', cursive; font-size: 15px; line-height: 1.25; color: var(--dark); }
-
-    /* ================================================
-       AD SLOT
-    ================================================ */
-    .ad-slot {
-      background: var(--gray-100);
-      border: 1px dashed var(--border);
-      border-radius: var(--r-sm);
-      padding: 18px;
-      text-align: center;
-      color: var(--gray-500);
-      font-size: 12px;
-      margin: 28px 0;
-    }
-    .ad-slot p { margin: 0; }
-
-    /* ================================================
-       SECTION HEADERS
-    ================================================ */
-    .section-head {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding-bottom: 14px;
-      border-bottom: 2px solid var(--border);
-      margin: 34px 0 20px;
-    }
-    .section-head h2 { font-family: 'Fredoka One', cursive; font-size: 22px; color: var(--dark); }
-    .s-tag {
-      background: var(--red);
-      color: #fff;
-      font-size: 9px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      padding: 3px 10px;
-      border-radius: 20px;
-    }
-
-    /* ================================================
-       CATEGORÍAS
-    ================================================ */
-    .cats-section { padding: 28px 0 0; }
-    .cats-row {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 10px;
-    }
-    .cat-pill {
-      background: var(--white);
-      border: 2px solid var(--border);
-      border-radius: var(--r-md);
-      padding: 14px 8px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 7px;
-      color: inherit;
-      transition: all .18s;
-    }
-    .cat-pill:hover { border-color: var(--red); background: var(--red-light); transform: translateY(-2px); text-decoration: none; }
-    .cat-pill .cpico { font-size: 28px; }
-    .cat-pill .cpname { font-size: 10px; font-weight: 900; color: var(--gray-700); text-transform: uppercase; letter-spacing: 0.3px; }
-
-    /* ================================================
-       GRID DE 10 ARTÍCULOS + SIDEBAR
-    ================================================ */
-    .content-layout {
-      display: grid;
-      grid-template-columns: 1fr 290px;
-      gap: 32px;
-      align-items: start;
-    }
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-    .article-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--r-md);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      color: inherit;
-      box-shadow: var(--shadow-sm);
-      transition: transform .18s, box-shadow .18s;
-    }
-    .article-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); text-decoration: none; }
-    .article-card.featured { grid-column: span 2; flex-direction: row; }
-
-    .card-img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      display: block;
-      flex-shrink: 0;
-      background: linear-gradient(135deg, #f4f4f8, #e8e8f2);
-    }
-    .article-card.featured .card-img { width: 230px; height: auto; min-height: 180px; }
-
-    .card-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
-    .card-cat { font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; }
-    .article-card h3 { font-family: 'Fredoka One', cursive; font-size: 16px; line-height: 1.3; color: var(--dark); }
-    .article-card.featured h3 { font-size: 18px; }
-    .card-excerpt { font-size: 13px; color: var(--gray-700); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-    .card-meta { font-size: 11px; color: var(--gray-500); display: flex; gap: 10px; margin-top: auto; padding-top: 10px; border-top: 1px solid var(--border); }
-    .read-more { font-size: 12px; font-weight: 800; color: var(--red); margin-top: 4px; display: inline-block; }
-    .read-more::after { content: ' →'; }
-
-    /* ================================================
-       SIDEBAR
-    ================================================ */
-    .sidebar { display: flex; flex-direction: column; gap: 18px; }
-    .sw { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-sm); }
-    .sw-head { background: var(--dark); color: #fff; padding: 12px 16px; font-family: 'Fredoka One', cursive; font-size: 15px; }
-    .sw-body { padding: 14px 16px; }
-
-    .tg-item { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); }
-    .tg-item:last-child { border-bottom: none; }
-    .tg-rank { font-family: 'Fredoka One', cursive; font-size: 20px; color: var(--border); min-width: 22px; text-align: center; }
-    .tg-item:nth-child(1) .tg-rank { color: var(--red); }
-    .tg-item:nth-child(2) .tg-rank { color: var(--yellow); }
-    .tg-item:nth-child(3) .tg-rank { color: var(--blue); }
-    .tg-icon { width: 36px; height: 36px; border-radius: var(--r-sm); background: var(--gray-100); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
-    .tg-info { flex: 1; }
-    .tg-name { font-size: 13px; font-weight: 800; color: var(--dark); }
-    .tg-players { font-size: 11px; color: var(--green); font-weight: 700; }
-    .tg-change { font-size: 11px; font-weight: 800; }
-    .up { color: var(--green); } .down { color: var(--red); }
-
-    .ev-item { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--border); }
-    .ev-item:last-child { border-bottom: none; }
-    .ev-date { background: var(--red); border-radius: var(--r-sm); padding: 6px 8px; text-align: center; min-width: 42px; flex-shrink: 0; }
-    .ev-day { font-family: 'Fredoka One', cursive; font-size: 20px; color: #fff; line-height: 1; }
-    .ev-mon { font-size: 9px; color: #ffcccc; text-transform: uppercase; font-weight: 700; }
-    .ev-title { font-size: 13px; font-weight: 800; color: var(--dark); }
-    .ev-desc { font-size: 11px; color: var(--gray-500); }
-
-    .rel-item { display: flex; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); color: inherit; }
-    .rel-item:last-child { border-bottom: none; }
-    .rel-item:hover .rel-title { color: var(--red); }
-    .rel-num { font-family: 'Fredoka One', cursive; font-size: 22px; color: var(--border); min-width: 28px; }
-    .rel-title { font-size: 13px; font-weight: 700; color: var(--dark); line-height: 1.3; }
-    .rel-cat { font-size: 11px; color: var(--gray-500); margin-top: 3px; }
-
-    /* ================================================
-       TRENDING STRIP
-    ================================================ */
-    .trending-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 40px; }
-    .trend-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-md); padding: 16px; color: inherit; transition: all .15s; box-shadow: var(--shadow-sm); }
-    .trend-card:hover { border-color: var(--red); box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none; }
-    .trend-num { font-family: 'Fredoka One', cursive; font-size: 34px; color: var(--border); line-height: 1; margin-bottom: 8px; }
-    .trend-card:nth-child(1) .trend-num { color: var(--red); }
-    .trend-card:nth-child(2) .trend-num { color: var(--yellow); }
-    .trend-card:nth-child(3) .trend-num { color: var(--blue); }
-    .trend-cat { font-size: 10px; color: var(--gray-500); font-weight: 800; text-transform: uppercase; margin-bottom: 6px; }
-    .trend-card h3 { font-family: 'Fredoka One', cursive; font-size: 14px; color: var(--dark); line-height: 1.3; }
-
-    /* ================================================
-       COOKIE BANNER
-    ================================================ */
-    #cookie-banner {
-      position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;
-      background: var(--dark); border-top: 3px solid var(--red);
-      padding: 16px 24px; display: flex; align-items: center;
-      gap: 20px; flex-wrap: wrap; justify-content: space-between;
-      box-shadow: 0 -6px 30px rgba(0,0,0,.25);
-      animation: slideUp .35s ease-out;
-    }
-    @keyframes slideUp { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-    #cookie-banner.hidden { display: none; }
-    .cookie-text { font-size: 13px; color: var(--gray-200); flex: 1; min-width: 260px; line-height: 1.5; }
-    .cookie-text a { color: #7eb3ff; }
-    .cookie-text strong { color: #fff; }
-    .cookie-btns { display: flex; gap: 10px; flex-shrink: 0; }
-    .btn-accept { background: var(--red); color: #fff; border: none; padding: 9px 22px; border-radius: var(--r-sm); font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 13px; cursor: pointer; transition: background .15s; }
-    .btn-accept:hover { background: var(--red-dark); }
-    .btn-reject { background: transparent; color: var(--gray-200); border: 1px solid var(--gray-700); padding: 9px 18px; border-radius: var(--r-sm); font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 13px; cursor: pointer; transition: all .15s; }
-    .btn-reject:hover { color: #fff; border-color: var(--gray-200); }
-
-    /* ================================================
-       FOOTER
-    ================================================ */
-    footer { background: var(--dark); padding: 44px 24px 24px; margin-top: auto; }
-    .footer-inner { max-width: var(--max-w); margin: 0 auto; }
-    .footer-grid { display: grid; grid-template-columns: 1.6fr repeat(3, 1fr); gap: 36px; padding-bottom: 32px; border-bottom: 1px solid #2d2d3a; margin-bottom: 24px; }
-    .footer-brand .fl { font-family: 'Fredoka One', cursive; font-size: 26px; color: var(--red); margin-bottom: 10px; }
-    .footer-brand .fl span { color: #fff; }
-    .footer-brand p { font-size: 13px; color: var(--gray-500); line-height: 1.6; }
-    .footer-col h4 { font-family: 'Fredoka One', cursive; font-size: 14px; color: #fff; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid #2d2d3a; }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .footer-col li a { font-size: 13px; color: var(--gray-500); transition: color .15s; }
-    .footer-col li a:hover { color: #fff; text-decoration: none; }
-    .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--gray-500); flex-wrap: wrap; gap: 10px; }
-    .footer-legal { display: flex; gap: 18px; }
-    .footer-legal a { color: var(--gray-500); font-size: 12px; }
-    .footer-legal a:hover { color: #fff; }
-
-    /* ================================================
-       RESPONSIVE
-    ================================================ */
-    @media (max-width: 1024px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-side { flex-direction: row; }
-      .side-card { flex: 1; }
-      .content-layout { grid-template-columns: 1fr; }
-      .sidebar { display: none; }
-      .trending-grid { grid-template-columns: repeat(3, 1fr); }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 768px) {
-      .articles-grid { grid-template-columns: 1fr 1fr; }
-      .article-card.featured { grid-column: span 2; flex-direction: column; }
-      .article-card.featured .card-img { width: 100%; height: 180px; }
-      .cats-row { grid-template-columns: repeat(3, 1fr); }
-      .trending-grid { grid-template-columns: repeat(2, 1fr); }
-      .hero-side { flex-direction: column; }
-      .topbar { display: none; }
-    }
-    @media (max-width: 480px) {
-      .articles-grid { grid-template-columns: 1fr; }
-      .article-card.featured { grid-column: span 1; flex-direction: column; }
-      .article-card.featured .card-img { width: 100%; }
-      .trending-grid { grid-template-columns: 1fr 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 20px; }
-      .cats-row { grid-template-columns: repeat(2, 1fr); }
-    }
-  </style>
+  <link rel="stylesheet" href="theme.css" />
+  <script>(function(){var t=null;try{t=localStorage.getItem('rblxnews_theme');}catch(e){}if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark');}})();</script>
 </head>
 <body>
-
-<!-- TOPBAR — sin botones rotos, solo links de texto -->
 <div class="topbar" role="banner">
   <div class="topbar-left">
     <a href="about.html">Sobre Nosotros</a>
@@ -495,67 +35,61 @@
   <div class="topbar-right">Portal independiente · Est. 2024</div>
 </div>
 
-<!-- NAV — exactamente 4 links reales, sin búsqueda ni login -->
 <nav class="main-nav" role="navigation" aria-label="Navegación principal">
   <a href="index.html" class="logo" aria-label="RBLXNews — Inicio">RBLX<span>News</span></a>
   <div class="nav-links">
-    <a href="index.html"  class="active" aria-current="page">Inicio</a>
+    <a href="index.html" class="active" aria-current="page">Inicio</a>
     <a href="about.html">Sobre Nosotros</a>
     <a href="privacy.html">Privacidad</a>
     <a href="contact.html">Contacto</a>
   </div>
+  <button class="theme-toggle" aria-label="Cambiar modo oscuro/claro">
+    <div class="toggle-track" aria-hidden="true"><div class="toggle-knob"></div></div>
+    <span class="toggle-label">🌙  Modo Oscuro</span>
+  </button>
 </nav>
 
-<!-- ════════════ HERO ════════════ -->
+<!-- BANNER PRINCIPAL: img/banner.jpg = image_d147e6.jpg -->
+<div class="hero-banner" role="img" aria-label="Banner principal RBLXNews">
+  <img src="img/banner.jpg" alt="RBLXNews — Noticias y guías de Roblox en español" width="1200" height="340" loading="eager" onerror="this.parentElement.style.background='linear-gradient(135deg,#1565C0,#E8192C)';this.style.display='none';" />
+  <div class="hero-banner-overlay"></div>
+  <div class="hero-banner-content">
+    <h2>Tu portal de Roblox en español 🎮</h2>
+    <p>Guías, noticias, seguridad y todo lo que necesitas para jugar mejor.</p>
+  </div>
+</div>
+
+<!-- HERO -->
 <section class="hero-section" aria-labelledby="hero-title">
   <div class="container">
     <div class="hero-grid">
-
-      <a href="articulo-1-roleplay.html" class="hero-main" aria-label="Ir al artículo destacado">
-        <img
-          src="img/articulo-1.jpg"
-          alt="Los mejores juegos de roleplay en Roblox 2025"
-          class="hero-img"
-          width="760" height="280"
-          loading="eager"
-        />
+      <a href="articulo-1-roleplay.html" class="hero-main">
+        <img src="img/articulo-1.jpg" alt="Mejores juegos de roleplay Roblox 2025" class="hero-img" width="760" height="280" loading="eager" onerror="this.style.display='none';" />
         <div class="hero-body">
           <span class="badge">🔥 Artículo Destacado</span>
           <h1 id="hero-title">Los mejores juegos de Roleplay en Roblox 2025 y su economía interna</h1>
-          <p class="hero-desc">Analizamos Brookhaven, Bloxburg, Berry Avenue y más: qué los hace especiales, cómo funciona su economía interna y cuál deberías jugar primero.</p>
-          <div class="meta-row">
-            <span class="cat">🎭 Juegos</span>
-            <span>📅 26 Mar 2025</span>
-            <span>📖 8 min lectura</span>
-          </div>
+          <p class="hero-desc">Analizamos Brookhaven, Bloxburg, Berry Avenue y más: qué los hace especiales, cómo funciona su economía y cuál deberías jugar primero.</p>
+          <div class="meta-row"><span class="cat">🎭 Juegos</span><span>📅 26 Mar 2025</span><span>📖 8 min</span></div>
         </div>
       </a>
-
       <div class="hero-side">
-        <a href="articulo-2-roblox-studio.html" class="side-card">
-          <img src="img/articulo-2.jpg" alt="Roblox Studio 2025 nuevas herramientas de creación" class="side-img" width="400" height="115" loading="lazy" />
-          <div class="side-body">
-            <div class="side-cat">🛠️ Creación</div>
-            <h2>Roblox Studio 2025: las nuevas herramientas que cambian el juego</h2>
-          </div>
+        <a href="articulo-7-eventos.html" class="side-card">
+          <img src="img/articulo-7.jpg" alt="Eventos Roblox 2025" class="side-img" width="400" height="115" loading="lazy" onerror="this.style.display='none';" />
+          <div class="side-body"><div class="side-cat">🎪 Eventos</div><h2>Los mejores eventos de la comunidad Roblox en 2025</h2></div>
         </a>
-        <a href="articulo-3-seguridad.html" class="side-card">
-          <img src="img/articulo-3.jpg" alt="Proteger cuenta de Roblox y evitar estafas" class="side-img" width="400" height="115" loading="lazy" />
-          <div class="side-body">
-            <div class="side-cat">🛡️ Seguridad</div>
-            <h2>Guía completa: protege tu cuenta y evita estafas en Roblox</h2>
-          </div>
+        <a href="articulo-4-avatares.html" class="side-card">
+          <img src="img/articulo-4.jpg" alt="Accesorios gratis avatar Roblox" class="side-img" width="400" height="115" loading="lazy" onerror="this.style.display='none';" />
+          <div class="side-body"><div class="side-cat">👗 Avatares</div><h2>Los mejores accesorios y ropa gratis para tu avatar</h2></div>
         </a>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ════════════ CATEGORÍAS ════════════ -->
+<!-- CATEGORÍAS -->
 <section class="cats-section" aria-label="Categorías">
   <div class="container">
-    <nav class="cats-row" aria-label="Navegación por categorías">
+    <nav class="cats-row" aria-label="Navegar por categoría">
       <a href="articulo-1-roleplay.html"      class="cat-pill"><span class="cpico">🎭</span><span class="cpname">Roleplay</span></a>
       <a href="articulo-3-seguridad.html"     class="cat-pill"><span class="cpico">🛡️</span><span class="cpname">Seguridad</span></a>
       <a href="articulo-7-eventos.html"       class="cat-pill"><span class="cpico">🎪</span><span class="cpname">Eventos</span></a>
@@ -569,40 +103,38 @@
 <!-- AD SLOT 1 -->
 <div class="container">
   <div class="ad-slot" role="complementary" aria-label="Publicidad">
-    <!-- Reemplaza con: <ins class="adsbygoogle" ...></ins> -->
     <p>[ Google AdSense — 728×90 Leaderboard ]</p>
   </div>
 </div>
 
-<!-- ════════════ ARTÍCULOS PRINCIPALES ════════════ -->
+<!-- ARTÍCULOS + SIDEBAR -->
 <section aria-labelledby="news-heading">
   <div class="container">
     <div class="section-head">
       <h2 id="news-heading">Últimos Artículos</h2>
       <span class="s-tag">Nuevo</span>
     </div>
-
     <div class="content-layout">
-
-      <!-- GRID DE 10 ARTÍCULOS -->
       <div>
         <div class="articles-grid" role="list">
 
-          <!-- 1 — FEATURED -->
+          <!-- 1 FEATURED: img real articulo-1.jpg -->
           <a href="articulo-1-roleplay.html" class="article-card featured" role="listitem">
-            <img src="img/articulo-1.jpg" alt="Los mejores juegos de roleplay en Roblox 2025" class="card-img" width="230" loading="lazy" />
+            <img src="img/articulo-1.jpg" alt="Los mejores juegos de roleplay en Roblox 2025" class="card-img" width="230" loading="lazy" onerror="this.outerHTML='&lt;div class=&quot;image-placeholder&quot;&gt;&lt;span class=&quot;ph-icon&quot;&gt;🎭&lt;/span&gt;&lt;/div&gt;';" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--red);">🎭 Juegos</span>
               <h3>Los mejores juegos de Roleplay en Roblox 2025 y su economía interna</h3>
-              <p class="card-excerpt">Brookhaven, Bloxburg, Berry Avenue y más: análisis completo con comparativa de economías internas.</p>
+              <p class="card-excerpt">Brookhaven, Bloxburg, Berry Avenue: análisis con comparativa de economías internas.</p>
               <div class="card-meta"><span>📅 26 Mar</span><span>📖 8 min</span></div>
               <span class="read-more">Leer artículo</span>
             </div>
           </a>
 
-          <!-- 2 -->
+          <!-- 2: placeholder -->
           <a href="articulo-2-roblox-studio.html" class="article-card" role="listitem">
-            <img src="img/articulo-2.jpg" alt="Roblox Studio 2025 IA y nuevas herramientas" class="card-img" width="400" height="160" loading="lazy" />
+            <div class="image-placeholder" role="img" aria-label="Roblox Studio 2025">
+              <span class="ph-icon">🛠️</span><span class="ph-text">Roblox Studio</span>
+            </div>
             <div class="card-body">
               <span class="card-cat" style="color:var(--blue);">🛠️ Creación</span>
               <h3>Roblox Studio 2025: nuevas herramientas para creadores</h3>
@@ -612,21 +144,23 @@
             </div>
           </a>
 
-          <!-- 3 -->
+          <!-- 3: placeholder -->
           <a href="articulo-3-seguridad.html" class="article-card" role="listitem">
-            <img src="img/articulo-3.jpg" alt="Cómo proteger tu cuenta de Roblox de estafas" class="card-img" width="400" height="160" loading="lazy" />
+            <div class="image-placeholder" role="img" aria-label="Seguridad en Roblox">
+              <span class="ph-icon">🛡️</span><span class="ph-text">Seguridad</span>
+            </div>
             <div class="card-body">
               <span class="card-cat" style="color:var(--green);">🛡️ Seguridad</span>
               <h3>Cómo proteger tu cuenta de Roblox y evitar estafas</h3>
-              <p class="card-excerpt">Activa el 2FA, identifica estafas comunes y recupera tu cuenta si fue comprometida.</p>
+              <p class="card-excerpt">Activa el 2FA, identifica estafas comunes y recupera tu cuenta.</p>
               <div class="card-meta"><span>📅 15 Mar</span><span>📖 10 min</span></div>
               <span class="read-more">Leer artículo</span>
             </div>
           </a>
 
-          <!-- 4 -->
+          <!-- 4: img real articulo-4.jpg -->
           <a href="articulo-4-avatares.html" class="article-card" role="listitem">
-            <img src="img/articulo-4.jpg" alt="Accesorios y ropa gratis para tu avatar de Roblox" class="card-img" width="400" height="160" loading="lazy" />
+            <img src="img/articulo-4.jpg" alt="Accesorios y ropa gratis para avatar de Roblox" class="card-img" width="400" height="160" loading="lazy" onerror="this.outerHTML='&lt;div class=&quot;image-placeholder&quot;&gt;&lt;span class=&quot;ph-icon&quot;&gt;👗&lt;/span&gt;&lt;/div&gt;';" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--yellow);">👗 Avatares</span>
               <h3>Los mejores accesorios y ropa gratis para tu avatar</h3>
@@ -636,9 +170,11 @@
             </div>
           </a>
 
-          <!-- 5 -->
+          <!-- 5: placeholder -->
           <a href="articulo-5-codigos.html" class="article-card" role="listitem">
-            <img src="img/articulo-5.jpg" alt="Promo Codes de Roblox cómo canjearlos" class="card-img" width="400" height="160" loading="lazy" />
+            <div class="image-placeholder" role="img" aria-label="Promo Codes Roblox">
+              <span class="ph-icon">🎟️</span><span class="ph-text">Promo Codes</span>
+            </div>
             <div class="card-body">
               <span class="card-cat" style="color:var(--green);">🎟️ Códigos</span>
               <h3>Cómo encontrar y canjear Promo Codes en Roblox de forma segura</h3>
@@ -648,9 +184,11 @@
             </div>
           </a>
 
-          <!-- 6 -->
+          <!-- 6: placeholder -->
           <a href="articulo-6-optimizacion.html" class="article-card" role="listitem">
-            <img src="img/articulo-6.jpg" alt="Cómo mejorar FPS y rendimiento en Roblox" class="card-img" width="400" height="160" loading="lazy" />
+            <div class="image-placeholder" role="img" aria-label="Optimización FPS Roblox">
+              <span class="ph-icon">⚡</span><span class="ph-text">Optimización FPS</span>
+            </div>
             <div class="card-body">
               <span class="card-cat" style="color:var(--yellow);">⚡ Tutoriales</span>
               <h3>Cómo mejorar el rendimiento y los FPS en Roblox</h3>
@@ -660,21 +198,23 @@
             </div>
           </a>
 
-          <!-- 7 -->
+          <!-- 7: img real articulo-7.jpg -->
           <a href="articulo-7-eventos.html" class="article-card" role="listitem">
-            <img src="img/articulo-7.jpg" alt="Mejores eventos de la comunidad Roblox 2025" class="card-img" width="400" height="160" loading="lazy" />
+            <img src="img/articulo-7.jpg" alt="Mejores eventos comunidad Roblox 2025" class="card-img" width="400" height="160" loading="lazy" onerror="this.outerHTML='&lt;div class=&quot;image-placeholder&quot;&gt;&lt;span class=&quot;ph-icon&quot;&gt;🎪&lt;/span&gt;&lt;/div&gt;';" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--blue);">🎪 Eventos</span>
-              <h3>Las mejores actualizaciones de eventos de la comunidad Roblox en 2025</h3>
+              <h3>Las mejores actualizaciones de eventos de la comunidad Roblox 2025</h3>
               <p class="card-excerpt">Egg Hunt, RDC y colaboraciones: todo lo que ha movido a la comunidad.</p>
               <div class="card-meta"><span>📅 10 Mar</span><span>📖 7 min</span></div>
               <span class="read-more">Leer artículo</span>
             </div>
           </a>
 
-          <!-- 8 -->
+          <!-- 8: placeholder -->
           <a href="articulo-8-avatar.html" class="article-card" role="listitem">
-            <img src="img/articulo-8.jpg" alt="Avatar premium gratis en Roblox guía de diseño" class="card-img" width="400" height="160" loading="lazy" />
+            <div class="image-placeholder" role="img" aria-label="Avatar premium gratis Roblox">
+              <span class="ph-icon">👑</span><span class="ph-text">Avatar Premium</span>
+            </div>
             <div class="card-body">
               <span class="card-cat" style="color:var(--yellow);">👑 Avatares</span>
               <h3>Cómo crear un avatar de aspecto premium sin gastar nada</h3>
@@ -684,9 +224,11 @@
             </div>
           </a>
 
-          <!-- 9 -->
+          <!-- 9: placeholder -->
           <a href="articulo-9-monetizacion.html" class="article-card" role="listitem">
-            <img src="img/articulo-9.jpg" alt="Ganar dinero desarrollando en Roblox programa DevEx" class="card-img" width="400" height="160" loading="lazy" />
+            <div class="image-placeholder" role="img" aria-label="Monetización DevEx Roblox">
+              <span class="ph-icon">💰</span><span class="ph-text">Monetización DevEx</span>
+            </div>
             <div class="card-body">
               <span class="card-cat" style="color:var(--green);">💰 Monetización</span>
               <h3>Cómo ganar dinero desarrollando en Roblox: guía del programa DevEx</h3>
@@ -696,9 +238,9 @@
             </div>
           </a>
 
-          <!-- 10 -->
+          <!-- 10: img real articulo-10.jpg -->
           <a href="articulo-10-futuro.html" class="article-card" role="listitem">
-            <img src="img/articulo-10.jpg" alt="El futuro del metaverso de Roblox IA y mundos" class="card-img" width="400" height="160" loading="lazy" />
+            <img src="img/articulo-10.jpg" alt="Futuro metaverso Roblox IA mundos generativos" class="card-img" width="400" height="160" loading="lazy" onerror="this.outerHTML='&lt;div class=&quot;image-placeholder&quot;&gt;&lt;span class=&quot;ph-icon&quot;&gt;🚀&lt;/span&gt;&lt;/div&gt;';" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--red);">🚀 Análisis</span>
               <h3>El futuro del metaverso de Roblox: IA y mundos generativos</h3>
@@ -708,17 +250,14 @@
             </div>
           </a>
 
-        </div><!-- /articles-grid -->
-
-        <!-- AD SLOT 2 -->
-        <div class="ad-slot" style="margin-top:24px;" role="complementary" aria-label="Publicidad">
+        </div>
+        <div class="ad-slot" style="margin-top:24px;" aria-label="Publicidad">
           <p>[ Google AdSense — 336×280 Rectangle ]</p>
         </div>
-      </div><!-- /col izquierda -->
+      </div>
 
       <!-- SIDEBAR -->
-      <aside class="sidebar" aria-label="Barra lateral con información adicional">
-
+      <aside class="sidebar" aria-label="Barra lateral">
         <div class="sw">
           <div class="sw-head">🏆 Top Juegos Ahora</div>
           <div class="sw-body">
@@ -729,7 +268,6 @@
             <div class="tg-item"><div class="tg-rank">5</div><div class="tg-icon">💀</div><div class="tg-info"><div class="tg-name">Murder Mystery 2</div><div class="tg-players">● 1.5M jugando</div></div><span class="tg-change up">▲8%</span></div>
           </div>
         </div>
-
         <div class="sw">
           <div class="sw-head">🎪 Próximos Eventos</div>
           <div class="sw-body">
@@ -738,33 +276,25 @@
             <div class="ev-item"><div class="ev-date"><div class="ev-day">15</div><div class="ev-mon">Abr</div></div><div><div class="ev-title">RDC 2025</div><div class="ev-desc">Conferencia de desarrolladores</div></div></div>
           </div>
         </div>
-
         <div class="sw">
           <div class="sw-head">🔥 Más Leídos</div>
           <div class="sw-body">
-            <a href="articulo-3-seguridad.html" class="rel-item"><div class="rel-num">1</div><div><div class="rel-title">Cómo proteger tu cuenta de Roblox</div><div class="rel-cat">Seguridad</div></div></a>
-            <a href="articulo-5-codigos.html"   class="rel-item"><div class="rel-num">2</div><div><div class="rel-title">Promo Codes activos y cómo canjearlos</div><div class="rel-cat">Códigos</div></div></a>
-            <a href="articulo-1-roleplay.html"  class="rel-item"><div class="rel-num">3</div><div><div class="rel-title">Los mejores juegos de roleplay 2025</div><div class="rel-cat">Juegos</div></div></a>
+            <a href="articulo-3-seguridad.html"    class="rel-item"><div class="rel-num">1</div><div><div class="rel-title">Cómo proteger tu cuenta de Roblox</div><div class="rel-cat">Seguridad</div></div></a>
+            <a href="articulo-5-codigos.html"      class="rel-item"><div class="rel-num">2</div><div><div class="rel-title">Promo Codes activos y cómo canjearlos</div><div class="rel-cat">Códigos</div></div></a>
+            <a href="articulo-1-roleplay.html"     class="rel-item"><div class="rel-num">3</div><div><div class="rel-title">Los mejores juegos de roleplay 2025</div><div class="rel-cat">Juegos</div></div></a>
             <a href="articulo-9-monetizacion.html" class="rel-item"><div class="rel-num">4</div><div><div class="rel-title">Cómo ganar dinero con DevEx</div><div class="rel-cat">Monetización</div></div></a>
           </div>
         </div>
-
-        <div class="ad-slot" style="margin:0;" role="complementary" aria-label="Publicidad">
-          <p>[ Google AdSense — 300×250 ]</p>
-        </div>
-
+        <div class="ad-slot" style="margin:0;" aria-label="Publicidad"><p>[ Google AdSense — 300×250 ]</p></div>
       </aside>
-    </div><!-- /content-layout -->
-  </div><!-- /container -->
+    </div>
+  </div>
 </section>
 
-<!-- ════════════ TRENDING ════════════ -->
+<!-- TRENDING -->
 <section aria-labelledby="trending-heading" style="padding:0 0 16px;">
   <div class="container">
-    <div class="section-head">
-      <h2 id="trending-heading">Más Leídos de la Semana</h2>
-      <span class="s-tag">🔥 Top 5</span>
-    </div>
+    <div class="section-head"><h2 id="trending-heading">Más Leídos</h2><span class="s-tag">🔥 Top 5</span></div>
     <div class="trending-grid">
       <a href="articulo-3-seguridad.html"    class="trend-card"><div class="trend-num">1</div><div class="trend-cat">Seguridad</div><h3>Guía para proteger tu cuenta de Roblox en 2025</h3></a>
       <a href="articulo-5-codigos.html"      class="trend-card"><div class="trend-num">2</div><div class="trend-cat">Códigos</div><h3>Promo Codes: cómo encontrarlos y canjearlos</h3></a>
@@ -775,46 +305,37 @@
   </div>
 </section>
 
-<!-- ════════════ FOOTER ════════════ -->
+<!-- FOOTER -->
 <footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="fl">RBLX<span>News</span></div>
-        <p>Portal independiente de noticias, guías y tutoriales sobre Roblox para la comunidad de habla hispana. No afiliado con Roblox Corporation.</p>
+        <p>Portal independiente de noticias, guías y tutoriales sobre Roblox. No afiliado con Roblox Corporation.</p>
       </div>
-      <div class="footer-col">
-        <h4>Artículos</h4>
-        <ul>
-          <li><a href="articulo-1-roleplay.html">Guía de Roleplay</a></li>
-          <li><a href="articulo-2-roblox-studio.html">Roblox Studio 2025</a></li>
-          <li><a href="articulo-3-seguridad.html">Seguridad</a></li>
-          <li><a href="articulo-4-avatares.html">Avatares Gratis</a></li>
-          <li><a href="articulo-5-codigos.html">Promo Codes</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Más Contenido</h4>
-        <ul>
-          <li><a href="articulo-6-optimizacion.html">Optimización FPS</a></li>
-          <li><a href="articulo-7-eventos.html">Eventos 2025</a></li>
-          <li><a href="articulo-8-avatar.html">Avatar Premium</a></li>
-          <li><a href="articulo-9-monetizacion.html">Ganar Dinero</a></li>
-          <li><a href="articulo-10-futuro.html">Futuro de Roblox</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>El Portal</h4>
-        <ul>
-          <li><a href="about.html">Sobre Nosotros</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-          <li><a href="privacy.html">Política de Privacidad</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h4>Artículos</h4><ul>
+        <li><a href="articulo-1-roleplay.html">Guía de Roleplay</a></li>
+        <li><a href="articulo-2-roblox-studio.html">Roblox Studio 2025</a></li>
+        <li><a href="articulo-3-seguridad.html">Seguridad</a></li>
+        <li><a href="articulo-4-avatares.html">Avatares Gratis</a></li>
+        <li><a href="articulo-5-codigos.html">Promo Codes</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Más Contenido</h4><ul>
+        <li><a href="articulo-6-optimizacion.html">Optimización FPS</a></li>
+        <li><a href="articulo-7-eventos.html">Eventos 2025</a></li>
+        <li><a href="articulo-8-avatar.html">Avatar Premium</a></li>
+        <li><a href="articulo-9-monetizacion.html">Ganar Dinero</a></li>
+        <li><a href="articulo-10-futuro.html">Futuro de Roblox</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>El Portal</h4><ul>
+        <li><a href="about.html">Sobre Nosotros</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="privacy.html">Política de Privacidad</a></li>
+      </ul></div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 RBLXNews · Sitio independiente, no afiliado con Roblox Corporation</span>
-      <nav class="footer-legal" aria-label="Pie de página legal">
+      <span>© 2025 RBLXNews · No afiliado con Roblox Corporation</span>
+      <nav class="footer-legal" aria-label="Legal">
         <a href="about.html">Sobre Nosotros</a>
         <a href="privacy.html">Privacidad</a>
         <a href="contact.html">Contacto</a>
@@ -823,34 +344,18 @@
   </div>
 </footer>
 
-<!-- COOKIE CONSENT — JS sin dependencias -->
+<!-- COOKIE CONSENT -->
 <div id="cookie-banner" role="dialog" aria-label="Aviso de cookies" aria-live="polite">
-  <p class="cookie-text">
-    <strong>🍪 Aviso de cookies.</strong>
-    Usamos cookies propias y de <strong>Google AdSense</strong> para publicidad relevante.
-    Al navegar aceptas su uso según nuestra <a href="privacy.html">Política de Privacidad</a>.
-  </p>
+  <p class="cookie-text"><strong>🍪 Aviso de cookies.</strong> Usamos cookies propias y de <strong>Google AdSense</strong> para publicidad relevante. Al navegar aceptas su uso según nuestra <a href="privacy.html">Política de Privacidad</a>.</p>
   <div class="cookie-btns">
     <button class="btn-reject" id="cookie-reject">Solo esenciales</button>
     <button class="btn-accept" id="cookie-accept">Aceptar todo</button>
   </div>
 </div>
 
+<script src="theme.js"></script>
 <script>
-  (function () {
-    var b = document.getElementById('cookie-banner');
-    var K = 'rblxnews_consent';
-    try { if (localStorage.getItem(K)) b.classList.add('hidden'); } catch(e) {}
-    document.getElementById('cookie-accept').onclick = function () {
-      try { localStorage.setItem(K, 'accepted'); } catch(e) {}
-      b.classList.add('hidden');
-    };
-    document.getElementById('cookie-reject').onclick = function () {
-      try { localStorage.setItem(K, 'rejected'); } catch(e) {}
-      b.classList.add('hidden');
-    };
-  })();
+(function(){var b=document.getElementById('cookie-banner'),K='rblxnews_consent';try{if(localStorage.getItem(K))b.classList.add('hidden');}catch(e){}document.getElementById('cookie-accept').onclick=function(){try{localStorage.setItem(K,'accepted');}catch(e){}b.classList.add('hidden');};document.getElementById('cookie-reject').onclick=function(){try{localStorage.setItem(K,'rejected');}catch(e){}b.classList.add('hidden');};})();
 </script>
-
 </body>
 </html>
