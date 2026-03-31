@@ -707,3 +707,75 @@ footer { background: var(--footer-bg); padding: 44px 24px 24px; margin-top: auto
   .cats-row { grid-template-columns: repeat(2, 1fr); }
   .hero-banner img { height: 220px; }
 }
+
+/* ════════════════════════════════════════════════════
+   CAMBIOS ADICIONALES — index.html actualizado
+════════════════════════════════════════════════════ */
+
+/* ── CAMBIO #3: Logo gráfico en el nav ── */
+.logo-img-link {
+  display:     flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 16px;
+  text-decoration: none;
+}
+.nav-logo-img {
+  /* Ajusta la imagen al alto de la barra de navegación
+     sin desbordar. La nav tiene ~52px de altura útil. */
+  height:      48px;          /* altura máxima dentro del nav */
+  width:       auto;          /* mantiene proporción original */
+  max-width:   200px;         /* evita logos demasiado anchos */
+  object-fit:  contain;       /* no recorta, encaja completo */
+  display:     block;
+  /* Sutil sombra para que el logo destaque en ambos modos */
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,.18));
+  transition: opacity .15s;
+}
+.logo-img-link:hover .nav-logo-img { opacity: .85; }
+
+/* En modo oscuro el logo podría tener fondo blanco;
+   añadimos un leve brillo para que se integre mejor */
+html.dark .nav-logo-img {
+  filter: drop-shadow(0 1px 6px rgba(0,0,0,.5)) brightness(1.05);
+}
+
+/* ── CAMBIO #1: Colores para posiciones 4 y 5 en "Más Leídos" ── */
+/* Los colores 1,2,3 ya existen en el CSS original (.rel-num
+   se colorea via nth-child). Añadimos clases explícitas para
+   poder asignar color a cualquier posición de forma predecible. */
+
+/* Posiciones ya definidas — redeclaradas como clases para claridad */
+.rel-num--1 { color: var(--red);    font-family: 'Fredoka One', cursive; font-size: 22px; min-width: 28px; transition: color .25s; }
+.rel-num--2 { color: var(--yellow); font-family: 'Fredoka One', cursive; font-size: 22px; min-width: 28px; transition: color .25s; }
+.rel-num--3 { color: var(--blue);   font-family: 'Fredoka One', cursive; font-size: 22px; min-width: 28px; transition: color .25s; }
+
+/* NUEVOS — posición 4: verde esmeralda, posición 5: plata/gris */
+.rel-num--4 {
+  color:       var(--green);        /* verde — coherente con la paleta gaming */
+  font-family: 'Fredoka One', cursive;
+  font-size:   22px;
+  min-width:   28px;
+  transition:  color .25s;
+}
+.rel-num--5 {
+  color:       #8888b0;             /* plata/gris azulado — quinto lugar */
+  font-family: 'Fredoka One', cursive;
+  font-size:   22px;
+  min-width:   28px;
+  transition:  color .25s;
+}
+html.dark .rel-num--5 { color: #6a6a9a; }
+
+/* ── CAMBIO #4: Eliminar estilos del footer completo ── */
+/* El bloque <footer role="contentinfo"> fue eliminado del HTML.
+   Las reglas CSS originales de footer (footer, .footer-inner,
+   .footer-grid, .footer-brand, .footer-col, .footer-bottom,
+   .footer-legal, .footer-simple) quedan en el CSS pero no
+   se renderizan al no existir el elemento HTML. No las
+   eliminamos para no romper las páginas de artículos que
+   sí usan .footer-simple. */
+
+/* ── CAMBIO #4 extra: eliminar .topbar si tampoco se usa ── */
+/* El <div class="topbar"> fue eliminado del index.html.
+   Su CSS permanece para que funcione en otras páginas. */
