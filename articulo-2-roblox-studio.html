@@ -3,260 +3,202 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Roblox Studio 2025: las nuevas herramientas de creación que cambian el juego | RBLXNews</title>
-  <meta name="description" content="Roblox Studio recibió en 2025 sus actualizaciones más ambiciosas: IA generativa para terrenos, nuevas APIs de física, editor de animaciones mejorado y soporte para materiales PBR. Todo lo que los creadores necesitan saber." />
-  <link rel="canonical" href="https://rblxnews.github.io/articulos/roblox-studio-nuevas-herramientas-2025.html" />
-
+  <title>Domina Roblox Studio: Guía de Creación 2025 | RBLXNews</title>
+  <meta name="description" content="Guía completa para dominar Roblox Studio en 2025: descarga, primeros pasos, Luau scripting, asistente de IA, materiales PBR y cómo publicar tu primer juego. Para principiantes y creadores hispanohablantes." />
+  <link rel="canonical" href="https://rblxnews.github.io/articulo-2-roblox-studio.html" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Roblox Studio 2025: las nuevas herramientas de creación que cambian el juego" />
-  <meta property="og:description" content="Análisis de las últimas actualizaciones de Roblox Studio: IA generativa, física mejorada, editor de animaciones y materiales PBR. Guía para creadores hispanohablantes." />
-  <meta property="og:url" content="https://rblxnews.github.io/articulos/roblox-studio-nuevas-herramientas-2025.html" />
-  <meta property="og:image" content="https://rblxnews.github.io/img/og-studio-2025.jpg" />
+  <meta property="og:title" content="Domina Roblox Studio: Guía de Creación 2025" />
+  <meta property="og:description" content="Todo lo que necesitas para empezar a crear en Roblox Studio: instalación, scripting con IA, materiales PBR y publicación de tu primer juego." />
+  <meta property="og:url" content="https://rblxnews.github.io/articulo-2-roblox-studio.html" />
+  <meta property="og:image" content="https://rblxnews.github.io/img/articulo-2.jpg" />
   <meta property="og:site_name" content="RBLXNews" />
   <meta property="og:locale" content="es_CO" />
   <meta property="article:section" content="Creación" />
   <meta property="article:published_time" content="2025-03-20T09:00:00-05:00" />
-
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Roblox Studio 2025: las nuevas herramientas para creadores" />
-  <meta name="twitter:description" content="IA generativa, física mejorada, PBR y más. Todo sobre las actualizaciones de Roblox Studio en 2025." />
-  <meta name="twitter:image" content="https://rblxnews.github.io/img/og-studio-2025.jpg" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Roblox Studio 2025: las nuevas herramientas de creación que cambian el juego",
-    "description": "Análisis de las últimas actualizaciones de Roblox Studio: IA generativa, física mejorada, editor de animaciones y materiales PBR.",
-    "author": { "@type": "Organization", "name": "Equipo RBLXNews" },
-    "publisher": {
-      "@type": "Organization",
-      "name": "RBLXNews",
-      "logo": { "@type": "ImageObject", "url": "https://rblxnews.github.io/img/logo.png" }
-    },
-    "datePublished": "2025-03-20",
-    "image": "https://rblxnews.github.io/img/og-studio-2025.jpg",
-    "url": "https://rblxnews.github.io/articulos/roblox-studio-nuevas-herramientas-2025.html",
-    "inLanguage": "es"
-  }
-  </script>
-
+  <meta name="twitter:title" content="Domina Roblox Studio: Guía de Creación 2025" />
+  <meta name="twitter:description" content="Guía completa para empezar a crear en Roblox Studio, con IA, PBR y mucho más." />
+  <meta name="twitter:image" content="https://rblxnews.github.io/img/articulo-2.jpg" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Domina Roblox Studio: Guía de Creación 2025","description":"Guía completa para crear en Roblox Studio 2025.","author":{"@type":"Organization","name":"Equipo RBLXNews"},"publisher":{"@type":"Organization","name":"RBLXNews","logo":{"@type":"ImageObject","url":"https://rblxnews.github.io/img/logo.png"}},"datePublished":"2025-03-20","url":"https://rblxnews.github.io/articulo-2-roblox-studio.html","inLanguage":"es"}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet" />
-
-  <style>
-    :root {
-      --red:#E8192C; --dark:#0f0f12; --card-bg:#1a1a22;
-      --border:#2a2a36; --accent:#00C2FF; --text:#e8e8f0;
-      --muted:#8888aa; --body-max:780px;
-    }
-    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-    html { scroll-behavior:smooth; }
-    body {
-      background:var(--dark); color:var(--text);
-      font-family:'Nunito',sans-serif; font-size:17px;
-      line-height:1.8; display:flex; flex-direction:column; min-height:100vh;
-    }
-    a { color:var(--accent); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    img { max-width:100%; border-radius:8px; display:block; }
-    nav {
-      background:#08080f; border-bottom:2px solid var(--red);
-      padding:0 24px; display:flex; align-items:center; gap:24px;
-      position:sticky; top:0; z-index:100;
-    }
-    .logo { font-family:'Fredoka One',cursive; font-size:26px; color:var(--red); padding:12px 0; white-space:nowrap; }
-    .logo span { color:#fff; }
-    .nav-links { display:flex; }
-    .nav-links a { color:var(--muted); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; padding:14px 12px; border-bottom:3px solid transparent; transition:all .15s; }
-    .nav-links a:hover { color:#fff; border-bottom-color:var(--red); text-decoration:none; }
-    .page-wrapper { max-width:1100px; margin:0 auto; padding:40px 24px; display:grid; grid-template-columns:1fr 300px; gap:48px; flex:1; }
-    @media(max-width:820px){ .page-wrapper{ grid-template-columns:1fr; } .sidebar{ display:none; } }
-    .breadcrumb { font-size:12px; color:var(--muted); margin-bottom:20px; }
-    .breadcrumb a { color:var(--muted); }
-    .breadcrumb span { color:var(--text); }
-    article { min-width:0; }
-    .article-meta { display:flex; gap:14px; align-items:center; font-size:12px; color:var(--muted); margin-bottom:24px; flex-wrap:wrap; }
-    .article-meta .cat { background:#00C2FF; color:#000; font-size:10px; font-weight:900; text-transform:uppercase; letter-spacing:.5px; padding:3px 10px; border-radius:3px; }
-    article h1 { font-family:'Fredoka One',cursive; font-size:clamp(26px,5vw,40px); line-height:1.15; color:#fff; margin-bottom:16px; }
-    .article-intro { font-size:19px; color:#cccce0; line-height:1.7; margin-bottom:32px; border-left:4px solid var(--accent); padding-left:20px; }
-    .img-placeholder { background:linear-gradient(135deg,#0a1a2e,#102040); border:2px dashed var(--border); border-radius:10px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:40px; margin:28px 0; text-align:center; color:var(--muted); gap:10px; }
-    .img-placeholder .icon { font-size:48px; }
-    .img-placeholder p { font-size:13px; line-height:1.5; }
-    .img-placeholder code { font-size:11px; background:#2a2a40; padding:4px 8px; border-radius:4px; color:var(--accent); }
-    article h2 { font-family:'Fredoka One',cursive; font-size:24px; color:#fff; margin:36px 0 14px; padding-bottom:8px; border-bottom:2px solid var(--border); }
-    article h3 { font-family:'Fredoka One',cursive; font-size:18px; color:var(--accent); margin:24px 0 10px; }
-    article p { margin-bottom:18px; }
-    article ul, article ol { margin:0 0 18px 24px; }
-    article li { margin-bottom:8px; }
-    article strong { color:#fff; font-weight:800; }
-    .callout { background:#0a1a20; border:1px solid var(--accent); border-left:4px solid var(--accent); border-radius:8px; padding:18px 22px; margin:28px 0; font-size:15px; }
-    .callout-title { font-weight:900; color:var(--accent); margin-bottom:6px; font-size:13px; text-transform:uppercase; letter-spacing:.5px; }
-    .feature-card { background:var(--card-bg); border:1px solid var(--border); border-radius:10px; padding:20px 22px; margin:20px 0; }
-    .feature-card .fc-header { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
-    .feature-card .fc-icon { font-size:36px; }
-    .feature-card h3 { margin:0; font-size:19px; color:#fff; }
-    .feature-card p { font-size:15px; color:var(--muted); margin-bottom:10px; }
-    .feature-card p:last-child { margin-bottom:0; color:var(--text); }
-    .tag-list { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 28px; }
-    .tag { background:#1a1a2e; border:1px solid var(--border); border-radius:20px; padding:4px 12px; font-size:12px; color:var(--muted); }
-    .author-box { background:var(--card-bg); border:1px solid var(--border); border-radius:10px; padding:20px; margin-top:40px; display:flex; gap:16px; align-items:center; }
-    .author-avatar { width:56px; height:56px; border-radius:50%; background:linear-gradient(135deg,#00C2FF,#0080ff); display:flex; align-items:center; justify-content:center; font-size:24px; flex-shrink:0; }
-    .author-info p { font-size:13px; color:var(--muted); margin-bottom:0; }
-    .author-info strong { color:#fff; font-size:15px; display:block; margin-bottom:4px; }
-    .ad-slot { background:#12121e; border:1px dashed #333355; border-radius:8px; padding:20px; text-align:center; color:#44445a; font-size:12px; margin:32px 0; }
-    .ad-slot p { margin:0; }
-    .sidebar-widget { background:var(--card-bg); border:1px solid var(--border); border-radius:10px; overflow:hidden; margin-bottom:20px; }
-    .sw-header { background:#222232; padding:12px 16px; font-family:'Fredoka One',cursive; font-size:16px; color:#fff; border-bottom:1px solid var(--border); }
-    .sw-body { padding:16px; }
-    .related-item { display:flex; gap:12px; align-items:flex-start; padding:10px 0; border-bottom:1px solid var(--border); }
-    .related-item:last-child { border-bottom:none; }
-    .ri-icon { font-size:28px; flex-shrink:0; }
-    .ri-title { font-size:13px; font-weight:700; color:#fff; line-height:1.3; }
-    .ri-cat { font-size:11px; color:var(--muted); margin-top:3px; }
-    .step-list { counter-reset:steps; list-style:none; margin-left:0; }
-    .step-list li { counter-increment:steps; display:flex; gap:14px; align-items:flex-start; margin-bottom:20px; }
-    .step-list li::before { content:counter(steps); background:var(--accent); color:#000; font-weight:900; font-size:14px; min-width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px; }
-    footer { background:#08080f; border-top:1px solid var(--border); padding:28px 24px; text-align:center; color:var(--muted); font-size:13px; margin-top:auto; }
-    footer .footer-logo { font-family:'Fredoka One',cursive; font-size:22px; color:var(--red); margin-bottom:10px; }
-    footer .footer-links { display:flex; justify-content:center; gap:20px; margin:12px 0; flex-wrap:wrap; }
-    footer .footer-links a { color:var(--muted); font-size:12px; }
-    footer .footer-links a:hover { color:var(--accent); }
-  </style>
+  <link rel="stylesheet" href="theme.css" />
+  <script>(function(){var t=null;try{t=localStorage.getItem('rblxnews_theme');}catch(e){}if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark');}})();</script>
 </head>
 <body>
 
-<nav>
-  <a href="../index.html" class="logo">RBLX<span>News</span></a>
+<nav class="main-nav" role="navigation" aria-label="Navegación principal">
+  <a href="index.html" class="nav-logo-link" aria-label="RBLXNews — Inicio">
+    <img src="img/logo.png" alt="RBLXNews Logo" class="main-logo" />
+  </a>
   <div class="nav-links">
-    <a href="../index.html">Inicio</a>
-    <a href="../juegos.html">Juegos</a>
-    <a href="../eventos.html">Eventos</a>
-    <a href="../actualizaciones.html">Actualizaciones</a>
-    <a href="../tutoriales.html">Tutoriales</a>
+    <a href="index.html">Inicio</a>
+    <a href="articulo-5-codigos.html">Códigos</a>
+    <a href="articulo-7-eventos.html">Eventos</a>
+    <a href="articulo-4-avatares.html">Avatares</a>
+    <a href="articulo-1-roleplay.html">Roleplay</a>
+    <a href="articulo-3-seguridad.html" class="active" aria-current="page">Creación</a>
   </div>
+  <button class="theme-toggle" aria-label="Cambiar modo oscuro/claro">
+    <div class="toggle-track" aria-hidden="true"><div class="toggle-knob"></div></div>
+    <span class="toggle-label">🌙 Modo Oscuro</span>
+  </button>
 </nav>
 
 <div class="page-wrapper">
   <main>
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="../index.html">Inicio</a> › <a href="../actualizaciones.html">Actualizaciones</a> › <span>Roblox Studio 2025</span>
+
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="index.html">Inicio</a> › <a href="index.html">Creación</a> › <span>Domina Roblox Studio 2025</span>
     </nav>
+
+    <a href="index.html" class="back-btn">← Volver al inicio</a>
 
     <article itemscope itemtype="https://schema.org/Article">
       <meta itemprop="datePublished" content="2025-03-20" />
       <meta itemprop="author" content="Equipo RBLXNews" />
 
       <div class="article-meta">
-        <span class="cat">🛠️ Creación</span>
+        <span class="cat" style="background:var(--green,#1b8a4e);color:#fff;">🛠️ Creación</span>
         <span>20 de marzo de 2025</span>
-        <span>📖 Lectura: ~9 min</span>
+        <span>📖 ~10 min lectura</span>
         <span>✍️ Equipo RBLXNews</span>
       </div>
 
-      <h1 itemprop="headline">Roblox Studio 2025: las nuevas herramientas de creación que todo desarrollador debe conocer</h1>
+      <h1 itemprop="headline">Domina Roblox Studio: Guía de Creación 2025</h1>
 
-      <p class="article-intro">Roblox Studio siempre fue potente. Pero en 2025, la herramienta que ha formado a toda una generación de desarrolladores jóvenes ha dado un salto cualitativo enorme. La incorporación de asistentes de inteligencia artificial, motores de física renovados, soporte completo para materiales de renderizado físicamente precisos (PBR) y un editor de animaciones completamente rehecho están transformando lo que es posible construir dentro de la plataforma.</p>
+      <!-- IMAGEN PRINCIPAL — sube img/articulo-2.jpg a tu repo -->
+      <img
+        src="img/articulo-2.jpg"
+        alt="Interfaz de Roblox Studio 2025 con las nuevas herramientas de IA"
+        class="article-hero-img"
+        width="860" height="440"
+        loading="eager"
+        itemprop="image"
+      />
+
+      <p class="article-intro" itemprop="description">
+        Roblox Studio es la herramienta gratuita con la que se han construido millones de experiencias en Roblox. En 2025 recibió sus actualizaciones más ambiciosas: un asistente de IA que escribe código por ti, un generador de terrenos por texto, soporte para materiales PBR y un editor de animaciones completamente rehecho. Esta guía te enseña todo lo que necesitas para pasar de cero a publicar tu primer juego.
+      </p>
 
       <div class="tag-list">
-        <span class="tag">Roblox Studio</span><span class="tag">IA Generativa</span>
-        <span class="tag">Lua</span><span class="tag">PBR</span>
-        <span class="tag">Animaciones</span><span class="tag">Creadores</span>
+        <span class="tag">Roblox Studio</span>
+        <span class="tag">Luau</span>
+        <span class="tag">IA Generativa</span>
+        <span class="tag">PBR</span>
+        <span class="tag">Creadores</span>
+        <span class="tag">Principiantes</span>
       </div>
 
-      <div class="ad-slot">
-        <p>[ Espacio para anuncio — 728×90 Leaderboard ]</p>
-      </div>
+      <div class="ad-slot"><p>[ Google AdSense — 728×90 Leaderboard ]</p></div>
 
-      <div class="img-placeholder" role="img" aria-label="Interfaz de Roblox Studio 2025">
-        <span class="icon">🛠️</span>
-        <p><strong>Imagen: Interfaz de Roblox Studio 2025 con las nuevas herramientas de IA</strong></p>
-        <code>&lt;img src="../img/roblox-studio-2025-interface.webp" alt="Roblox Studio 2025 con herramientas de IA" width="780" height="440" loading="lazy"&gt;</code>
-      </div>
+      <h2>¿Qué es Roblox Studio y por qué deberías aprenderlo?</h2>
+      <p>Roblox Studio es el entorno de desarrollo integrado (IDE) oficial de Roblox, disponible de forma completamente gratuita para Windows y macOS. Con él puedes construir mundos en 3D, programar comportamientos usando Luau (un lenguaje derivado de Lua), diseñar interfaces de usuario, animar personajes y publicar todo directamente en la plataforma donde más de 88 millones de personas juegan cada día.</p>
+      <p>A diferencia de motores como Unity o Unreal, Roblox Studio tiene una ventaja única: tu audiencia ya está ahí. Cuando publicas un juego, inmediatamente está disponible para millones de jugadores hispanohablantes sin necesidad de tiendas de aplicaciones, servidores propios ni distribución adicional.</p>
 
-      <h2>El contexto: ¿por qué estas actualizaciones son importantes?</h2>
-      <p>Roblox tiene más de 70 millones de experiencias publicadas. La mayoría fueron creadas con las herramientas clásicas de Studio, que aunque funcionales, tenían una curva de aprendizaje pronunciada que alejaba a muchos potenciales creadores. La visión de Roblox Corporation para 2025 es clara: hacer que crear un juego sea tan accesible como jugar uno.</p>
-      <p>Las actualizaciones de este año no son mejoras menores. Representan una filosofía diferente: pasar de un Studio pensado para programadores con experiencia en Lua, a una plataforma donde un adolescente con creatividad y dedicación pueda construir algo genuinamente jugable en su primer fin de semana.</p>
+      <h2>Instalación y primeros pasos (menos de 10 minutos)</h2>
+      <p>Instalar Roblox Studio es más sencillo que cualquier otro motor de juego profesional:</p>
+      <ol>
+        <li>Ve a <strong>create.roblox.com</strong> e inicia sesión con tu cuenta de Roblox. Si no tienes cuenta, créala gratis.</li>
+        <li>Haz clic en <strong>"Start Creating"</strong>. Roblox descargará e instalará Studio automáticamente.</li>
+        <li>Al abrir Studio por primera vez, elige la plantilla <strong>"Baseplate"</strong> para empezar con un lienzo en blanco.</li>
+        <li>Explora el panel izquierdo (Explorer), el panel derecho (Properties) y la barra de herramientas superior. Estos tres elementos son el 80% de tu flujo de trabajo.</li>
+      </ol>
 
-      <h2>Las cinco grandes novedades de Roblox Studio en 2025</h2>
+      <!-- IMAGEN INTERIOR: sube img/articulo-2-studio-interface.jpg -->
+      <img
+        src="img/articulo-2.jpg"
+        alt="Interfaz de Roblox Studio 2025 con paneles Explorer y Properties"
+        class="article-img"
+        width="780" height="440"
+        loading="lazy"
+      />
+      <p class="img-caption">La interfaz de Roblox Studio 2025: Explorer (izquierda), viewport central y Properties (derecha).</p>
 
-      <div class="feature-card">
-        <div class="fc-header">
-          <div class="fc-icon">🤖</div>
+      <h2>Las 5 novedades clave de Roblox Studio en 2025</h2>
+
+      <div class="game-card">
+        <div class="gc-icon">🤖</div>
+        <div>
+          <span class="gc-badge free">Incluido gratis</span>
           <h3>1. Asistente de IA para código (Luau AI)</h3>
+          <p>Describes en español lo que quieres que haga un objeto —"cuando el jugador toque este botón, abre la puerta y reproduce un sonido"— y el asistente genera el script completo en Luau con comentarios explicativos. Ideal para principiantes que quieren aprender mientras crean.</p>
         </div>
-        <p>Esta es la novedad más comentada y, posiblemente, la más transformadora. El asistente de IA integrado en Studio puede generar código en Luau (el lenguaje de scripting de Roblox) a partir de descripciones en lenguaje natural. Escribes "haz que este ladrillo cambie de color cuando un jugador lo toque y emita un sonido", y el asistente genera el script correspondiente.</p>
-        <p>Lo importante es que el sistema no solo genera código: lo explica. Cada fragmento viene acompañado de comentarios que describen qué hace cada línea, convirtiéndolo en una herramienta de aprendizaje tanto como de producción. Para creadores que nunca han programado, esto elimina la barrera más alta de entrada al desarrollo en Roblox.</p>
       </div>
 
-      <div class="feature-card">
-        <div class="fc-header">
-          <div class="fc-icon">🏔️</div>
-          <h3>2. Generación de terrenos con IA</h3>
+      <div class="game-card">
+        <div class="gc-icon">🏔️</div>
+        <div>
+          <span class="gc-badge free">Incluido gratis</span>
+          <h3>2. Generador de terrenos por texto</h3>
+          <p>Describe el paisaje que quieres —"isla volcánica con selva densa y caldera activa"— y el sistema genera un terreno 3D editable al instante. El resultado sigue siendo modificable vóxel a vóxel, pero el punto de partida ahorra horas de trabajo manual.</p>
         </div>
-        <p>El generador de terrenos de Roblox era uno de los puntos más criticados de Studio. Funcional pero limitado, producía paisajes que se reconocían inmediatamente como "terreno de Roblox". La versión 2025 cambia esto radicalmente.</p>
-        <p>Ahora puedes describir un terreno con palabras: "una isla volcánica con playas de arena negra, selva densa en la parte central y una caldera activa en el pico norte". El sistema interpreta esa descripción y genera un terreno 3D que se puede editar manualmente. El resultado sigue siendo editable vóxel a vóxel, pero el punto de partida es infinitamente más rico que cualquier combinación manual de las herramientas anteriores.</p>
       </div>
 
-      <div class="feature-card">
-        <div class="fc-header">
-          <div class="fc-icon">💎</div>
-          <h3>3. Materiales PBR y renderizado mejorado</h3>
+      <div class="game-card">
+        <div class="gc-icon">💎</div>
+        <div>
+          <span class="gc-badge free">Incluido gratis</span>
+          <h3>3. Materiales PBR (Physically Based Rendering)</h3>
+          <p>Soporte completo para texturas de alta calidad con rugosidad, reflexión metálica y mapas de normales. Los juegos que usan PBR se distinguen visualmente del resto: las superficies metálicas reflejan la luz de forma coherente y la piedra húmeda luce diferente a la seca.</p>
         </div>
-        <p>PBR (Physically Based Rendering) es el estándar de la industria para que los materiales 3D se vean realistas bajo diferentes condiciones de iluminación. Roblox ha implementado soporte completo para PBR en 2025, lo que significa que los creadores pueden ahora asignar mapas de textura de alta calidad que incluyen: color base, rugosidad de superficie, reflexión metálica y mapas de normales que simulan detalles geométricos sin añadir polígonos.</p>
-        <p>El impacto visual es notable. Los juegos que ya han adoptado estos materiales se distinguen claramente del resto: las superficies metálicas reflejan la luz de forma coherente, la piedra húmeda luce diferente a la piedra seca, y los tejidos tienen una textura visual que antes simplemente no era posible en Roblox.</p>
       </div>
 
-      <div class="img-placeholder" role="img" aria-label="Comparativa materiales PBR en Roblox">
-        <span class="icon">💎</span>
-        <p><strong>Imagen: Comparativa antes/después con materiales PBR en Roblox Studio 2025</strong></p>
-        <code>&lt;img src="../img/pbr-comparativa-roblox.webp" alt="Materiales PBR en Roblox Studio 2025" width="780" height="440" loading="lazy"&gt;</code>
-      </div>
-
-      <div class="feature-card">
-        <div class="fc-header">
-          <div class="fc-icon">🎬</div>
+      <div class="game-card">
+        <div class="gc-icon">🎬</div>
+        <div>
+          <span class="gc-badge free">Incluido gratis</span>
           <h3>4. Editor de animaciones rediseñado</h3>
+          <p>Nueva interfaz con editor de curvas de interpolación, soporte experimental para captura de movimiento por cámara web y previsualización en tiempo real sin necesidad de publicar. Perfecto para cutscenes y juegos con narrativa.</p>
         </div>
-        <p>El editor de animaciones previo de Studio era funcional pero poco intuitivo, especialmente para quienes venían de herramientas como Blender o Maya. La versión 2025 presenta una interfaz completamente rediseñada inspirada en los flujos de trabajo de animación profesional.</p>
-        <p>Las mejoras más destacadas incluyen un editor de curvas de interpolación, soporte para captura de movimiento mediante cámara web (experimental), y la posibilidad de previsualizar animaciones directamente sobre el personaje en el entorno del juego sin necesidad de publicar. Para los creadores que hacen cutscenes o juegos con narrativa, este cambio es especialmente significativo.</p>
       </div>
 
-      <div class="feature-card">
-        <div class="fc-header">
-          <div class="fc-icon">⚙️</div>
-          <h3>5. Motor de física Spatial Voice mejorado y nuevas APIs</h3>
+      <div class="game-card">
+        <div class="gc-icon">⚙️</div>
+        <div>
+          <span class="gc-badge free">Incluido gratis</span>
+          <h3>5. Nuevas APIs de física y Spatial Voice mejorado</h3>
+          <p>Fluidos simulados, cuerpos blandos que se deforman al impacto y articulación de cadenas cinemáticas para vehículos y personajes más naturales. El sistema de voz espacial 3D también recibe menor latencia y mayor control de zonas de audibilidad.</p>
         </div>
-        <p>Las APIs de física en Luau han recibido una expansión considerable. Ahora es posible crear interacciones físicas mucho más complejas: fluidos simulados, cuerpos blandos que se deforman al impacto, y sistemas de articulación de cadenas cinemáticas que permiten crear personajes y vehículos con comportamientos más naturales.</p>
-        <p>Adicionalmente, el sistema de Spatial Voice (voz espacial 3D entre jugadores) ha sido mejorado para reducir la latencia y ofrecer mayor control a los creadores sobre las zonas de audibilidad. Esto abre posibilidades nuevas para juegos de aventura con narrativa hablada y experiencias de realidad virtual dentro de la plataforma.</p>
       </div>
 
-      <div class="ad-slot">
-        <p>[ Espacio para anuncio — 336×280 Rectangle ]</p>
+      <div class="ad-slot"><p>[ Google AdSense — 336×280 Rectangle ]</p></div>
+
+      <h2>Tu primer script en Luau: más fácil de lo que parece</h2>
+      <p>Luau es el lenguaje de scripting de Roblox. Es accesible para principiantes y con el asistente de IA ya no necesitas memorizar sintaxis. Pero entender la estructura básica te ayudará a depurar errores y personalizar el código generado.</p>
+      <p>Un script básico que hace que una parte cambie de color al tocarla:</p>
+      <div class="callout">
+        <div class="callout-title">💻 Ejemplo de script Luau</div>
+        <p>Inserta un Script dentro de cualquier Part en Studio. El código detecta cuando un jugador toca la pieza y cambia su color aleatoriamente:</p>
+        <pre style="background:rgba(0,0,0,.3);padding:14px;border-radius:8px;font-size:13px;overflow-x:auto;margin-top:10px;color:#a0f0b0;"><code>local part = script.Parent
+
+part.Touched:Connect(function(hit)
+  -- Verificar que quien toca es un personaje
+  if hit.Parent:FindFirstChild("Humanoid") then
+    -- Cambiar color a uno aleatorio
+    part.BrickColor = BrickColor.Random()
+  end
+end)</code></pre>
       </div>
 
-      <h2>¿Cómo empezar a usar estas nuevas herramientas?</h2>
-      <p>Si ya tienes experiencia con Roblox Studio, la transición a las nuevas herramientas es gradual. Roblox ha diseñado las novedades para que sean opt-in: puedes seguir trabajando exactamente como siempre, o puedes activar las nuevas funciones desde el menú de configuración.</p>
-      <p>Para quienes empiezan desde cero, esta es la mejor ruta de aprendizaje en 2025:</p>
-
-      <ol class="step-list">
-        <li><div><strong>Descarga Roblox Studio</strong> desde el sitio oficial. Es completamente gratuito y disponible para Windows y macOS. La instalación incluye automáticamente todas las herramientas nuevas.</div></li>
-        <li><div><strong>Completa los tutoriales integrados.</strong> Studio 2025 incluye una serie de lecciones interactivas que cubren desde mover objetos hasta escribir tus primeros scripts con el asistente de IA. No los omitas: están bien diseñados.</div></li>
-        <li><div><strong>Experimenta con el generador de terrenos.</strong> Crea un mundo vacío y usa el generador de IA para construir un paisaje. Luego modifícalo manualmente. Es la forma más rápida de entender cómo funciona el sistema de vóxeles.</div></li>
-        <li><div><strong>Trabaja en un proyecto pequeño y específico.</strong> No intentes construir el próximo Bloxburg en tu primera semana. Un juego simple —una carrera de obstáculos, un minijuego de recolección— te enseñará más que horas de tutoriales.</div></li>
-        <li><div><strong>Únete a la comunidad de creadores.</strong> El foro de desarrolladores de Roblox (DevForum) y los canales de Discord en español son recursos invaluables. Los creadores hispanohablantes son especialmente generosos compartiendo conocimiento.</div></li>
+      <h2>Cómo publicar tu primer juego</h2>
+      <p>Publicar en Roblox es gratuito e inmediato. Cuando tu experiencia esté lista para que otros la prueben:</p>
+      <ol>
+        <li><strong>File → Publish to Roblox.</strong> Se abrirá un formulario donde defines nombre, descripción y género.</li>
+        <li><strong>Ajusta la configuración de acceso.</strong> Puedes publicar como "público" para que cualquiera juegue, o "solo para amigos" para pruebas privadas.</li>
+        <li><strong>Configura el dispositivo de juego.</strong> Roblox Studio genera automáticamente versiones compatibles con PC, móvil y tablet.</li>
+        <li><strong>Activa los servidores.</strong> Desde el panel de configuración de tu juego en roblox.com puedes controlar cuántos servidores simultáneos se activan.</li>
       </ol>
 
       <div class="callout">
-        <div class="callout-title">📌 Recurso oficial</div>
-        Roblox ofrece su plataforma educativa <strong>Roblox Education</strong> de forma gratuita, con cursos estructurados que van desde programación básica hasta diseño de economías de juego. Si eres docente o padre que quiere guiar a un joven creador, es el punto de partida ideal.
+        <div class="callout-title">📌 Recurso oficial gratuito</div>
+        <strong>Roblox Education</strong> ofrece cursos estructurados en español que van desde mover tu primer bloque hasta diseñar economías de juego completas. Accede en <strong>education.roblox.com</strong> — es completamente gratuito y está diseñado para jóvenes creadores.
       </div>
 
       <h2>El ecosistema de creadores hispanohablantes en 2025</h2>
-      <p>Uno de los desarrollos más emocionantes del último año ha sido el crecimiento explosivo de la comunidad creadora en español. Canales de YouTube con tutoriales de Roblox Studio en español ya cuentan con millones de suscriptores, y en plataformas como TikTok abundan los creadores que documentan su proceso de construcción de juegos.</p>
-      <p>Este ecosistema local tiene un valor enorme: no solo enseña técnica, sino que muestra que es posible construir juegos exitosos siendo hispanohablante, con referencias culturales propias, para una audiencia que comparte tu idioma. Algunos de los juegos de roleplay más populares entre usuarios de Colombia, México y Argentina han sido creados precisamente por jóvenes de esos países.</p>
-      <p>El momento para convertirse en creador de Roblox nunca ha sido mejor. Las herramientas son más accesibles, la comunidad más grande, y la audiencia dispuesta a descubrir juegos en español más numerosa que en cualquier momento anterior. Si tienes una idea, Roblox Studio 2025 te da todos los instrumentos para convertirla en realidad.</p>
+      <p>La comunidad creadora en español nunca ha sido tan grande ni tan activa. Canales de YouTube con tutoriales de Roblox Studio en castellano superan el millón de suscriptores, y en Discord existen servidores con decenas de miles de miembros hispanohablantes dispuestos a ayudar a quienes empiezan.</p>
+      <p>Algunos de los juegos de roleplay y simulación más populares entre jugadores de Colombia, México y Argentina fueron creados precisamente por jóvenes de esos países. La combinación de herramientas accesibles y una audiencia enorme en español hace que 2025 sea el mejor momento para convertirse en creador de Roblox.</p>
 
       <div class="author-box">
         <div class="author-avatar">🛠️</div>
@@ -266,65 +208,148 @@
         </div>
       </div>
     </article>
+
+    <!-- ══ SIGUE LEYENDO ══════════════════════════════════════ -->
+    <section class="keep-reading" aria-labelledby="kr-heading">
+      <h2 class="keep-reading-title" id="kr-heading">📚 Sigue Leyendo</h2>
+      <div class="kr-grid">
+
+        <!-- Artículo 1: Roleplay -->
+        <a href="articulo-1-roleplay.html" class="kr-card">
+          <div class="kr-num">1</div>
+          <img src="img/articulo-1.jpg" alt="Los mejores juegos de Roleplay en Roblox 2025" class="kr-card-img" width="300" height="150" loading="lazy" />
+          <div class="kr-card-body">
+            <h3 class="kr-card-title">Los mejores juegos de Roleplay en Roblox 2025</h3>
+            <span class="kr-badge cat-juegos">Juegos</span>
+          </div>
+        </a>
+
+        <!-- Artículo 4: Avatares -->
+        <a href="articulo-4-avatares.html" class="kr-card">
+          <div class="kr-num">4</div>
+          <img src="img/articulo-4.jpg" alt="Los mejores accesorios gratis para tu avatar de Roblox" class="kr-card-img" width="300" height="150" loading="lazy" />
+          <div class="kr-card-body">
+            <h3 class="kr-card-title">Los mejores accesorios y ropa gratis para tu avatar</h3>
+            <span class="kr-badge cat-avatares">Avatares</span>
+          </div>
+        </a>
+
+        <!-- Artículo 5: Códigos -->
+        <a href="articulo-5-codigos.html" class="kr-card">
+          <div class="kr-num">5</div>
+          <img src="img/articulo-5.jpg" alt="Cómo encontrar y canjear Promo Codes en Roblox" class="kr-card-img" width="300" height="150" loading="lazy" />
+          <div class="kr-card-body">
+            <h3 class="kr-card-title">Cómo encontrar y canjear Promo Codes en Roblox de forma segura en 2025</h3>
+            <span class="kr-badge cat-codigos">Códigos</span>
+          </div>
+        </a>
+
+        <!-- Artículo 9: Monetización -->
+        <a href="articulo-9-monetizacion.html" class="kr-card">
+          <div class="kr-num">9</div>
+          <img src="img/articulo-9.jpg" alt="Cómo ganar dinero desarrollando en Roblox" class="kr-card-img" width="300" height="150" loading="lazy" />
+          <div class="kr-card-body">
+            <h3 class="kr-card-title">Cómo ganar dinero desarrollando en Roblox: guía DevEx</h3>
+            <span class="kr-badge cat-monetizacion">Monetización</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+    <!-- ══ FIN SIGUE LEYENDO ════════════════════════════════ -->
+
   </main>
 
   <aside class="sidebar" aria-label="Contenido relacionado">
-    <div class="sidebar-widget">
-      <div class="sw-header">📰 Artículos Relacionados</div>
+    <div class="sw">
+      <div class="sw-head">🔗 Recursos para Creadores</div>
       <div class="sw-body">
-        <div class="related-item">
-          <div class="ri-icon">🎭</div>
-          <div>
-            <div class="ri-title">Los mejores juegos de Roleplay en Roblox 2025</div>
-            <div class="ri-cat">Juegos</div>
-          </div>
-        </div>
-        <div class="related-item">
-          <div class="ri-icon">🛡️</div>
-          <div>
-            <div class="ri-title">Cómo proteger tu cuenta de Roblox y evitar estafas</div>
-            <div class="ri-cat">Seguridad</div>
-          </div>
-        </div>
-        <div class="related-item">
-          <div class="ri-icon">💰</div>
-          <div>
-            <div class="ri-title">Cómo ganar Robux legalmente como creador en 2025</div>
-            <div class="ri-cat">Monetización</div>
-          </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="https://create.roblox.com" target="_blank" rel="noopener noreferrer" style="font-size:13px;display:flex;gap:8px;align-items:center;color:inherit;text-decoration:none;"><span>🛠️</span> Roblox Studio (Oficial)</a>
+          <a href="https://devforum.roblox.com" target="_blank" rel="noopener noreferrer" style="font-size:13px;display:flex;gap:8px;align-items:center;color:inherit;text-decoration:none;"><span>💬</span> DevForum Roblox</a>
+          <a href="https://education.roblox.com" target="_blank" rel="noopener noreferrer" style="font-size:13px;display:flex;gap:8px;align-items:center;color:inherit;text-decoration:none;"><span>📚</span> Roblox Education</a>
+          <a href="https://create.roblox.com/docs" target="_blank" rel="noopener noreferrer" style="font-size:13px;display:flex;gap:8px;align-items:center;color:inherit;text-decoration:none;"><span>📖</span> Documentación API</a>
         </div>
       </div>
     </div>
-
-    <div class="sidebar-widget">
-      <div class="sw-header">🔗 Recursos para Creadores</div>
+    <div class="sw">
+      <div class="sw-head">📰 Artículos Relacionados</div>
       <div class="sw-body">
-        <div style="display:flex; flex-direction:column; gap:10px;">
-          <a href="https://create.roblox.com" target="_blank" rel="noopener noreferrer" style="font-size:13px; display:flex; gap:8px; align-items:center;"><span>🛠️</span> Roblox Studio (Oficial)</a>
-          <a href="https://devforum.roblox.com" target="_blank" rel="noopener noreferrer" style="font-size:13px; display:flex; gap:8px; align-items:center;"><span>💬</span> DevForum Roblox</a>
-          <a href="https://education.roblox.com" target="_blank" rel="noopener noreferrer" style="font-size:13px; display:flex; gap:8px; align-items:center;"><span>📚</span> Roblox Education</a>
-          <a href="https://create.roblox.com/docs" target="_blank" rel="noopener noreferrer" style="font-size:13px; display:flex; gap:8px; align-items:center;"><span>📖</span> Documentación API</a>
-        </div>
+        <a href="articulo-9-monetizacion.html" class="rel-item" style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border);color:inherit;text-decoration:none;">
+          <div class="rel-icon" style="font-size:24px;flex-shrink:0;">💰</div>
+          <div><div class="rel-title" style="font-size:13px;font-weight:700;color:var(--text-primary);">Cómo ganar dinero con DevEx</div><div class="rel-cat" style="font-size:11px;color:var(--text-muted);">Monetización</div></div>
+        </a>
+        <a href="articulo-1-roleplay.html" class="rel-item" style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border);color:inherit;text-decoration:none;">
+          <div class="rel-icon" style="font-size:24px;flex-shrink:0;">🎭</div>
+          <div><div class="rel-title" style="font-size:13px;font-weight:700;color:var(--text-primary);">Los mejores juegos de Roleplay 2025</div><div class="rel-cat" style="font-size:11px;color:var(--text-muted);">Juegos</div></div>
+        </a>
+        <a href="articulo-10-futuro.html" class="rel-item" style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;color:inherit;text-decoration:none;">
+          <div class="rel-icon" style="font-size:24px;flex-shrink:0;">🚀</div>
+          <div><div class="rel-title" style="font-size:13px;font-weight:700;color:var(--text-primary);">El futuro del metaverso de Roblox</div><div class="rel-cat" style="font-size:11px;color:var(--text-muted);">Análisis</div></div>
+        </a>
       </div>
     </div>
-
-    <div class="ad-slot" style="margin:0;">
-      <p>[ Anuncio Sidebar — 300×250 ]</p>
-    </div>
+    <div class="ad-slot" style="margin:0;"><p>[ Google AdSense — 300×250 ]</p></div>
   </aside>
 </div>
 
-<footer>
-  <div class="footer-logo">RBLX<span style="color:#fff">News</span></div>
-  <p>El portal de noticias de Roblox en español</p>
-  <nav class="footer-links" aria-label="Footer">
-    <a href="../index.html">Inicio</a>
-    <a href="../about.html">Sobre Nosotros</a>
-    <a href="../privacy.html">Política de Privacidad</a>
-    <a href="../contact.html">Contacto</a>
-  </nav>
-  <p style="margin-top:10px; font-size:11px;">© 2025 RBLXNews · Sitio independiente, no afiliado con Roblox Corporation.</p>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-container">
+    <div class="footer-col footer-brand">
+      <a href="index.html" class="footer-logo-link">
+        <img src="img/logo.png" alt="RBLXNews Logo" class="footer-logo-img" />
+      </a>
+      <p class="footer-tagline">Tu portal independiente de<br>noticias y guías sobre Roblox<br>en español.</p>
+      <p class="footer-disclaimer">No afiliado con Roblox Corporation.</p>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title">Artículos</h4>
+      <ul class="footer-links-list">
+        <li><a href="articulo-5-codigos.html">Promo Codes</a></li>
+        <li><a href="articulo-7-eventos.html">Eventos 2025</a></li>
+        <li><a href="articulo-4-avatares.html">Avatares Gratis</a></li>
+        <li><a href="articulo-1-roleplay.html">Guía de Roleplay</a></li>
+        <li><a href="articulo-3-seguridad.html">Seguridad</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title">Más Contenido</h4>
+      <ul class="footer-links-list">
+        <li><a href="articulo-2-roblox-studio.html">Roblox Studio 2025</a></li>
+        <li><a href="articulo-6-optimizacion.html">Optimización FPS</a></li>
+        <li><a href="articulo-8-avatar.html">Avatar Premium</a></li>
+        <li><a href="articulo-9-monetizacion.html">Ganar Dinero</a></li>
+        <li><a href="articulo-10-futuro.html">Futuro de Roblox</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title">El Portal</h4>
+      <ul class="footer-links-list">
+        <li><a href="about.html">Sobre Nosotros</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="privacy.html">Política de Privacidad</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 RBLXNews · Sitio independiente, no afiliado con Roblox Corporation</span>
+    <nav class="footer-bottom-links" aria-label="Legal">
+      <a href="about.html">Sobre Nosotros</a>
+      <a href="privacy.html">Privacidad</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </div>
 </footer>
-
+<div id="cookie-banner" role="dialog" aria-label="Aviso de cookies" aria-live="polite">
+  <p class="cookie-text"><strong>🍪 Aviso de cookies.</strong> Usamos cookies propias y de <strong>Google AdSense</strong> para publicidad relevante. Al navegar aceptas su uso según nuestra <a href="privacy.html">Política de Privacidad</a>.</p>
+  <div class="cookie-btns">
+    <button class="btn-reject" id="cookie-reject">Solo esenciales</button>
+    <button class="btn-accept" id="cookie-accept">Aceptar todo</button>
+  </div>
+</div>
+<script src="theme.js"></script>
+<script>
+(function(){var b=document.getElementById('cookie-banner'),K='rblxnews_consent';try{if(localStorage.getItem(K))b.classList.add('hidden');}catch(e){}document.getElementById('cookie-accept').onclick=function(){try{localStorage.setItem(K,'accepted');}catch(e){}b.classList.add('hidden');};document.getElementById('cookie-reject').onclick=function(){try{localStorage.setItem(K,'rejected');}catch(e){}b.classList.add('hidden');};})();
+</script>
 </body>
 </html>
