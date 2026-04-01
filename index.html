@@ -18,7 +18,7 @@
   <meta name="twitter:title" content="RBLXNews — Noticias de Roblox en Español" />
   <meta name="twitter:description" content="El portal de referencia sobre Roblox para la comunidad hispanohablante." />
   <meta name="twitter:image" content="https://rblxnews.github.io/img/banner.jpg" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"RBLXNews","url":"https://rblxnews.github.io/","description":"Portal independiente de noticias, guías y tutoriales sobre Roblox en español.","inLanguage":"es","publisher":{"@type":"Organization","name":"RBLXNews","logo":{"@type":"ImageObject","url":"https://rblxnews.github.io/img/logo.png"}}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"RBLXNews","url":"https://rblxnews.github.io/","description":"Portal independiente sobre Roblox en español.","inLanguage":"es","publisher":{"@type":"Organization","name":"RBLXNews","logo":{"@type":"ImageObject","url":"https://rblxnews.github.io/img/logo.png"}}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet" />
@@ -27,39 +27,26 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════════════
-     TOPBAR — eliminado el bloque completo
-     (Cambio #4: se elimina el footer/topbar
-     con "Portal independiente · Est. 2024")
-═══════════════════════════════════ -->
-
-<!-- ═══════════════════════════════════
-     NAVEGACIÓN — Logo gráfico nuevo (#3)
-═══════════════════════════════════ -->
+<!-- ═══ NAV ════════════════════════════════════════════════ -->
 <nav class="main-nav" role="navigation" aria-label="Navegación principal">
-
-  <!-- CAMBIO #3: logo de texto reemplazado por imagen gráfica -->
-  <a href="index.html" class="logo-img-link" aria-label="RBLXNews — Inicio">
-    <img
-      src="assets/img/nuevo-logo.jpg"
-      alt="RBLXNews logo"
-      class="nav-logo-img"
-    />
+  <a href="index.html" class="nav-logo-link" aria-label="RBLXNews — Inicio">
+    <img src="img/logo.png" alt="RBLXNews Logo" class="main-logo" />
   </a>
-
   <div class="nav-links">
     <a href="index.html" class="active" aria-current="page">Inicio</a>
-    <a href="about.html">Sobre Nosotros</a>
-    <a href="privacy.html">Privacidad</a>
-    <a href="contact.html">Contacto</a>
+    <a href="articulo-5-codigos.html">Códigos</a>
+    <a href="articulo-7-eventos.html">Eventos</a>
+    <a href="articulo-4-avatares.html">Avatares</a>
+    <a href="articulo-1-roleplay.html">Roleplay</a>
+    <a href="articulo-3-seguridad.html">Seguridad</a>
   </div>
   <button class="theme-toggle" aria-label="Cambiar modo oscuro/claro">
     <div class="toggle-track" aria-hidden="true"><div class="toggle-knob"></div></div>
-    <span class="toggle-label">🌙  Modo Oscuro</span>
+    <span class="toggle-label">🌙 Modo Oscuro</span>
   </button>
 </nav>
 
-<!-- BANNER PRINCIPAL -->
+<!-- ═══ BANNER ═════════════════════════════════════════════ -->
 <div class="hero-banner" role="img" aria-label="Banner principal RBLXNews">
   <img src="img/banner.jpg" alt="RBLXNews — Noticias y guías de Roblox en español" width="1200" height="340" loading="eager" onerror="this.parentElement.style.background='linear-gradient(135deg,#1565C0,#E8192C)';this.style.display='none';" />
   <div class="hero-banner-overlay"></div>
@@ -69,12 +56,12 @@
   </div>
 </div>
 
-<!-- HERO -->
+<!-- ═══ HERO ════════════════════════════════════════════════ -->
 <section class="hero-section" aria-labelledby="hero-title">
   <div class="container">
     <div class="hero-grid">
       <a href="articulo-1-roleplay.html" class="hero-main">
-        <img src="img/articulo-1.jpg" alt="Mejores juegos de roleplay Roblox 2025" class="hero-img" width="760" height="280" loading="eager" onerror="this.style.display='none';" />
+        <img src="img/articulo-1.jpg" alt="Mejores juegos de roleplay Roblox 2025" class="hero-img" width="760" height="280" loading="eager" onerror="this.style.background='var(--img-ph-bg)';this.style.display='block';this.removeAttribute('src');" />
         <div class="hero-body">
           <span class="badge">🔥 Artículo Destacado</span>
           <h1 id="hero-title">Los mejores juegos de Roleplay en Roblox 2025 y su economía interna</h1>
@@ -84,11 +71,11 @@
       </a>
       <div class="hero-side">
         <a href="articulo-7-eventos.html" class="side-card">
-          <img src="img/articulo-7.jpg" alt="Eventos Roblox 2025" class="side-img" width="400" height="115" loading="lazy" onerror="this.style.display='none';" />
+          <img src="img/articulo-7.jpg" alt="Eventos Roblox 2025" class="side-img" width="400" height="115" loading="lazy" onerror="this.style.background='var(--img-ph-bg)';this.removeAttribute('src');" />
           <div class="side-body"><div class="side-cat">🎪 Eventos</div><h2>Los mejores eventos de la comunidad Roblox en 2025</h2></div>
         </a>
         <a href="articulo-4-avatares.html" class="side-card">
-          <img src="img/articulo-4.jpg" alt="Accesorios gratis avatar Roblox" class="side-img" width="400" height="115" loading="lazy" onerror="this.style.display='none';" />
+          <img src="img/articulo-4.jpg" alt="Accesorios gratis avatar Roblox" class="side-img" width="400" height="115" loading="lazy" onerror="this.style.background='var(--img-ph-bg)';this.removeAttribute('src');" />
           <div class="side-body"><div class="side-cat">👗 Avatares</div><h2>Los mejores accesorios y ropa gratis para tu avatar</h2></div>
         </a>
       </div>
@@ -96,16 +83,16 @@
   </div>
 </section>
 
-<!-- CATEGORÍAS -->
+<!-- ═══ CATEGORÍAS ══════════════════════════════════════════ -->
 <section class="cats-section" aria-label="Categorías">
   <div class="container">
     <nav class="cats-row" aria-label="Navegar por categoría">
-      <a href="articulo-1-roleplay.html"      class="cat-pill"><span class="cpico">🎭</span><span class="cpname">Roleplay</span></a>
-      <a href="articulo-3-seguridad.html"     class="cat-pill"><span class="cpico">🛡️</span><span class="cpname">Seguridad</span></a>
-      <a href="articulo-7-eventos.html"       class="cat-pill"><span class="cpico">🎪</span><span class="cpname">Eventos</span></a>
-      <a href="articulo-4-avatares.html"      class="cat-pill"><span class="cpico">👗</span><span class="cpname">Avatares</span></a>
-      <a href="articulo-2-roblox-studio.html" class="cat-pill"><span class="cpico">🛠️</span><span class="cpname">Creación</span></a>
-      <a href="articulo-9-monetizacion.html"  class="cat-pill"><span class="cpico">💰</span><span class="cpname">Dinero</span></a>
+      <a href="articulo-5-codigos.html"      class="cat-pill"><span class="cpico">🎟️</span><span class="cpname">Códigos</span></a>
+      <a href="articulo-7-eventos.html"      class="cat-pill"><span class="cpico">🎪</span><span class="cpname">Eventos</span></a>
+      <a href="articulo-4-avatares.html"     class="cat-pill"><span class="cpico">👗</span><span class="cpname">Avatares</span></a>
+      <a href="articulo-1-roleplay.html"     class="cat-pill"><span class="cpico">🎭</span><span class="cpname">Roleplay</span></a>
+      <a href="articulo-3-seguridad.html"    class="cat-pill"><span class="cpico">🛡️</span><span class="cpname">Seguridad</span></a>
+      <a href="articulo-9-monetizacion.html" class="cat-pill"><span class="cpico">💰</span><span class="cpname">Dinero</span></a>
     </nav>
   </div>
 </section>
@@ -117,7 +104,7 @@
   </div>
 </div>
 
-<!-- ARTÍCULOS + SIDEBAR -->
+<!-- ═══ ARTÍCULOS + SIDEBAR ════════════════════════════════ -->
 <section aria-labelledby="news-heading">
   <div class="container">
     <div class="section-head">
@@ -128,9 +115,9 @@
       <div>
         <div class="articles-grid" role="list">
 
-          <!-- 1 FEATURED -->
+          <!-- ARTÍCULO 1 — FEATURED -->
           <a href="articulo-1-roleplay.html" class="article-card featured" role="listitem">
-            <img src="img/articulo-1.jpg" alt="Los mejores juegos de roleplay en Roblox 2025" class="card-img" width="230" loading="lazy" onerror="this.outerHTML='&lt;div class=&quot;image-placeholder&quot;&gt;&lt;span class=&quot;ph-icon&quot;&gt;🎭&lt;/span&gt;&lt;/div&gt;';" />
+            <img src="img/articulo-1.jpg" alt="Los mejores juegos de roleplay en Roblox 2025" class="card-img" width="230" height="180" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--red);">🎭 Juegos</span>
               <h3>Los mejores juegos de Roleplay en Roblox 2025 y su economía interna</h3>
@@ -140,11 +127,9 @@
             </div>
           </a>
 
-          <!-- 2: placeholder -->
+          <!-- ARTÍCULO 2 -->
           <a href="articulo-2-roblox-studio.html" class="article-card" role="listitem">
-            <div class="image-placeholder" role="img" aria-label="Roblox Studio 2025">
-              <span class="ph-icon">🛠️</span><span class="ph-text">Roblox Studio</span>
-            </div>
+            <img src="img/articulo-2.jpg" alt="Roblox Studio 2025 nuevas herramientas" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--blue);">🛠️ Creación</span>
               <h3>Roblox Studio 2025: nuevas herramientas para creadores</h3>
@@ -154,11 +139,9 @@
             </div>
           </a>
 
-          <!-- 3: placeholder -->
+          <!-- ARTÍCULO 3 -->
           <a href="articulo-3-seguridad.html" class="article-card" role="listitem">
-            <div class="image-placeholder" role="img" aria-label="Seguridad en Roblox">
-              <span class="ph-icon">🛡️</span><span class="ph-text">Seguridad</span>
-            </div>
+            <img src="img/articulo-3.jpg" alt="Cómo proteger tu cuenta de Roblox y evitar estafas" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--green);">🛡️ Seguridad</span>
               <h3>Cómo proteger tu cuenta de Roblox y evitar estafas</h3>
@@ -168,9 +151,9 @@
             </div>
           </a>
 
-          <!-- 4: img real articulo-4.jpg -->
+          <!-- ARTÍCULO 4 -->
           <a href="articulo-4-avatares.html" class="article-card" role="listitem">
-            <img src="img/articulo-4.jpg" alt="Accesorios y ropa gratis para avatar de Roblox" class="card-img" width="400" height="160" loading="lazy" onerror="this.outerHTML='&lt;div class=&quot;image-placeholder&quot;&gt;&lt;span class=&quot;ph-icon&quot;&gt;👗&lt;/span&gt;&lt;/div&gt;';" />
+            <img src="img/articulo-4.jpg" alt="Accesorios y ropa gratis para tu avatar de Roblox" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--yellow);">👗 Avatares</span>
               <h3>Los mejores accesorios y ropa gratis para tu avatar</h3>
@@ -180,25 +163,21 @@
             </div>
           </a>
 
-          <!-- 5: placeholder -->
+          <!-- ARTÍCULO 5 -->
           <a href="articulo-5-codigos.html" class="article-card" role="listitem">
-            <div class="image-placeholder" role="img" aria-label="Promo Codes Roblox">
-              <span class="ph-icon">🎟️</span><span class="ph-text">Promo Codes</span>
-            </div>
+            <img src="img/articulo-5.jpg" alt="Promo Codes de Roblox cómo encontrarlos y canjearlos" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--green);">🎟️ Códigos</span>
-              <h3>Cómo encontrar y canjear Promo Codes en Roblox de forma segura</h3>
+              <h3>Cómo encontrar y canjear Promo Codes en Roblox de forma segura en 2025</h3>
               <p class="card-excerpt">Fuentes legítimas, proceso de canje paso a paso y errores a evitar.</p>
               <div class="card-meta"><span>📅 22 Mar</span><span>📖 6 min</span></div>
               <span class="read-more">Leer artículo</span>
             </div>
           </a>
 
-          <!-- 6: placeholder -->
+          <!-- ARTÍCULO 6 -->
           <a href="articulo-6-optimizacion.html" class="article-card" role="listitem">
-            <div class="image-placeholder" role="img" aria-label="Optimización FPS Roblox">
-              <span class="ph-icon">⚡</span><span class="ph-text">Optimización FPS</span>
-            </div>
+            <img src="img/articulo-6.jpg" alt="Cómo mejorar el rendimiento y FPS en Roblox" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--yellow);">⚡ Tutoriales</span>
               <h3>Cómo mejorar el rendimiento y los FPS en Roblox</h3>
@@ -208,9 +187,9 @@
             </div>
           </a>
 
-          <!-- 7: img real articulo-7.jpg -->
+          <!-- ARTÍCULO 7 -->
           <a href="articulo-7-eventos.html" class="article-card" role="listitem">
-            <img src="img/articulo-7.jpg" alt="Mejores eventos comunidad Roblox 2025" class="card-img" width="400" height="160" loading="lazy" onerror="this.outerHTML='&lt;div class=&quot;image-placeholder&quot;&gt;&lt;span class=&quot;ph-icon&quot;&gt;🎪&lt;/span&gt;&lt;/div&gt;';" />
+            <img src="img/articulo-7.jpg" alt="Mejores eventos de la comunidad Roblox 2025" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--blue);">🎪 Eventos</span>
               <h3>Las mejores actualizaciones de eventos de la comunidad Roblox 2025</h3>
@@ -220,11 +199,9 @@
             </div>
           </a>
 
-          <!-- 8: placeholder -->
+          <!-- ARTÍCULO 8 -->
           <a href="articulo-8-avatar.html" class="article-card" role="listitem">
-            <div class="image-placeholder" role="img" aria-label="Avatar premium gratis Roblox">
-              <span class="ph-icon">👑</span><span class="ph-text">Avatar Premium</span>
-            </div>
+            <img src="img/articulo-8.jpg" alt="Cómo crear un avatar premium gratis en Roblox" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--yellow);">👑 Avatares</span>
               <h3>Cómo crear un avatar de aspecto premium sin gastar nada</h3>
@@ -234,11 +211,9 @@
             </div>
           </a>
 
-          <!-- 9: placeholder -->
+          <!-- ARTÍCULO 9 -->
           <a href="articulo-9-monetizacion.html" class="article-card" role="listitem">
-            <div class="image-placeholder" role="img" aria-label="Monetización DevEx Roblox">
-              <span class="ph-icon">💰</span><span class="ph-text">Monetización DevEx</span>
-            </div>
+            <img src="img/articulo-9.jpg" alt="Cómo ganar dinero en Roblox con DevEx" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--green);">💰 Monetización</span>
               <h3>Cómo ganar dinero desarrollando en Roblox: guía del programa DevEx</h3>
@@ -248,9 +223,9 @@
             </div>
           </a>
 
-          <!-- 10: img real articulo-10.jpg -->
+          <!-- ARTÍCULO 10 -->
           <a href="articulo-10-futuro.html" class="article-card" role="listitem">
-            <img src="img/articulo-10.jpg" alt="Futuro metaverso Roblox IA mundos generativos" class="card-img" width="400" height="160" loading="lazy" onerror="this.outerHTML='&lt;div class=&quot;image-placeholder&quot;&gt;&lt;span class=&quot;ph-icon&quot;&gt;🚀&lt;/span&gt;&lt;/div&gt;';" />
+            <img src="img/articulo-10.jpg" alt="El futuro del metaverso de Roblox IA y mundos generativos" class="card-img" width="400" height="160" loading="lazy" />
             <div class="card-body">
               <span class="card-cat" style="color:var(--red);">🚀 Análisis</span>
               <h3>El futuro del metaverso de Roblox: IA y mundos generativos</h3>
@@ -260,11 +235,12 @@
             </div>
           </a>
 
-        </div>
+        </div><!-- /articles-grid -->
+
         <div class="ad-slot" style="margin-top:24px;" aria-label="Publicidad">
           <p>[ Google AdSense — 336×280 Rectangle ]</p>
         </div>
-      </div>
+      </div><!-- /col artículos -->
 
       <!-- SIDEBAR -->
       <aside class="sidebar" aria-label="Barra lateral">
@@ -286,72 +262,23 @@
             <div class="ev-item"><div class="ev-date"><div class="ev-day">15</div><div class="ev-mon">Abr</div></div><div><div class="ev-title">RDC 2025</div><div class="ev-desc">Conferencia de desarrolladores</div></div></div>
           </div>
         </div>
-
-        <!-- ═══════════════════════════════════
-             "MÁS LEÍDOS" — Cambios #1 y #2
-             #2: posiciones 1 y 2 intercambiadas
-                 + título nuevo en posición #1
-             #1: colores en .rel-num para 4 y 5
-        ═══════════════════════════════════ -->
         <div class="sw">
           <div class="sw-head">🔥 Más Leídos</div>
           <div class="sw-body">
-
-            <!-- POSICIÓN 1 — antes era el artículo de Promo Codes (#2), título actualizado -->
-            <a href="articulo-5-codigos.html" class="rel-item">
-              <div class="rel-num rel-num--1">1</div>
-              <div>
-                <div class="rel-title">Cómo encontrar y canjear Promo Codes en Roblox de forma segura en 2025</div>
-                <div class="rel-cat">Códigos</div>
-              </div>
-            </a>
-
-            <!-- POSICIÓN 2 — antes era el artículo de Seguridad (#1) -->
-            <a href="articulo-3-seguridad.html" class="rel-item">
-              <div class="rel-num rel-num--2">2</div>
-              <div>
-                <div class="rel-title">Cómo proteger tu cuenta de Roblox</div>
-                <div class="rel-cat">Seguridad</div>
-              </div>
-            </a>
-
-            <!-- POSICIÓN 3 — sin cambios -->
-            <a href="articulo-1-roleplay.html" class="rel-item">
-              <div class="rel-num rel-num--3">3</div>
-              <div>
-                <div class="rel-title">Los mejores juegos de roleplay 2025</div>
-                <div class="rel-cat">Juegos</div>
-              </div>
-            </a>
-
-            <!-- POSICIÓN 4 — color morado (nuevo) -->
-            <a href="articulo-9-monetizacion.html" class="rel-item">
-              <div class="rel-num rel-num--4">4</div>
-              <div>
-                <div class="rel-title">Cómo ganar dinero con DevEx</div>
-                <div class="rel-cat">Monetización</div>
-              </div>
-            </a>
-
-            <!-- POSICIÓN 5 — color gris-plata (nuevo) -->
-            <a href="articulo-7-eventos.html" class="rel-item">
-              <div class="rel-num rel-num--5">5</div>
-              <div>
-                <div class="rel-title">Los mejores eventos de Roblox en 2025</div>
-                <div class="rel-cat">Eventos</div>
-              </div>
-            </a>
-
+            <a href="articulo-5-codigos.html"      class="rel-item"><div class="rel-num rel-num--1">1</div><div><div class="rel-title">Cómo encontrar y canjear Promo Codes en Roblox de forma segura en 2025</div><div class="rel-cat">Códigos</div></div></a>
+            <a href="articulo-3-seguridad.html"    class="rel-item"><div class="rel-num rel-num--2">2</div><div><div class="rel-title">Cómo proteger tu cuenta de Roblox</div><div class="rel-cat">Seguridad</div></div></a>
+            <a href="articulo-1-roleplay.html"     class="rel-item"><div class="rel-num rel-num--3">3</div><div><div class="rel-title">Los mejores juegos de roleplay 2025</div><div class="rel-cat">Juegos</div></div></a>
+            <a href="articulo-9-monetizacion.html" class="rel-item"><div class="rel-num rel-num--4">4</div><div><div class="rel-title">Cómo ganar dinero con DevEx</div><div class="rel-cat">Monetización</div></div></a>
+            <a href="articulo-7-eventos.html"      class="rel-item"><div class="rel-num rel-num--5">5</div><div><div class="rel-title">Los mejores eventos de Roblox en 2025</div><div class="rel-cat">Eventos</div></div></a>
           </div>
         </div>
-
         <div class="ad-slot" style="margin:0;" aria-label="Publicidad"><p>[ Google AdSense — 300×250 ]</p></div>
       </aside>
     </div>
   </div>
 </section>
 
-<!-- TRENDING -->
+<!-- ═══ TRENDING ════════════════════════════════════════════ -->
 <section aria-labelledby="trending-heading" style="padding:0 0 16px;">
   <div class="container">
     <div class="section-head"><h2 id="trending-heading">Más Leídos</h2><span class="s-tag">🔥 Top 5</span></div>
@@ -365,14 +292,56 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════
-     FOOTER — ELIMINADO COMPLETAMENTE (#4)
-     Se eliminó el bloque <footer> completo
-     con "Sobre Nosotros", "Privacidad",
-     "Contacto" y "Portal independiente · Est. 2024"
-═══════════════════════════════════ -->
+<!-- ═══ FOOTER (Cambio #4 — nuevo diseño) ══════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-container">
+    <div class="footer-col footer-brand">
+      <a href="index.html" class="footer-logo-link">
+        <img src="img/logo.png" alt="RBLXNews Logo" class="footer-logo-img" />
+      </a>
+      <p class="footer-tagline">Tu portal independiente de<br>noticias y guías sobre Roblox<br>en español.</p>
+      <p class="footer-disclaimer">No afiliado con Roblox Corporation.</p>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title">Artículos</h4>
+      <ul class="footer-links-list">
+        <li><a href="articulo-5-codigos.html">Promo Codes</a></li>
+        <li><a href="articulo-7-eventos.html">Eventos 2025</a></li>
+        <li><a href="articulo-4-avatares.html">Avatares Gratis</a></li>
+        <li><a href="articulo-1-roleplay.html">Guía de Roleplay</a></li>
+        <li><a href="articulo-3-seguridad.html">Seguridad</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title">Más Contenido</h4>
+      <ul class="footer-links-list">
+        <li><a href="articulo-2-roblox-studio.html">Roblox Studio 2025</a></li>
+        <li><a href="articulo-6-optimizacion.html">Optimización FPS</a></li>
+        <li><a href="articulo-8-avatar.html">Avatar Premium</a></li>
+        <li><a href="articulo-9-monetizacion.html">Ganar Dinero</a></li>
+        <li><a href="articulo-10-futuro.html">Futuro de Roblox</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title">El Portal</h4>
+      <ul class="footer-links-list">
+        <li><a href="about.html">Sobre Nosotros</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="privacy.html">Política de Privacidad</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 RBLXNews · Sitio independiente, no afiliado con Roblox Corporation</span>
+    <nav class="footer-bottom-links" aria-label="Legal">
+      <a href="about.html">Sobre Nosotros</a>
+      <a href="privacy.html">Privacidad</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </div>
+</footer>
 
-<!-- COOKIE CONSENT -->
+<!-- ═══ COOKIE CONSENT ══════════════════════════════════════ -->
 <div id="cookie-banner" role="dialog" aria-label="Aviso de cookies" aria-live="polite">
   <p class="cookie-text"><strong>🍪 Aviso de cookies.</strong> Usamos cookies propias y de <strong>Google AdSense</strong> para publicidad relevante. Al navegar aceptas su uso según nuestra <a href="privacy.html">Política de Privacidad</a>.</p>
   <div class="cookie-btns">
