@@ -46,7 +46,7 @@
   </button>
 </nav>
 
-<div class="page-wrapper" style="grid-template-columns:1fr;">
+<div class="page-wrapper" style="display: block; max-width: 900px; margin: 0 auto;">
   <main>
 
     <nav class="breadcrumb" aria-label="Ruta de navegación">
@@ -59,7 +59,7 @@
       <meta itemprop="author" content="Equipo RBLXNews" />
 
       <div class="article-meta">
-        <span class="cat" style="background:var(--yellow,#FFD600);color:#111;">⚡ Tutoriales</span>
+        <span class="cat" style="background:#6366f1;color:#fff;">⚡ Tutoriales</span>
         <span>12 de marzo de 2025</span>
         <span>📖 ~8 min lectura</span>
         <span>✍️ Equipo RBLXNews</span>
@@ -92,14 +92,16 @@
       <h2>Ajustes de gráficos: el impacto más inmediato</h2>
       <p>La primera acción que debes tomar es controlar manualmente la configuración de gráficos. Por defecto, Roblox usa el modo "Automático", que frecuentemente sobreestima las capacidades del equipo.</p>
 
-      <h3>Cómo acceder a la configuración gráfica</h3>
-      <ol>
-        <li>Entra a cualquier juego de Roblox.</li>
-        <li>Presiona <strong>Escape</strong> para abrir el menú.</li>
-        <li>Selecciona el ícono de <strong>Configuración</strong> (engranaje).</li>
-        <li>Ve a la pestaña <strong>Gráficos</strong>.</li>
-        <li>Desactiva "Modo gráfico automático" y mueve el deslizador manualmente.</li>
-      </ol>
+      <div class="callout">
+        <div class="callout-title">Cómo acceder a la configuración gráfica</div>
+        <ol>
+          <li>Entra a cualquier juego de Roblox.</li>
+          <li>Presiona <strong>Escape</strong> para abrir el menú.</li>
+          <li>Selecciona el ícono de <strong>Configuración</strong> (engranaje).</li>
+          <li>Ve a la pestaña <strong>Gráficos</strong>.</li>
+          <li>Desactiva "Modo gráfico automático" y mueve el deslizador manualmente.</li>
+        </ol>
+      </div>
 
       <div class="callout">
         <div class="callout-title">💡 Nivel recomendado por dispositivo</div>
@@ -107,34 +109,11 @@
       </div>
 
       <h3>Ajustes que más impactan en el rendimiento</h3>
-      <div class="setting-card">
-        <div class="sc-icon">🌅</div>
-        <div>
-          <h3>Iluminación y sombras</h3>
-          <p>Las sombras dinámicas son el ajuste que más recursos consume. Reducirlas puede dar un salto de 20–40% en FPS sin cambiar drásticamente el aspecto visual del juego.</p>
-        </div>
-      </div>
-      <div class="setting-card">
-        <div class="sc-icon">🌊</div>
-        <div>
-          <h3>Calidad de texturas</h3>
-          <p>En dispositivos con poca VRAM, reducir la calidad de texturas alivia significativamente la carga. El resultado es menos nítido pero la ganancia en fluidez puede ser considerable.</p>
-        </div>
-      </div>
-      <div class="setting-card">
-        <div class="sc-icon">🎭</div>
-        <div>
-          <h3>Distancia de renderizado</h3>
-          <p>Controla cuán lejos ve tu personaje. En juegos de mundos abiertos grandes, reducir esta distancia es una de las optimizaciones más efectivas disponibles.</p>
-        </div>
-      </div>
-      <div class="setting-card">
-        <div class="sc-icon">✨</div>
-        <div>
-          <h3>Efectos de post-procesado</h3>
-          <p>Bloom, desenfoque de movimiento y aberración cromática son efectos visuales que consumen recursos sin aportar información de juego. Desactivarlos es siempre una buena idea en equipos con dificultades.</p>
-        </div>
-      </div>
+      
+      <p><strong>Iluminación y sombras:</strong> Las sombras dinámicas son el ajuste que más recursos consume. Reducirlas puede dar un salto de 20–40% en FPS sin cambiar drásticamente el aspecto visual del juego.</p>
+      <p><strong>Calidad de texturas:</strong> En dispositivos con poca VRAM, reducir la calidad de texturas alivia significativamente la carga. El resultado es menos nítido pero la ganancia en fluidez puede ser considerable.</p>
+      <p><strong>Distancia de renderizado:</strong> Controla cuán lejos ve tu personaje. En juegos de mundos abiertos grandes, reducir esta distancia es una de las optimizaciones más efectivas disponibles.</p>
+      <p><strong>Efectos de post-procesado:</strong> Bloom, desenfoque de movimiento y aberración cromática son efectos visuales que consumen recursos sin aportar información de juego. Desactivarlos es siempre una buena idea en equipos con dificultades.</p>
 
       <img
         src="img/articulo-6.jpg"
@@ -144,40 +123,6 @@
         loading="lazy"
       />
       <p class="img-caption">Los cambios en los ajustes gráficos tienen efecto inmediato en la tasa de fotogramas.</p>
-
-      <h2>Optimizaciones específicas por plataforma</h2>
-
-      <div class="platform-grid">
-        <div class="platform-card">
-          <div class="pc-head"><div class="pc-icon">🖥️</div><h3>Windows</h3></div>
-          <ul>
-            <li>Activa el Modo de Juego (Configuración → Juegos)</li>
-            <li>Establece prioridad del proceso a "Alta" en el Administrador de tareas</li>
-            <li>Actualiza los drivers de tu GPU regularmente</li>
-            <li>Desactiva Xbox Game Bar si no la usas</li>
-            <li>Usa el plan de energía "Alto rendimiento"</li>
-          </ul>
-        </div>
-        <div class="platform-card">
-          <div class="pc-head"><div class="pc-icon">🍎</div><h3>Mac</h3></div>
-          <ul>
-            <li>Cierra aplicaciones en segundo plano desde el Monitor de Actividad</li>
-            <li>En Mac con Apple Silicon, la GPU integrada es gestionada automáticamente</li>
-            <li>Limpia el caché de Roblox periódicamente</li>
-            <li>Mantén macOS siempre actualizado</li>
-          </ul>
-        </div>
-        <div class="platform-card">
-          <div class="pc-head"><div class="pc-icon">📱</div><h3>Móvil</h3></div>
-          <ul>
-            <li>Cierra todas las apps antes de abrir Roblox</li>
-            <li>Activa el modo de alto rendimiento si tu teléfono lo tiene</li>
-            <li>Desactiva animaciones del sistema en Opciones de desarrollador</li>
-            <li>Juega siempre conectado a WiFi, no a datos móviles</li>
-            <li>Mantén la batería por encima del 20%</li>
-          </ul>
-        </div>
-      </div>
 
       <h2>Optimización de red: cuando el problema no son los gráficos</h2>
       <p>Si experimentas "teleporting" de personajes, acciones que no registran o desconexiones frecuentes, el problema está en tu conexión de red. Roblox necesita una conexión estable más que rápida: la latencia (ping) importa más que el ancho de banda.</p>
@@ -191,16 +136,11 @@
 
       <h2>Liberar memoria RAM: el paso más ignorado</h2>
       <p>Roblox puede necesitar hasta 2 GB de RAM en experiencias complejas. Si tu sistema tiene 4 GB o menos, esto puede convertirse en un cuello de botella severo. Antes de abrir Roblox, cierra el navegador web, aplicaciones de mensajería y cualquier programa que no necesites activamente.</p>
-      <p>En Windows, el Administrador de tareas (Ctrl+Shift+Esc → Rendimiento) te muestra cuánta RAM está en uso. Si supera el 70% del total disponible antes de abrir Roblox, hay margen de mejora cerrando procesos.</p>
-
-      <div class="callout-blue">
+      
+      <div class="callout">
         <div class="callout-title">📌 Herramienta útil integrada</div>
         Roblox tiene un indicador de rendimiento accesible desde el menú de configuración durante el juego. Muestra FPS en tiempo real, latencia de red y uso de memoria. Úsalo para identificar exactamente qué está limitando tu experiencia antes de hacer cambios.
       </div>
-
-      <h2>Cuándo el problema está en el juego, no en tu equipo</h2>
-      <p>Algunos juegos de Roblox están mal optimizados independientemente de lo que hagas en tu dispositivo. Si aplicas todos los ajustes anteriores y el problema persiste solo en experiencias específicas, lo más probable es que esas experiencias tengan scripts ineficientes. En esos casos, la solución más pragmática es buscar alternativas del mismo género con mejor rendimiento.</p>
-      <p>Con estos ajustes aplicados sistemáticamente, la mayoría de jugadores experimenta una mejora perceptible en la fluidez. Los cambios gráficos tienen efecto inmediato; las optimizaciones de red pueden tardar unos minutos en estabilizarse.</p>
 
       <div class="author-box">
         <div class="author-avatar">⚡</div>
