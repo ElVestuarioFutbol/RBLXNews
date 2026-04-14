@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ SEO ════════════════════════════════════════════════════════════ -->
+  <title>Cómo Proteger tu Cuenta de Roblox en 2026: Guía Anti-Hackeo y Estafas | RBLXNews</title>
+  <meta name="description" content="Guía de seguridad para Roblox 2026: activa el 2FA, detecta phishing y falsos generadores, protege tus items y recupera tu cuenta si te hackean." />
+  <!-- 154 caracteres ↑ — dentro del límite de 155 recomendado por Google -->
+
+  <link rel="canonical" href="https://rblxnews.online/articulo-3-seguridad.html" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"                content="article" />
+  <meta property="og:title"               content="Cómo Proteger tu Cuenta de Roblox en 2026: Guía Anti-Hackeo y Estafas" />
+  <meta property="og:description"         content="Activa el 2FA, detecta phishing y falsos generadores de Robux, protege tus ítems en el trading y recupera tu cuenta si la pierdes." />
+  <meta property="og:url"                 content="https://rblxnews.online/articulo-3-seguridad.html" />
+  <meta property="og:image"               content="https://rblxnews.online/img/articulo-3.jpg" />
+  <meta property="og:site_name"           content="RBLXNews" />
+  <meta property="og:locale"              content="es_CO" />
+  <meta property="article:author"         content="Equipo RBLXNews" />
+  <meta property="article:published_time" content="2026-03-15T09:00:00-05:00" />
+  <meta property="article:section"        content="Seguridad" />
+  <meta property="article:tag"            content="Seguridad" />
+  <meta property="article:tag"            content="2FA" />
+  <meta property="article:tag"            content="Phishing" />
+  <meta property="article:tag"            content="Estafas Roblox" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Cómo Proteger tu Cuenta de Roblox en 2026: Guía Anti-Hackeo" />
+  <meta name="twitter:description" content="2FA, phishing, falsos generadores de Robux y cómo recuperar tu cuenta. Todo lo que necesitas para jugar seguro en Roblox." />
+  <meta name="twitter:image"       content="https://rblxnews.online/img/articulo-3.jpg" />
+
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type":    "Article",
+    "headline": "Cómo Proteger tu Cuenta de Roblox en 2026: Guía Anti-Hackeo y Estafas",
+    "description": "Guía completa de seguridad para Roblox 2026: 2FA, detección de phishing, trading seguro y recuperación de cuenta.",
+    "image":     "https://rblxnews.online/img/articulo-3.jpg",
+    "datePublished": "2026-03-15",
+    "dateModified":  "2026-03-15",
+    "author": {
+      "@type": "Organization",
+      "name":  "Equipo RBLXNews",
+      "url":   "https://rblxnews.online/about.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name":  "RBLXNews",
+      "logo":  { "@type": "ImageObject", "url": "https://rblxnews.online/img/logo.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://rblxnews.online/articulo-3-seguridad.html" },
+    "inLanguage": "es",
+    "url": "https://rblxnews.online/articulo-3-seguridad.html"
+  }
+  </script>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="theme.css" />
+
+  <!-- Anti-flash tema oscuro/claro -->
+  <script>(function(){var t=null;try{t=localStorage.getItem('rblxnews_theme');}catch(e){}if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark');}})();</script>
+
+  <!-- Estilos exclusivos de este artículo -->
+  <style>
+
+    /* ── Alerta de peligro (roja) ───────────────────────────────── */
+    .danger-box {
+      background:    rgba(232, 25, 44, .07);
+      border:        1px solid rgba(232, 25, 44, .30);
+      border-left:   4px solid #E8192C;
+      border-radius: 8px;
+      padding:       16px 20px;
+      margin:        24px 0;
+      font-size:     15px;
+    }
+    .danger-box .box-title {
+      font-weight:    900;
+      color:          #E8192C;
+      font-size:      12px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-bottom:  6px;
+    }
+    html.dark .danger-box { background: rgba(232, 25, 44, .12); }
+
+    /* ── Alerta de éxito / consejo (verde) ─────────────────────── */
+    .success-box {
+      background:    rgba(27, 138, 78, .07);
+      border:        1px solid rgba(27, 138, 78, .30);
+      border-left:   4px solid #1b8a4e;
+      border-radius: 8px;
+      padding:       16px 20px;
+      margin:        24px 0;
+      font-size:     15px;
+    }
+    .success-box .box-title {
+      font-weight:    900;
+      color:          #1b8a4e;
+      font-size:      12px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-bottom:  6px;
+    }
+    html.dark .success-box { background: rgba(27, 138, 78, .12); }
+
+    /* ── Pasos numerados ────────────────────────────────────────── */
+    .step-row {
+      display:     flex;
+      gap:         16px;
+      align-items: flex-start;
+      margin:      18px 0;
+    }
+    .step-num {
+      background:      #1565C0;
+      color:           #fff;
+      font-family:     'Fredoka One', cursive;
+      font-size:       18px;
+      min-width:       36px;
+      height:          36px;
+      border-radius:   50%;
+      display:         flex;
+      align-items:     center;
+      justify-content: center;
+      flex-shrink:     0;
+      margin-top:      3px;
+    }
+    .step-body h3 {
+      font-family: 'Fredoka One', cursive;
+      font-size:   17px;
+      color:       var(--text-primary, #e8e8f2);
+      margin:      0 0 5px;
+    }
+    .step-body p {
+      margin:    0;
+      font-size: 15px;
+      color:     var(--text-secondary, #a0a0c0);
+    }
+
+    /* ── Tarjeta de estafa ──────────────────────────────────────── */
+    .scam-card {
+      background:    var(--card-bg, #1e1e2e);
+      border:        1px solid var(--border, #2a2a3e);
+      border-radius: 12px;
+      padding:       20px 22px;
+      margin:        16px 0;
+      display:       flex;
+      gap:           16px;
+      align-items:   flex-start;
+      box-shadow:    var(--shadow-sm, 0 1px 4px rgba(0,0,0,.15));
+      transition:    border-color .2s;
+    }
+    .scam-card:hover { border-color: #E8192C; }
+    .scam-icon   { font-size: 36px; flex-shrink: 0; margin-top: 2px; line-height: 1; }
+    .scam-card h3 {
+      font-family: 'Fredoka One', cursive;
+      font-size:   17px;
+      color:       var(--text-primary, #e8e8f2);
+      margin:      0 0 6px;
+    }
+    .scam-card p {
+      font-size: 14px;
+      color:     var(--text-secondary, #a0a0c0);
+      margin:    0 0 8px;
+    }
+    .scam-card p:last-child { margin: 0; }
+    .scam-tag {
+      display:        inline-block;
+      font-size:      10px;
+      font-weight:    900;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      padding:        2px 10px;
+      border-radius:  20px;
+      background:     rgba(232,25,44,.12);
+      color:          #E8192C;
+      border:         1px solid rgba(232,25,44,.25);
+      margin-bottom:  10px;
+    }
+
+    /* ── Lista de recuperación numerada ────────────────────────── */
+    .recovery-list {
+      list-style:     none;
+      margin:         0 0 18px;
+      padding:        0;
+      display:        flex;
+      flex-direction: column;
+      gap:            10px;
+    }
+    .recovery-list li {
+      display:     flex;
+      gap:         12px;
+      align-items: flex-start;
+      font-size:   15px;
+      color:       var(--text-primary, #e8e8f2);
+    }
+    .step-badge {
+      background:      #1565C0;
+      color:           #fff;
+      font-family:     'Fredoka One', cursive;
+      font-size:       13px;
+      min-width:       28px;
+      height:          28px;
+      border-radius:   6px;
+      display:         flex;
+      align-items:     center;
+      justify-content: center;
+      flex-shrink:     0;
+      margin-top:      1px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAVEGACIÓN ══════════════════════════════════════════════════════ -->
+<nav class="main-nav" role="navigation" aria-label="Navegación principal">
+  <a href="index.html" class="nav-logo-link" aria-label="RBLXNews — Inicio">
+    <img src="img/logo.png" alt="RBLXNews Logo" class="main-logo" />
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="articulo-5-codigos.html">Códigos</a>
+    <a href="articulo-7-eventos.html">Eventos</a>
+    <a href="articulo-4-avatares.html">Avatares</a>
+    <a href="articulo-1-roleplay.html">Roleplay</a>
+    <a href="articulo-3-seguridad.html" class="active" aria-current="page">Seguridad</a>
+  </div>
+  <button class="theme-toggle" aria-label="Cambiar modo oscuro/claro">
+    <div class="toggle-track" aria-hidden="true"><div class="toggle-knob"></div></div>
+    <span class="toggle-label">🌙 Modo Oscuro</span>
+  </button>
+</nav>
+
+<!-- ═══ CONTENIDO PRINCIPAL + SIDEBAR ══════════════════════════════════ -->
+<div class="page-wrapper">
+
+  <main>
+
+    <!-- Migas de pan -->
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="index.html">Inicio</a> ›
+      <a href="index.html">Seguridad</a> ›
+      <span>Proteger cuenta de Roblox 2026</span>
+    </nav>
+    <a href="index.html" class="back-btn">← Volver al inicio</a>
+
+    <!-- ─────────────────────────────────────────────────────────── -->
+    <article class="main-article" itemscope itemtype="https://schema.org/Article">
+      <meta itemprop="datePublished" content="2026-03-15" />
+      <meta itemprop="author"        content="Equipo RBLXNews" />
+
+      <!-- Metadatos visibles -->
+      <div class="article-meta">
+        <span class="cat" style="background:#f97316;color:#fff;">🛡️ Seguridad</span>
+        <span>15 de marzo de 2026</span>
+        <span>📖 ~10 min lectura</span>
+        <span>✍️ Equipo RBLXNews</span>
+      </div>
+
+      <!-- H1 -->
+      <h1 itemprop="headline">
+        Guía definitiva para proteger tu cuenta de Roblox en 2026: cómo evitar estafas y hackeos
+      </h1>
+
+      <!-- Imagen de cabecera -->
+      <img
+        src="img/articulo-3.jpg"
+        alt="Escudo de seguridad digital protegiendo una cuenta de Roblox contra hackeos y estafas en 2026"
+        class="article-hero-img"
+        width="860"
+        height="380"
+        loading="eager"
+        itemprop="image"
+      />
+
+      <!-- Introducción -->
+      <p class="article-intro" itemprop="description">
+        El robo de cuentas en Roblox no es un problema menor. En 2026, con economías
+        in-game que mueven millones de dólares en mascotas legendarias de Adopt Me!,
+        frutas míticas de Blox Fruits e ítems de edición limitada en el Marketplace,
+        una cuenta bien equipada puede valer cientos de dólares reales. Eso la convierte
+        en objetivo de estafadores con técnicas cada vez más sofisticadas. Esta guía
+        te da todas las herramientas para blindar tu cuenta antes de que sea tarde.
+      </p>
+
+      <!-- Etiquetas -->
+      <div class="tag-list" aria-label="Etiquetas del artículo">
+        <span class="tag">Seguridad</span>
+        <span class="tag">2FA</span>
+        <span class="tag">Phishing</span>
+        <span class="tag">Estafas</span>
+        <span class="tag">Trading seguro</span>
+        <span class="tag">Recuperar cuenta</span>
+      </div>
+
+      <!-- ── AD SLOT 1 ─────────────────────────────────────────────
+           Posición: tras la intro, antes del primer H2
+           Reemplaza con: <ins class="adsbygoogle" ...>             -->
+      <!-- Google AdSense — Leaderboard 728×90 -->
+      <div class="ad-slot" role="complementary" aria-label="Publicidad">
+      </div>
+
+      <!-- ════════════════════════════════════════════════════════
+           SECCIÓN 1 — Por qué las cuentas valen más que nunca
+      ═══════════════════════════════════════════════════════════ -->
+      <h2>Por qué el robo de cuentas de Roblox ha aumentado en 2026</h2>
+
+      <p>
+        En los primeros años de Roblox, robar una cuenta era un crimen de oportunidad
+        con poco valor real. Hoy, la situación es radicalmente diferente. Adopt Me!
+        tiene una economía de mascotas tan desarrollada que existe un mercado externo
+        de compra-venta con precios en dólares reales. Blox Fruits tiene frutas míticas
+        que los jugadores buscan durante semanas. El Marketplace de avatares vende ítems
+        de edición limitada que se revalorizan con el tiempo como activos digitales.
+      </p>
+
+      <p>
+        Los atacantes ya no son solo adolescentes con conocimientos básicos. Existen
+        grupos organizados que distribuyen kits de phishing personalizados para Roblox,
+        con páginas de login falsas visualmente indistinguibles de las originales. El
+        vector de ataque más común en 2026 no es el hackeo técnico clásico, sino la
+        ingeniería social: convencer al propio jugador de que entregue sus credenciales
+        voluntariamente. Conocer sus métodos es la primera línea de defensa.
+      </p>
+
+      <!-- ════════════════════════════════════════════════════════
+           SECCIÓN 2 — 2FA
+      ═══════════════════════════════════════════════════════════ -->
+      <h2>Activa la verificación en dos pasos (2FA): tu primer escudo</h2>
+
+      <p>
+        La verificación en dos pasos es la medida de seguridad con mejor relación
+        esfuerzo-protección que existe. Con el 2FA activado, aunque un atacante obtenga
+        tu contraseña exacta, no podrá entrar a tu cuenta sin el código temporal que
+        genera tu app de autenticación. Es el equivalente digital de añadir una segunda
+        cerradura que solo tú puedes abrir.
+      </p>
+
+      <p>
+        Roblox ofrece dos métodos de 2FA: por <strong>correo electrónico</strong>
+        (menos seguro, pero mejor que nada) y por <strong>aplicación de autenticación</strong>
+        (TOTP). Recomendamos siempre el segundo: apps como <em>Google Authenticator</em>,
+        <em>Authy</em> o <em>Microsoft Authenticator</em> generan códigos de seis dígitos
+        que cambian cada 30 segundos y no pueden ser interceptados por ataques de
+        phishing tradicionales.
+      </p>
+
+      <h3>Cómo activar el 2FA con app de autenticación: paso a paso</h3>
+
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Abre Configuración en roblox.com</h3>
+          <p>Haz clic en el ícono de engranaje ⚙️ en la esquina superior derecha y
+          selecciona <em>Configuración</em> desde el menú desplegable.</p>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Ve a la pestaña de Seguridad</h3>
+          <p>En el menú lateral, selecciona <em>Seguridad</em>. Encontrarás la sección
+          <em>«Verificación en 2 pasos»</em> con todas las opciones disponibles.</p>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Elige "App de autenticación" y escanea el QR</h3>
+          <p>Selecciona esa opción. Roblox mostrará un código QR. Ábrelo con tu app
+          de autenticación preferida y escanéalo para vincularla a tu cuenta.</p>
+        </div>
+      </div>
+
+      <div class="step-row">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3>Guarda los códigos de recuperación offline</h3>
+          <p>Roblox te dará <strong>códigos de respaldo de un solo uso</strong>. Cópialos
+          y guárdalos en papel o en un lugar físico seguro, nunca en el mismo dispositivo.
+          Son tu única salida si pierdes acceso a la app.</p>
+        </div>
+      </div>
+
+      <div class="success-box">
+        <div class="box-title">✅ Consejo de seguridad adicional</div>
+        Asegura también el correo electrónico vinculado a tu cuenta de Roblox activando
+        el 2FA en ese servicio. Un atacante que controle tu correo puede saltarse
+        la autenticación de Roblox usando la opción de recuperación de contraseña.
+        La cadena de seguridad es tan fuerte como su eslabón más débil.
+      </div>
+
+      <!-- ── AD SLOT 2 ─────────────────────────────────────────────
+           Posición: el lector ha terminado la sección técnica del 2FA,
+           pausa natural antes de la sección de estafas              -->
+      <!-- Google AdSense — In-article / Rectangle 336×280 -->
+      <div class="ad-slot" role="complementary" aria-label="Publicidad">
+      </div>
+
+      <!-- ════════════════════════════════════════════════════════
+           SECCIÓN 3 — Las estafas más comunes en 2026
+      ═══════════════════════════════════════════════════════════ -->
+      <h2>Las estafas más comunes en 2026 y cómo detectarlas</h2>
+
+      <p>
+        Las técnicas de los estafadores evolucionan cada año, pero en 2026 hay cuatro
+        vectores de ataque que concentran la gran mayoría de los casos reportados en
+        foros y grupos de la comunidad. Conocerlas es la diferencia entre un usuario
+        que navega con confianza y uno que pierde su cuenta en cuestión de minutos.
+      </p>
+
+      <!-- Estafa 1: Phishing -->
+      <div class="scam-card">
+        <div class="scam-icon">🎣</div>
+        <div>
+          <h3>Phishing: páginas de inicio de sesión falsas</h3>
+          <span class="scam-tag">Nivel de riesgo: Muy alto</span>
+          <p>
+            Son copias exactas de la página de login de Roblox. El atacante envía el
+            enlace por Discord, TikTok o Instagram con un pretexto atractivo: "¡Ganaste
+            Robux gratis!", "Mira quién te espió el perfil" o "Verifica tu cuenta para
+            evitar el ban". La URL suele ser casi idéntica pero falsa:
+            <em>robIox.com</em> (con una «i» mayúscula que parece una «L»),
+            <em>roblox-login-seguro.com</em>, o dominios con guiones intermedios.
+          </p>
+          <p>
+            <strong>Cómo detectarlo:</strong> revisa siempre la barra de direcciones
+            del navegador. La única URL legítima es exactamente <strong>roblox.com</strong>.
+            Usa el marcador de favoritos de tu navegador en lugar de clicar en enlaces
+            enviados por desconocidos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Estafa 2: Generadores de Robux -->
+      <div class="scam-card">
+        <div class="scam-icon">💸</div>
+        <div>
+          <h3>Falsos generadores de Robux</h3>
+          <span class="scam-tag">Nivel de riesgo: Alto</span>
+          <p>
+            Sitios web, vídeos de TikTok y publicaciones en Discord que prometen Robux
+            gratuitos a cambio de completar encuestas, descargar aplicaciones o introducir
+            tus credenciales. <strong>No existe ningún generador de Robux legítimo
+            fuera de roblox.com.</strong> Los Robux solo pueden obtenerse comprándolos
+            directamente, con suscripción Premium o ganándolos como creador.
+          </p>
+          <p>
+            <strong>La realidad técnica:</strong> Roblox no tiene ninguna API pública
+            que permita a terceros añadir Robux a cuentas ajenas. Cualquier sitio que
+            afirme lo contrario busca robarte los datos o instalarte software malicioso.
+          </p>
+        </div>
+      </div>
+
+      <!-- Estafa 3: Discord y TikTok -->
+      <div class="scam-card">
+        <div class="scam-icon">📱</div>
+        <div>
+          <h3>Enlaces maliciosos en Discord y TikTok</h3>
+          <span class="scam-tag">Nivel de riesgo: Alto</span>
+          <p>
+            Los servidores de Discord de juegos populares como Blox Fruits, Adopt Me!
+            y Murder Mystery 2 son terreno fértil para estafadores. Las técnicas más
+            habituales incluyen bots que envían DMs con "ofertas de trading exclusivas",
+            cuentas que suplantan a moderadores pidiendo "verificación de seguridad" y
+            anuncios de eventos falsos con enlaces a páginas de phishing.
+          </p>
+          <p>
+            <strong>Cómo protegerte:</strong> desactiva los mensajes directos de
+            desconocidos en Discord, no hagas clic en URLs acortadas en chats de juego,
+            y desconfía de cualquier oferta que llegue por mensaje privado sin que
+            tú la hayas iniciado.
+          </p>
+        </div>
+      </div>
+
+      <!-- Estafa 4: Credential stuffing -->
+      <div class="scam-card">
+        <div class="scam-icon">🔑</div>
+        <div>
+          <h3>Relleno de credenciales (credential stuffing)</h3>
+          <span class="scam-tag">Nivel de riesgo: Medio-alto</span>
+          <p>
+            Si usas la misma contraseña en Roblox que en otro servicio que haya sufrido
+            una filtración de datos, los atacantes prueban esas credenciales
+            automáticamente en Roblox con herramientas especializadas. Es el ataque
+            más silencioso: no hay engaño, solo automatización masiva.
+          </p>
+          <p>
+            <strong>La solución:</strong> usa una contraseña única para Roblox que
+            no emplees en ningún otro sitio. Un gestor de contraseñas como Bitwarden
+            (gratuito y de código abierto) hace esto fácil sin necesidad de memorizar
+            nada adicional.
+          </p>
+        </div>
+      </div>
+
+      <div class="danger-box">
+        <div class="box-title">⚠️ Señal de alerta universal</div>
+        Cualquier mensaje, vídeo o publicación que prometa Robux gratis, ítems raros
+        sin esfuerzo o acceso anticipado a actualizaciones a cambio de tus credenciales
+        es una estafa, sin excepción. Roblox nunca contacta a jugadores por Discord,
+        TikTok ni canales externos para ofrecer recompensas.
+      </div>
+
+      <!-- ════════════════════════════════════════════════════════
+           SECCIÓN 4 — Trading seguro
+      ═══════════════════════════════════════════════════════════ -->
+      <h2>Reglas de oro para el trading seguro: no pierdas tus ítems</h2>
+
+      <p>
+        El sistema de intercambio de Roblox tiene salvaguardas integradas, pero los
+        estafadores han desarrollado técnicas que explotan la buena fe de los jugadores.
+        El principio más importante del trading seguro es directo:
+        <strong>si el trato parece demasiado bueno para ser verdad, es porque no lo es.</strong>
+      </p>
+
+      <ul>
+        <li>
+          <strong>Usa solo el sistema de trading oficial de Roblox.</strong> Nunca
+          intercambies fuera de la plataforma mediante PayPal, cuentas de otros juegos
+          o promesas verbales. Esos acuerdos no tienen protección ni recurso si la
+          otra parte no cumple.
+        </li>
+        <li>
+          <strong>Consulta el valor actual de los ítems antes de cualquier intercambio.</strong>
+          Sitios como Rolimons o el Roblox Trade Calculator mantienen tablas de valor
+          actualizadas. Un estafador siempre intentará que intercambies algo valioso
+          por algo que parece valioso pero no lo es.
+        </li>
+        <li>
+          <strong>Desconfía de los "middlemen" no verificados.</strong> La técnica del
+          intermediario propone a un tercero supuestamente neutral que custodie los ítems
+          durante el intercambio. En la mayoría de los casos, ese tercero simplemente
+          desaparece con todo lo que le entregaron.
+        </li>
+        <li>
+          <strong>Verifica el perfil del otro jugador.</strong> Una cuenta nueva, sin
+          amigos, sin historial de juego y con nombre de letras y números aleatorios
+          es una señal de alerta seria. Los jugadores legítimos tienen historial visible
+          y público.
+        </li>
+        <li>
+          <strong>Lee el resumen completo del trade antes de aceptar.</strong> Una técnica
+          habitual consiste en presentar un intercambio aparentemente legítimo y, en el
+          último segundo, cambiar uno de los ítems por otro de menor valor. Ve despacio
+          y revisa ambas listas ítem por ítem antes de confirmar.
+        </li>
+      </ul>
+
+      <!-- ── AD SLOT 3 ─────────────────────────────────────────────
+           Posición: entre trading y recuperación, punto medio del
+           artículo con alta densidad de contenido consumido          -->
+      <!-- Google AdSense — In-article / Rectangle 336×280 -->
+      <div class="ad-slot" role="complementary" aria-label="Publicidad">
+      </div>
+
+      <!-- ════════════════════════════════════════════════════════
+           SECCIÓN 5 — Recuperar la cuenta
+      ═══════════════════════════════════════════════════════════ -->
+      <h2>Qué hacer si ya perdiste acceso a tu cuenta: pasos para recuperarla</h2>
+
+      <p>
+        Si llegas a este punto, la calma es tu mejor aliada. Actuar con rapidez y en
+        el orden correcto maximiza las posibilidades de recuperar la cuenta y minimiza
+        el daño. Cada minuto que pasa puede significar más ítems intercambiados o
+        Robux transferidos.
+      </p>
+
+      <ul class="recovery-list">
+        <li>
+          <div class="step-badge">1</div>
+          <div>
+            <strong>Intenta recuperar el acceso por correo electrónico.</strong>
+            Ve a la pantalla de login de Roblox y selecciona <em>«¿Olvidaste tu
+            contraseña?»</em>. Si el atacante aún no cambió el correo asociado,
+            recibirás un enlace de recuperación en minutos.
+          </div>
+        </li>
+        <li>
+          <div class="step-badge">2</div>
+          <div>
+            <strong>Contacta al soporte de Roblox de inmediato.</strong> Ve a
+            <strong>en.help.roblox.com</strong> → Contact Us → categoría de cuenta
+            comprometida. Proporciona tu nombre de usuario, correo original, fecha
+            de creación de la cuenta y cualquier compra hecha. Más detalles equivalen
+            a resolución más rápida.
+          </div>
+        </li>
+        <li>
+          <div class="step-badge">3</div>
+          <div>
+            <strong>Cambia la contraseña del correo vinculado.</strong> Si el atacante
+            controla tu correo, puede bloquear el proceso de recuperación desde ahí.
+            Asegura ese correo en paralelo con el paso anterior.
+          </div>
+        </li>
+        <li>
+          <div class="step-badge">4</div>
+          <div>
+            <strong>Revoca todas las sesiones activas.</strong> Una vez que recuperes el
+            acceso, ve a Configuración → Seguridad → <em>«Cerrar sesión en todos los
+            dispositivos»</em>. Esto desconecta al atacante aunque haya iniciado sesión
+            desde otro equipo.
+          </div>
+        </li>
+        <li>
+          <div class="step-badge">5</div>
+          <div>
+            <strong>Documenta el daño con capturas de pantalla.</strong> Registra el
+            inventario actual, las transacciones recientes y los cambios realizados en
+            la cuenta. Este historial es lo que el soporte necesita para evaluar una
+            posible reversión de intercambios fraudulentos.
+          </div>
+        </li>
+        <li>
+          <div class="step-badge">6</div>
+          <div>
+            <strong>Activa el 2FA antes de volver a jugar.</strong> Es lo primero que
+            debes hacer al recuperar el acceso, antes de hacer cualquier otra cosa.
+            Sin él, el ciclo puede repetirse.
+          </div>
+        </li>
+      </ul>
+
+      <div class="danger-box">
+        <div class="box-title">⚠️ Sobre la reversión de intercambios</div>
+        Roblox evalúa las solicitudes de reversión caso a caso y no garantiza la
+        devolución de ítems en todos los supuestos. Las posibilidades son mayores
+        cuando el reporte es rápido, la documentación es sólida y el 2FA no estaba
+        activado en el momento del incidente. Esta es la razón más poderosa para
+        activarlo antes de que ocurra cualquier problema.
+      </div>
+
+      <!-- ════════════════════════════════════════════════════════
+           SECCIÓN 6 — Conclusión
+      ═══════════════════════════════════════════════════════════ -->
+      <h2>Juega tranquilo: la seguridad está en tus manos</h2>
+
+      <p>
+        La gran mayoría de los robos de cuentas en Roblox no son hackeos sofisticados.
+        Son situaciones en las que el jugador fue engañado para compartir sus credenciales
+        o hizo clic en un enlace sin verificar su procedencia. Eso significa que la
+        defensa más efectiva no requiere conocimientos técnicos avanzados: requiere hábitos.
+      </p>
+
+      <p>
+        Con el 2FA activado, una contraseña única para Roblox, la costumbre de revisar
+        la URL antes de escribir tus datos y el criterio de desconfiar de cualquier oferta
+        que llegue por canales externos, tu cuenta estará protegida contra la aplastante
+        mayoría de los ataques activos hoy. No esperes a ser víctima para tomar estas
+        medidas. Dedica diez minutos ahora y juega sin preocupaciones el resto del año.
+      </p>
+
+      <div class="success-box">
+        <div class="box-title">✅ Checklist de seguridad: acciones inmediatas</div>
+        <ul style="margin: 8px 0 0 18px;">
+          <li>Activa el 2FA con app de autenticación en Roblox ahora mismo.</li>
+          <li>Activa también el 2FA en el correo vinculado a tu cuenta de Roblox.</li>
+          <li>Crea una contraseña única para Roblox usando un gestor de contraseñas.</li>
+          <li>Guarda los códigos de respaldo del 2FA en papel o lugar seguro offline.</li>
+          <li>No hagas clic en enlaces de Roblox que lleguen por Discord, TikTok o DMs.</li>
+          <li>Consulta el valor de los ítems en Rolimons antes de cualquier intercambio.</li>
+        </ul>
+      </div>
+
+      <!-- Caja de autor -->
+      <div class="author-box">
+        <div class="author-avatar">🛡️</div>
+        <div class="author-info">
+          <strong>Equipo RBLXNews</strong>
+          <p>
+            Cubrimos el ecosistema de Roblox para la comunidad hispanohablante. Los
+            consejos de este artículo están basados en las guías oficiales de Roblox
+            Support y en reportes de la comunidad de ciberseguridad gaming en 2026.
+          </p>
+        </div>
+      </div>
+
+    </article>
+    <!-- /main-article -->
+
+    <!-- ════════════════════════════════════════════════════════
+         SIGUE LEYENDO
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="keep-reading" aria-labelledby="kr-heading-3">
+      <h2 class="keep-reading-title" id="kr-heading-3">📚 Sigue Leyendo</h2>
+      <div class="kr-grid">
+
+        <a href="articulo-1-roleplay.html" class="kr-card">
+          <div class="kr-num">1</div>
+          <img src="img/articulo-1.jpg" alt="Los mejores juegos de roleplay en Roblox 2026" class="kr-card-img" width="300" height="150" loading="lazy" />
+          <div class="kr-card-body">
+            <h3 class="kr-card-title">Los mejores juegos de Roleplay en Roblox 2026</h3>
+            <span class="kr-badge cat-juegos">Juegos</span>
+          </div>
+        </a>
+
+        <a href="articulo-2-roblox-studio.html" class="kr-card">
+          <div class="kr-num">2</div>
+          <img src="img/articulo-2.jpg" alt="Guía definitiva de Roblox Studio 2026 desde cero" class="kr-card-img" width="300" height="150" loading="lazy" />
+          <div class="kr-card-body">
+            <h3 class="kr-card-title">Aprende Roblox Studio 2026: de cero a experto</h3>
+            <span class="kr-badge cat-creacion">Creación</span>
+          </div>
+        </a>
+
+        <a href="articulo-5-codigos.html" class="kr-card">
+          <div class="kr-num">5</div>
+          <img src="img/articulo-5.jpg" alt="Cómo encontrar y canjear Promo Codes en Roblox 2026" class="kr-card-img" width="300" height="150" loading="lazy" />
+          <div class="kr-card-body">
+            <h3 class="kr-card-title">Cómo encontrar y canjear Promo Codes en Roblox</h3>
+            <span class="kr-badge cat-codigos">Códigos</span>
+          </div>
+        </a>
+
+        <a href="articulo-9-monetizacion.html" class="kr-card">
+          <div class="kr-num">9</div>
+          <img src="img/articulo-9.jpg" alt="Guía del programa DevEx de Roblox para ganar dinero real" class="kr-card-img" width="300" height="150" loading="lazy" />
+          <div class="kr-card-body">
+            <h3 class="kr-card-title">Guía DevEx: convierte Robux en dinero real</h3>
+            <span class="kr-badge cat-monetizacion">Monetización</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── SIDEBAR ──────────────────────────────────────────────────────── -->
+  <aside class="sidebar" aria-label="Barra lateral">
+
+    <div class="sw">
+      <div class="sw-head">📰 Artículos Relacionados</div>
+      <div class="sw-body">
+        <a href="articulo-5-codigos.html" class="rel-item">
+          <div class="rel-icon">🎟️</div>
+          <div><div class="rel-title">Cómo canjear Promo Codes de forma segura</div><div class="rel-cat">Códigos</div></div>
+        </a>
+        <a href="articulo-1-roleplay.html" class="rel-item">
+          <div class="rel-icon">🎭</div>
+          <div><div class="rel-title">Los mejores juegos de Roleplay en Roblox 2026</div><div class="rel-cat">Juegos</div></div>
+        </a>
+        <a href="articulo-2-roblox-studio.html" class="rel-item">
+          <div class="rel-icon">🛠️</div>
+          <div><div class="rel-title">Guía definitiva de Roblox Studio 2026</div><div class="rel-cat">Creación</div></div>
+        </a>
+        <a href="articulo-9-monetizacion.html" class="rel-item">
+          <div class="rel-icon">💰</div>
+          <div><div class="rel-title">Cómo ganar dinero desarrollando en Roblox</div><div class="rel-cat">Monetización</div></div>
+        </a>
+        <a href="articulo-10-futuro.html" class="rel-item">
+          <div class="rel-icon">🚀</div>
+          <div><div class="rel-title">El futuro del metaverso de Roblox: IA y mundos</div><div class="rel-cat">Análisis</div></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="sw">
+      <div class="sw-head">🏆 Top Juegos Ahora</div>
+      <div class="sw-body">
+        <div class="tg-item"><div class="tg-rank">1</div><div class="tg-icon">⚔️</div><div class="tg-info"><div class="tg-name">Blox Fruits</div><div class="tg-players">● 4.2M jugando</div></div><span class="tg-change up">▲12%</span></div>
+        <div class="tg-item"><div class="tg-rank">2</div><div class="tg-icon">🏠</div><div class="tg-info"><div class="tg-name">Brookhaven RP</div><div class="tg-players">● 2.8M jugando</div></div><span class="tg-change up">▲5%</span></div>
+        <div class="tg-item"><div class="tg-rank">3</div><div class="tg-icon">🍓</div><div class="tg-info"><div class="tg-name">Berry Avenue</div><div class="tg-players">● 1.6M jugando</div></div><span class="tg-change up">▲18%</span></div>
+        <div class="tg-item"><div class="tg-rank">4</div><div class="tg-icon">🐾</div><div class="tg-info"><div class="tg-name">Adopt Me!</div><div class="tg-players">● 2.1M jugando</div></div><span class="tg-change down">▼3%</span></div>
+        <div class="tg-item"><div class="tg-rank">5</div><div class="tg-icon">💀</div><div class="tg-info"><div class="tg-name">Murder Mystery 2</div><div class="tg-players">● 1.5M jugando</div></div><span class="tg-change up">▲8%</span></div>
+      </div>
+    </div>
+
+    <div class="ad-slot" style="margin:0;" aria-label="Publicidad">
+      <!-- Google AdSense — 300×250 sidebar -->
+    </div>
+
+  </aside>
+
+</div><!-- /page-wrapper -->
+
+<!-- ═══ FOOTER ══════════════════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-container">
+    <div class="footer-col footer-brand">
+      <a href="index.html" class="footer-logo-link">
+        <img src="img/logo.png" alt="RBLXNews Logo" class="footer-logo-img" />
+      </a>
+      <p class="footer-tagline">Tu portal independiente de<br>noticias y guías sobre Roblox<br>en español.</p>
+      <p class="footer-disclaimer">No afiliado con Roblox Corporation.</p>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title">Artículos</h4>
+      <ul class="footer-links-list">
+        <li><a href="articulo-5-codigos.html">Promo Codes</a></li>
+        <li><a href="articulo-7-eventos.html">Eventos 2026</a></li>
+        <li><a href="articulo-4-avatares.html">Avatares Gratis</a></li>
+        <li><a href="articulo-1-roleplay.html">Guía de Roleplay</a></li>
+        <li><a href="articulo-3-seguridad.html">Seguridad</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title">Más Contenido</h4>
+      <ul class="footer-links-list">
+        <li><a href="articulo-2-roblox-studio.html">Roblox Studio 2026</a></li>
+        <li><a href="articulo-6-optimizacion.html">Optimización FPS</a></li>
+        <li><a href="articulo-8-avatar.html">Avatar Premium</a></li>
+        <li><a href="articulo-9-monetizacion.html">Ganar Dinero</a></li>
+        <li><a href="articulo-10-futuro.html">Futuro de Roblox</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title">El Portal</h4>
+      <ul class="footer-links-list">
+        <li><a href="about.html">Sobre Nosotros</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="privacy.html">Política de Privacidad</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 RBLXNews · Sitio independiente, no afiliado con Roblox Corporation</span>
+    <nav class="footer-bottom-links" aria-label="Legal">
+      <a href="about.html">Sobre Nosotros</a>
+      <a href="privacy.html">Privacidad</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- ═══ COOKIE CONSENT ══════════════════════════════════════════════════ -->
+<div id="cookie-banner" role="dialog" aria-label="Aviso de cookies" aria-live="polite">
+  <p class="cookie-text">
+    <strong>🍪 Aviso de cookies.</strong>
+    Usamos cookies propias y de <strong>Google AdSense</strong> para publicidad relevante.
+    Al navegar aceptas su uso según nuestra <a href="privacy.html">Política de Privacidad</a>.
+  </p>
+  <div class="cookie-btns">
+    <button class="btn-reject" id="cookie-reject">Solo esenciales</button>
+    <button class="btn-accept" id="cookie-accept">Aceptar todo</button>
+  </div>
+</div>
+
+<script src="theme.js"></script>
+<script>
+(function(){
+  var b = document.getElementById('cookie-banner'),
+      K = 'rblxnews_consent';
+  try { if (localStorage.getItem(K)) b.classList.add('hidden'); } catch(e) {}
+  document.getElementById('cookie-accept').onclick = function(){
+    try { localStorage.setItem(K, 'accepted'); } catch(e) {}
+    b.classList.add('hidden');
+  };
+  document.getElementById('cookie-reject').onclick = function(){
+    try { localStorage.setItem(K, 'rejected'); } catch(e) {}
+    b.classList.add('hidden');
+  };
+})();
+</script>
+</body>
+</html>
