@@ -733,3 +733,9 @@ html.dark .callout { background: rgba(21,101,192,.1); }
   .kr-grid { grid-template-columns: 1fr; }
   .kr-card-img { height: 180px; }
 }
+/* -- Override: boton de paginacion activo en fucsia -- */
+.page-btn.active {
+    background: #e91e8c;
+    border-color: #e91e8c;
+    box-shadow: 0 0 12px rgba(233, 30, 140, .45);
+}
