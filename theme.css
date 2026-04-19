@@ -803,20 +803,12 @@ img, picture, video {
     height: auto;
 }
 
-/* 3. El salvavidas de las tablas (Corregido para que el texto baje) */
-.card-body table, 
-.article-content table, 
-table {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    white-space: normal; /* <-- ESTA ES LA CLAVE, permite saltos de línea */
-    border-collapse: collapse;
-}
-
-/* Forzar a que el texto se acomode hacia abajo y no hacia los lados */
-table th, table td {
+/* 3. MODO NUCLEAR: Fuerza a que TODO el texto baje y nada se corte en móvil */
+.article-content *, 
+.card-body *,
+table, th, td, tr {
     white-space: normal !important;
-    word-wrap: break-word;
-    padding: 10px; /* Un poco de espacio para que se lea mejor */
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
 }
