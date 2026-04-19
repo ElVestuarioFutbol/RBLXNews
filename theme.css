@@ -784,3 +784,33 @@ html.dark .callout { background: rgba(21,101,192,.1); }
     opacity: 0.3;
     cursor: not-allowed;
 }
+/* =========================================
+   🔥 FIX DE DESBORDAMIENTO (OVERFLOW) 🔥
+   Evita que tablas o imágenes rompan el celular
+   ========================================= */
+
+/* 1. Prohíbe que la página se estire hacia los lados */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+}
+
+/* 2. Hace que todas las imágenes grandes se encojan automáticamente */
+img, picture, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 3. El salvavidas de las tablas: 
+   Hace que la tabla tenga su propia barra de scroll interna sin romper la página */
+.card-body table, 
+.article-content table, 
+table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-collapse: collapse;
+}
