@@ -803,14 +803,20 @@ img, picture, video {
     height: auto;
 }
 
-/* 3. El salvavidas de las tablas: 
-   Hace que la tabla tenga su propia barra de scroll interna sin romper la página */
+/* 3. El salvavidas de las tablas (Corregido para que el texto baje) */
 .card-body table, 
 .article-content table, 
 table {
     display: block;
     width: 100%;
     overflow-x: auto;
-    white-space: nowrap;
+    white-space: normal; /* <-- ESTA ES LA CLAVE, permite saltos de línea */
     border-collapse: collapse;
+}
+
+/* Forzar a que el texto se acomode hacia abajo y no hacia los lados */
+table th, table td {
+    white-space: normal !important;
+    word-wrap: break-word;
+    padding: 10px; /* Un poco de espacio para que se lea mejor */
 }
