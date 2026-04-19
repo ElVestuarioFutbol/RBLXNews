@@ -739,3 +739,48 @@ html.dark .callout { background: rgba(21,101,192,.1); }
     border-color: #e91e8c;
     box-shadow: 0 0 12px rgba(233, 30, 140, .45);
 }
+/* ── Modern Rounded Pagination Style for Dark Theme ── */
+.pagination-container {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* space between buttons */
+    padding-bottom: 20px; /* spacing above footer */
+}
+
+.page-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Square base to enable roundness */
+    height: 40px;
+    padding: 0;
+    border-radius: 5px; /* Pill/rounded modern shape, similar to images */
+    text-decoration: none;
+    color: #ccc; /* Inactive text color for dark mode */
+    background: #222; /* Inactive background (dark grey) */
+    border: 1px solid #333; /* Dark subtle border */
+    font-family: 'Fredoka One', sans-serif; /* Use your logo font */
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on non-active buttons */
+.page-btn:hover:not(.disabled) {
+    background: #333;
+    color: white;
+}
+
+/* Active Button (Override: Your Fuchsia/Neon Pink) */
+.page-btn.active {
+    background: #e91e8c; /* Your exact accent color */
+    border-color: #e91e8c;
+    color: white;
+    box-shadow: 0 0 12px rgba(233, 30, 140, .45);
+}
+
+/* Disabled/Placeholder buttons */
+.page-btn.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
