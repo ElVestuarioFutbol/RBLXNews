@@ -812,3 +812,24 @@ table, th, td, tr {
     overflow-wrap: break-word !important;
     max-width: 100% !important;
 }
+/* =========================================
+   🔥 FIX GLOBAL DE CAJAS PARA TODOS LOS ARTÍCULOS 🔥
+   ========================================= */
+.method-card, .kr-card, .article-card {
+    flex-wrap: wrap !important;
+}
+
+.mc-content, .kr-card-body, .card-body {
+    flex: 1 1 250px !important;
+    min-width: 0 !important;
+}
+
+.mc-data, .tag-list {
+    flex-wrap: wrap !important;
+}
+
+.mc-content h3, .mc-content p, .mc-pill, .danger-box, .warn-box, .success-box, .box-title {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+}
