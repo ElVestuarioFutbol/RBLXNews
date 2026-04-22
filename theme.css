@@ -733,103 +733,284 @@ html.dark .callout { background: rgba(21,101,192,.1); }
   .kr-grid { grid-template-columns: 1fr; }
   .kr-card-img { height: 180px; }
 }
-/* -- Override: boton de paginacion activo en fucsia -- */
-.page-btn.active {
-    background: #e91e8c;
-    border-color: #e91e8c;
-    box-shadow: 0 0 12px rgba(233, 30, 140, .45);
-}
-/* ── Modern Rounded Pagination Style for Dark Theme ── */
+
+/* ══════════════════════════════════════════════════════════════
+   PAGINACIÓN — añadido para index.html / pagina-N.html
+   Compatible con .page-btn, .page-btn.active, .prev-btn,
+   .next-btn, .page-btn.disabled y .page-dots
+══════════════════════════════════════════════════════════════ */
+
 .pagination-container {
-    margin: 30px auto;
-    display: flex;
-    justify-content: center;
-    gap: 8px; /* space between buttons */
-    padding-bottom: 20px; /* spacing above footer */
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  gap:             6px;
+  margin:          36px 0 12px;
+  flex-wrap:       wrap;
 }
 
 .page-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px; /* Square base to enable roundness */
-    height: 40px;
-    padding: 0;
-    border-radius: 5px; /* Pill/rounded modern shape, similar to images */
-    text-decoration: none;
-    color: #ccc; /* Inactive text color for dark mode */
-    background: #222; /* Inactive background (dark grey) */
-    border: 1px solid #333; /* Dark subtle border */
-    font-family: 'Fredoka One', sans-serif; /* Use your logo font */
-    font-size: 1.1em;
-    transition: all 0.3s ease;
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  min-width:       40px;
+  height:          40px;
+  padding:         0 10px;
+  border-radius:   var(--r-sm, 8px);
+  background:      var(--card-bg, #1e1e2e);
+  border:          1px solid var(--border, #2a2a3e);
+  color:           var(--text-primary, #e8e8f2);
+  font-family:     'Nunito', sans-serif;
+  font-size:       14px;
+  font-weight:     800;
+  text-decoration: none;
+  transition:      background .15s, border-color .15s, color .15s, transform .12s;
+  cursor:          pointer;
+  user-select:     none;
+}
+.page-btn:hover {
+  background:      var(--red, #E8192C);
+  border-color:    var(--red, #E8192C);
+  color:           #fff;
+  transform:       translateY(-2px);
+  text-decoration: none;
 }
 
-/* Hover effect on non-active buttons */
-.page-btn:hover:not(.disabled) {
-    background: #333;
-    color: white;
-}
-
-/* Active Button (Override: Your Fuchsia/Neon Pink) */
+/* Página activa — rojo sólido, sin hover ni clic */
 .page-btn.active {
-    background: #e91e8c; /* Your exact accent color */
-    border-color: #e91e8c;
-    color: white;
-    box-shadow: 0 0 12px rgba(233, 30, 140, .45);
+  background:     var(--red, #E8192C);
+  border-color:   var(--red, #E8192C);
+  color:          #fff;
+  cursor:         default;
+  pointer-events: none;
 }
 
-/* Disabled/Placeholder buttons */
+/* Botón deshabilitado (prev en página 1, next en última página) */
 .page-btn.disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-}
-/* =========================================
-   🔥 FIX DE DESBORDAMIENTO (OVERFLOW) 🔥
-   Evita que tablas o imágenes rompan el celular
-   ========================================= */
-
-/* 1. Prohíbe que la página se estire hacia los lados */
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-    max-width: 100vw;
-    position: relative;
+  opacity:        0.25;
+  cursor:         not-allowed;
+  pointer-events: none;
 }
 
-/* 2. Hace que todas las imágenes grandes se encojan automáticamente */
-img, picture, video {
-    max-width: 100%;
-    height: auto;
+/* Flechas prev / next — ligeramente más anchas */
+.page-btn.prev-btn,
+.page-btn.next-btn {
+  font-size: 18px;
+  padding:   0 14px;
 }
 
-/* 3. MODO NUCLEAR: Fuerza a que TODO el texto baje y nada se corte en móvil */
-.article-content *, 
-.card-body *,
-table, th, td, tr {
-    white-space: normal !important;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    max-width: 100% !important;
-}
-/* =========================================
-   🔥 FIX GLOBAL DE CAJAS PARA TODOS LOS ARTÍCULOS 🔥
-   ========================================= */
-.method-card, .kr-card, .article-card {
-    flex-wrap: wrap !important;
+/* Puntos suspensivos entre rangos */
+.page-dots {
+  color:       var(--text-muted, #7878a0);
+  font-weight: 800;
+  font-size:   16px;
+  line-height: 40px;
+  padding:     0 4px;
+  user-select: none;
 }
 
-.mc-content, .kr-card-body, .card-body {
-    flex: 1 1 250px !important;
-    min-width: 0 !important;
+/* Responsive: en móvil muy pequeño se ocultan páginas intermedias */
+@media (max-width: 400px) {
+  .page-btn.hide-mobile { display: none; }
 }
 
-.mc-data, .tag-list {
-    flex-wrap: wrap !important;
+/* ══════════════════════════════════════════════════════════════════════════════
+   MOBILE TEXT OVERFLOW FIX — pegar al final de theme.css
+   Diagnóstico de reglas conflictivas encontradas en este archivo:
+   ─────────────────────────────────────────────────────────────
+   1. L147  .nav-links a        → white-space: nowrap  (correcto en nav, NO en artículo)
+   2. L205  .hero-banner        → overflow: hidden     (correcto en banner, inocuo)
+   3. L273  .article-card       → overflow: hidden     (correcto en cards del índice)
+   4. L296  .card-excerpt       → overflow: hidden + -webkit-line-clamp  (ok, es el extracto)
+   5. L306  .hero-main          → overflow: hidden     (correcto, es imagen de portada)
+   6. L321  .side-card          → overflow: hidden     (correcto, es imagen lateral)
+   7. L333  .sw                 → overflow: hidden     (correcto, widget sidebar)
+   8. L630  .kr-card            → overflow: hidden     (correcto, imagen de tarjeta)
+   CAUSA REAL del clipping en móvil:
+   • .page-wrapper (L486) usa grid de 2 columnas (1fr 290px) pero en el breakpoint
+     de 1024px solo colapsa a 1fr — en pantallas de 320–600px hay casos donde
+     el grid aún puede generar un segundo track implícito de 290px si el HTML
+     tiene algún elemento fuera de flujo, empujando el contenido fuera de la pantalla.
+   • .game-card (L533) usa display:flex sin min-width:0 en el hijo de texto,
+     lo que en Flexbox permite que el texto desborde su contenedor flex.
+   • article ul/ol (L526) tiene margin-left:24px fijo — en pantallas de 320px
+     esto puede empujar el borde del texto fuera del viewport.
+   • Ningún contenedor de artículo tiene overflow-wrap definido, así que URLs
+     largas y palabras sin espacios en <p> y <li> desbordan horizontalmente.
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── 1. Contenedor raíz: ningún elemento rompe el viewport ─────────────────── */
+html,
+body {
+  overflow-x:  hidden;        /* elimina scroll horizontal fantasma            */
+  max-width:   100%;
+  box-sizing:  border-box;
 }
 
-.mc-content h3, .mc-content p, .mc-pill, .danger-box, .warn-box, .success-box, .box-title {
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    white-space: normal !important;
+/* ── 2. Garantía global de box-sizing (refuerza la regla L79) ──────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── 3. page-wrapper: elimina el track implícito de 290px en móvil ─────────── */
+/*    La regla de 1024px ya colapsa a 1fr, pero añadimos min-width:0            */
+/*    para que el único track no desborde si un hijo tiene ancho intrínseco.    */
+.page-wrapper {
+  min-width:  0;              /* impide que el grid cree un track extra          */
+  width:      100%;
+  max-width:  100%;
+}
+
+/* ── 4. Columna principal del artículo ──────────────────────────────────────── */
+.page-wrapper > main {
+  min-width:   0;             /* crítico en grid/flex: permite encoger           */
+  max-width:   100%;
+  overflow-x:  hidden;
+}
+
+/* ── 5. El artículo y todos sus descendientes de texto ──────────────────────── */
+article,
+article h1,
+article h2,
+article h3,
+article h4,
+article p,
+article li,
+article blockquote,
+article figcaption,
+.article-intro,
+.article-meta {
+  overflow-wrap:     break-word !important;  /* rompe palabras sin espacios      */
+  word-wrap:         break-word !important;  /* alias legacy para IE/Safari      */
+  word-break:        break-word;             /* fallback adicional               */
+  white-space:       normal    !important;   /* anula cualquier nowrap heredado  */
+  max-width:         100%      !important;
+  min-width:         0;
+}
+
+/* ── 6. Listas: reducir margin-left en móvil para no salir del borde ────────── */
+@media (max-width: 480px) {
+  article ul,
+  article ol {
+    margin-left: 16px !important; /* era 24px (L526), se reduce en pantalla pequeña */
+    padding-left: 0;
+  }
+}
+
+/* ── 7. game-card: el hijo de texto (div) debe poder encoger en flex ────────── */
+/*    Sin min-width:0 el texto desborda por la flex-sizing heuristic de los      */
+/*    navegadores (el default es min-width:auto, que es el ancho del contenido). */
+.game-card {
+  max-width:  100%;
+  min-width:  0;
+  /* overflow:hidden se elimina implícitamente al no setearlo aquí —             */
+  /* la regla original NO lo tiene, así que el fix es solo añadir min-width.     */
+}
+.game-card > div:last-child {  /* el div de texto, hermano de .gc-icon          */
+  min-width:       0;
+  overflow-wrap:   break-word !important;
+  word-wrap:       break-word !important;
+  white-space:     normal     !important;
+  max-width:       100%;
+}
+.game-card p,
+.game-card h3,
+.game-card span {
+  overflow-wrap:   break-word !important;
+  word-wrap:       break-word !important;
+  white-space:     normal     !important;
+  max-width:       100%;
+  min-width:       0;
+}
+
+/* ── 8. callout ─────────────────────────────────────────────────────────────── */
+.callout,
+.callout * {
+  overflow-wrap:   break-word !important;
+  word-wrap:       break-word !important;
+  white-space:     normal     !important;
+  max-width:       100%;
+  min-width:       0;
+}
+
+/* ── 9. tag-list: impide que pills largas rompan el layout ──────────────────── */
+.tag-list {
+  flex-wrap:  wrap;           /* ya estaba (L547), pero lo reforzamos            */
+  max-width:  100%;
+}
+.tag {
+  overflow-wrap:  break-word !important;
+  word-break:     break-all;  /* fuerza corte en pills con texto sin espacios    */
+  max-width:      100%;
+}
+
+/* ── 10. author-box ─────────────────────────────────────────────────────────── */
+.author-box {
+  max-width:   100%;
+  min-width:   0;
+}
+.author-info,
+.author-info p,
+.author-info strong {
+  overflow-wrap:  break-word !important;
+  word-wrap:      break-word !important;
+  white-space:    normal     !important;
+  min-width:      0;
+  max-width:      100%;
+}
+
+/* ── 11. sidebar: widgets y rel-items ───────────────────────────────────────── */
+.sw,
+.rel-item,
+.rel-title,
+.tg-name,
+.ev-title,
+.ev-desc {
+  overflow-wrap:  break-word !important;
+  word-wrap:      break-word !important;
+  white-space:    normal     !important;
+  min-width:      0;
+  max-width:      100%;
+}
+
+/* ── 12. Imágenes del artículo: nunca desbordan ─────────────────────────────── */
+.article-hero-img,
+.article-img {
+  width:      100%    !important;
+  max-width:  100%    !important;
+  height:     auto;             /* en móvil se relaja la altura fija             */
+}
+@media (max-width: 600px) {
+  .article-hero-img {
+    height: 200px !important;   /* la regla L507 fija 380px — se reduce en móvil */
+    object-fit: cover;
+  }
+}
+
+/* ── 13. Breadcrumb: no desborda con rutas largas ───────────────────────────── */
+.breadcrumb {
+  overflow-wrap:  break-word !important;
+  word-wrap:      break-word !important;
+  white-space:    normal     !important;
+  max-width:      100%;
+}
+
+/* ── 14. keep-reading / kr-grid en pantallas muy pequeñas ──────────────────── */
+@media (max-width: 360px) {
+  .kr-grid {
+    grid-template-columns: 1fr !important;  /* 1 columna en pantallas sub-360px */
+  }
+  .keep-reading {
+    padding-left:  12px !important;
+    padding-right: 12px !important;
+  }
+}
+
+/* ── 15. page-wrapper padding reducido en móvil para maximizar área de texto ── */
+@media (max-width: 480px) {
+  .page-wrapper {
+    padding: 20px 14px !important;  /* era 36px 24px (L486) */
+  }
 }
