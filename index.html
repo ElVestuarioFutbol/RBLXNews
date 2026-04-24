@@ -3,14 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RBLXNews - Bienvenidos a RBLXNews</title>
-  <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
-<link rel="shortcut icon" href="img/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="RBLXNews" />
-<link rel="manifest" href="img/site.webmanifest" />
-  <meta name="description" content="En cada partida, hay detalles que definen tu progreso y tu estilo... Cómo conseguir los mejores accesorios y skins GRATIS en Roblox y Free Fire: guías estratégicas, códigos secretos de 2026 y métodos 100% legales." />
+  <title>RBLXNews — Noticias, Guías y Tutoriales de Roblox en Español</title>
+  <meta name="description" content="RBLXNews es el portal independiente sobre Roblox en español. Guías de juegos, seguridad, códigos, avatares, eventos y todo lo que necesitas saber sobre Roblox." />
+  <link rel="canonical" href="https://rblxnews.github.io/" />
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="RBLXNews — Noticias y Guías de Roblox en Español" />
@@ -37,6 +32,8 @@
   <a href="index.html" class="nav-logo-link" aria-label="RBLXNews — Inicio">
     <img src="img/logo.webp" alt="RBLXNews Logo" class="main-logo" />
   </a>
+
+  <!-- Menú desktop — oculto en móvil -->
   <div class="nav-links">
     <a href="index.html" class="active" aria-current="page">Inicio</a>
     <a href="articulo-5-codigos.html">Códigos</a>
@@ -45,11 +42,72 @@
     <a href="articulo-1-roleplay.html">Roleplay</a>
     <a href="articulo-3-seguridad.html">Seguridad</a>
   </div>
-  <button class="theme-toggle" aria-label="Cambiar modo oscuro/claro">
-    <div class="toggle-track" aria-hidden="true"><div class="toggle-knob"></div></div>
-    <span class="toggle-label">🌙 Modo Oscuro</span>
-  </button>
+
+  <!-- Controles derecha: toggle + hamburguesa -->
+  <div class="nav-right">
+    <button class="theme-toggle" aria-label="Cambiar modo oscuro/claro">
+      <div class="toggle-track" aria-hidden="true"><div class="toggle-knob"></div></div>
+      <span class="toggle-label">🌙 Modo Oscuro</span>
+    </button>
+    <!-- Botón hamburguesa — solo visible en móvil -->
+    <button class="mob-menu-btn" id="mobMenuBtn"
+            aria-label="Abrir menú" aria-expanded="false"
+            aria-controls="mobMenuOverlay">
+      <span class="ham-bar"></span>
+      <span class="ham-bar"></span>
+      <span class="ham-bar"></span>
+    </button>
+  </div>
 </nav>
+
+<!-- ═══ MENÚ MÓVIL OVERLAY ══════════════════════════════════ -->
+<div class="mob-menu-overlay" id="mobMenuOverlay" role="dialog"
+     aria-modal="true" aria-label="Menú de navegación" aria-hidden="true">
+  <div class="mob-menu-panel">
+    <!-- Cabecera: logo + botón cerrar -->
+    <div class="mob-menu-header">
+      <a href="index.html" class="nav-logo-link mob-menu-logo"
+         aria-label="RBLXNews — Inicio" tabindex="-1">
+        <img src="img/logo.webp" alt="RBLXNews Logo" class="main-logo" />
+      </a>
+      <button class="mob-menu-close" id="mobMenuClose"
+              aria-label="Cerrar menú">✕</button>
+    </div>
+    <!-- Separador decorativo -->
+    <div class="mob-menu-divider"></div>
+    <!-- Links de navegación -->
+    <nav class="mob-menu-links" aria-label="Menú móvil">
+      <a href="index.html" class="mob-link active" aria-current="page">
+        <span class="mob-link-icon">🏠</span> Inicio
+      </a>
+      <a href="articulo-5-codigos.html" class="mob-link">
+        <span class="mob-link-icon">🎟️</span> Códigos FF
+      </a>
+      <a href="articulo-7-eventos.html" class="mob-link">
+        <span class="mob-link-icon">🎪</span> Eventos
+      </a>
+      <a href="articulo-4-avatares.html" class="mob-link">
+        <span class="mob-link-icon">👗</span> Avatares
+      </a>
+      <a href="articulo-1-roleplay.html" class="mob-link">
+        <span class="mob-link-icon">🎭</span> Roleplay
+      </a>
+      <a href="articulo-3-seguridad.html" class="mob-link">
+        <span class="mob-link-icon">🛡️</span> Seguridad
+      </a>
+      <a href="pagina-2.html" class="mob-link">
+        <span class="mob-link-icon">🔫</span> Guías Free Fire
+      </a>
+    </nav>
+    <!-- Toggle de tema dentro del menú móvil -->
+    <div class="mob-menu-footer">
+      <button class="theme-toggle mob-theme-toggle" aria-label="Cambiar modo oscuro/claro">
+        <div class="toggle-track" aria-hidden="true"><div class="toggle-knob"></div></div>
+        <span class="toggle-label">🌙 Modo Oscuro</span>
+      </button>
+    </div>
+  </div>
+</div>
 
 <!-- ═══ BANNER ═════════════════════════════════════════════ -->
 <div class="hero-banner" role="img" aria-label="Banner principal RBLXNews">
@@ -365,6 +423,64 @@
 <script src="theme.js"></script>
 <script>
 (function(){var b=document.getElementById('cookie-banner'),K='rblxnews_consent';try{if(localStorage.getItem(K))b.classList.add('hidden');}catch(e){}document.getElementById('cookie-accept').onclick=function(){try{localStorage.setItem(K,'accepted');}catch(e){}b.classList.add('hidden');};document.getElementById('cookie-reject').onclick=function(){try{localStorage.setItem(K,'rejected');}catch(e){}b.classList.add('hidden');};})();
+</script>
+
+<!-- ═══ HAMBURGER MENU JS ══════════════════════════════════ -->
+<script>
+(function () {
+  'use strict';
+  var btn     = document.getElementById('mobMenuBtn');
+  var overlay = document.getElementById('mobMenuOverlay');
+  var close   = document.getElementById('mobMenuClose');
+  if (!btn || !overlay) return;
+
+  function openMenu() {
+    overlay.classList.add('mob-open');
+    overlay.setAttribute('aria-hidden', 'false');
+    btn.setAttribute('aria-expanded', 'true');
+    // Make overlay links tabbable
+    overlay.querySelectorAll('a, button').forEach(function(el){ el.removeAttribute('tabindex'); });
+    document.body.style.overflow = 'hidden'; // prevent bg scroll
+    if (close) close.focus();
+  }
+
+  function closeMenu() {
+    overlay.classList.remove('mob-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    btn.setAttribute('aria-expanded', 'false');
+    // Remove overlay links from tab order
+    overlay.querySelectorAll('a, button').forEach(function(el){ el.setAttribute('tabindex', '-1'); });
+    document.body.style.overflow = '';
+    btn.focus();
+  }
+
+  btn.addEventListener('click', openMenu);
+  if (close) close.addEventListener('click', closeMenu);
+
+  // Close on backdrop click (outside the panel)
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closeMenu();
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && overlay.classList.contains('mob-open')) closeMenu();
+  });
+
+  // Sync all theme-toggle buttons (desktop + mob-menu)
+  document.querySelectorAll('.theme-toggle').forEach(function (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      // theme.js already handles the toggle; just keep all buttons in visual sync
+      var isDark = document.documentElement.classList.contains('dark');
+      document.querySelectorAll('.toggle-label').forEach(function (lbl) {
+        lbl.textContent = isDark ? '☀️ Modo Claro' : '🌙 Modo Oscuro';
+      });
+    });
+  });
+
+  // Init tab-index on overlay links (hidden by default)
+  overlay.querySelectorAll('a, button').forEach(function(el){ el.setAttribute('tabindex', '-1'); });
+})();
 </script>
 </body>
 </html>

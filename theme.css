@@ -1014,3 +1014,210 @@ article figcaption,
     padding: 20px 14px !important;  /* era 36px 24px (L486) */
   }
 }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   HAMBURGER MENU — MÓVIL OVERLAY
+   Solo activo en max-width: 768px.  No afecta al menú desktop.
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Wrapper derecho en nav (toggle + hamburguesa) ──────────────────────────── */
+.nav-right {
+  display:     flex;
+  align-items: center;
+  gap:         10px;
+  margin-left: auto;       /* empuja todo hacia la derecha                      */
+}
+
+/* ── Botón hamburguesa: oculto en desktop ───────────────────────────────────── */
+.mob-menu-btn {
+  display:        none;    /* solo se muestra en el @media de abajo              */
+  flex-direction: column;
+  justify-content: space-between;
+  width:          36px;
+  height:         28px;
+  background:     transparent;
+  border:         2px solid rgba(255,255,255,.25);
+  border-radius:  8px;
+  padding:        6px 7px;
+  cursor:         pointer;
+  transition:     border-color .2s, background .2s;
+  flex-shrink:    0;
+}
+.mob-menu-btn:hover,
+.mob-menu-btn:focus-visible {
+  border-color: var(--red);
+  background:   rgba(232,25,44,.10);
+  outline:      none;
+}
+.ham-bar {
+  display:       block;
+  width:         100%;
+  height:        2px;
+  background:    #fff;
+  border-radius: 2px;
+  transition:    transform .25s, opacity .2s;
+}
+
+/* ── Overlay: el panel oscuro que cubre toda la pantalla ───────────────────── */
+.mob-menu-overlay {
+  position:         fixed;
+  inset:            0;                          /* top 0 right 0 bottom 0 left 0 */
+  z-index:          9999;
+  background:       rgba(0, 0, 0, .92);
+  backdrop-filter:  blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display:          flex;
+  align-items:      flex-start;
+  justify-content:  flex-end;                   /* panel sale desde la derecha   */
+
+  /* Estado cerrado */
+  opacity:          0;
+  pointer-events:   none;
+  transition:       opacity .28s ease;
+}
+.mob-menu-overlay.mob-open {
+  opacity:        1;
+  pointer-events: all;
+}
+
+/* ── Panel interior (carta oscura con borde rojo) ──────────────────────────── */
+.mob-menu-panel {
+  width:            min(85vw, 320px);           /* nunca más ancho que la pantalla */
+  height:           100%;
+  background:       #111118;
+  border-left:      3px solid var(--red);
+  display:          flex;
+  flex-direction:   column;
+  overflow-y:       auto;
+
+  /* Animación: desliza desde la derecha */
+  transform:        translateX(100%);
+  transition:       transform .28s cubic-bezier(.4,0,.2,1);
+}
+.mob-menu-overlay.mob-open .mob-menu-panel {
+  transform: translateX(0);
+}
+
+/* ── Cabecera del panel ─────────────────────────────────────────────────────── */
+.mob-menu-header {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  padding:         14px 18px;
+  background:      #0a0a0f;
+  border-bottom:   2px solid var(--red);
+  flex-shrink:     0;
+}
+.mob-menu-logo { line-height: 0; }
+.mob-menu-logo .main-logo { height: 32px; width: auto; }
+
+/* ── Botón cerrar (✕) ───────────────────────────────────────────────────────── */
+.mob-menu-close {
+  background:    rgba(232,25,44,.12);
+  border:        2px solid var(--red);
+  color:         var(--red);
+  font-size:     18px;
+  font-weight:   900;
+  width:         36px;
+  height:        36px;
+  border-radius: 8px;
+  cursor:        pointer;
+  line-height:   1;
+  transition:    background .2s, color .2s, transform .15s;
+  flex-shrink:   0;
+}
+.mob-menu-close:hover,
+.mob-menu-close:focus-visible {
+  background:  var(--red);
+  color:       #fff;
+  transform:   rotate(90deg);
+  outline:     none;
+}
+
+/* ── Separador decorativo con gradiente ─────────────────────────────────────── */
+.mob-menu-divider {
+  height:     3px;
+  background: linear-gradient(90deg, var(--red) 0%, transparent 100%);
+  flex-shrink: 0;
+}
+
+/* ── Links del menú ─────────────────────────────────────────────────────────── */
+.mob-menu-links {
+  display:        flex;
+  flex-direction: column;
+  padding:        12px 0;
+  flex:           1;
+}
+.mob-link {
+  display:         flex;
+  align-items:     center;
+  gap:             14px;
+  padding:         16px 24px;
+  color:           #c8c8e0;
+  font-family:     'Nunito', sans-serif;
+  font-size:       16px;
+  font-weight:     700;
+  text-decoration: none;
+  border-left:     3px solid transparent;
+  transition:      background .18s, color .18s, border-color .18s;
+  letter-spacing:  .3px;
+}
+.mob-link:hover,
+.mob-link:focus-visible {
+  background:   rgba(232,25,44,.10);
+  color:        #fff;
+  border-color: var(--red);
+  outline:      none;
+}
+.mob-link.active {
+  background:    rgba(232,25,44,.15);
+  color:         var(--red);
+  border-color:  var(--red);
+  font-weight:   900;
+}
+.mob-link-icon {
+  font-size:  20px;
+  flex-shrink: 0;
+  width:       26px;
+  text-align:  center;
+}
+
+/* ── Separador antes del footer del menú ───────────────────────────────────── */
+.mob-menu-footer {
+  padding:      16px 20px;
+  border-top:   1px solid rgba(255,255,255,.08);
+  flex-shrink:  0;
+}
+/* El toggle dentro del overlay siempre muestra la etiqueta */
+.mob-theme-toggle {
+  width:  100%;
+  justify-content: flex-start;
+  gap:    12px;
+}
+.mob-theme-toggle .toggle-label {
+  display: inline !important;  /* anula cualquier display:none heredado          */
+  font-size: 14px;
+}
+
+/* ── MEDIA QUERY: activa hamburguesa, oculta nav desktop ───────────────────── */
+@media (max-width: 768px) {
+
+  /* Mostrar botón hamburguesa */
+  .mob-menu-btn { display: flex; }
+
+  /* Ocultar menú de links horizontal */
+  .nav-links { display: none !important; }
+
+  /* Ocultar el toggle de escritorio (queda dentro del overlay móvil) */
+  .nav-right > .theme-toggle { display: none !important; }
+}
+
+/* ── MEDIA QUERY inversa: asegurar que el overlay nunca aparece en desktop ─── */
+@media (min-width: 769px) {
+  .mob-menu-overlay { display: none !important; }
+  .mob-menu-btn     { display: none !important; }
+  .nav-right {
+    /* en desktop, el toggle sigue a la derecha sin el gap extra del wrapper   */
+    margin-left: 0;
+  }
+}
