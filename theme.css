@@ -1220,115 +1220,61 @@ article figcaption,
     margin-left: 0;
   }
 }
-/* --- Estilos del Nuevo Pie de Página --- */
-.gaming-footer {
-  background-color: #111; /* Fondo oscuro gamer */
-  color: #ddd; /* Texto gris claro */
-  padding: 40px 20px 20px;
-  font-family: Arial, sans-serif; /* O la que uses en tu sitio */
-}
-
-/* El Grid que crea las columnas */
-.footer-grid {
+/* --- Magia Grid para el Pie de Página de RBLXNews --- */
+.footer-container {
   display: grid;
-  grid-template-columns: 1fr; /* Por defecto, una columna para celulares muy pequeños */
+  grid-template-columns: 1fr; /* En celulares pequeños: 1 columna */
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.footer-col h3 {
+/* En Tablets: Se divide en 2 columnas */
+@media (min-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-brand {
+    grid-column: span 2; /* El logo y texto ocupan el ancho arriba */
+    text-align: center;
+  }
+}
+
+/* En Computadoras: 4 columnas profesionales */
+@media (min-width: 900px) {
+  .footer-container {
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* Logo más grande, 3 listas al lado */
+  }
+  .footer-brand {
+    grid-column: span 1; /* Vuelve a la normalidad */
+    text-align: left;
+  }
+}
+
+/* Estilos extra para que se vea limpio */
+.footer-col-title {
   color: #fff;
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  border-bottom: 2px solid #00ffff; /* Rayita gamer debajo del título */
+  padding-bottom: 5px;
+  display: inline-block;
 }
 
-/* Columna de Info */
-.footer-logo {
-  max-width: 150px; /* Ajusta el tamaño del logo */
-  height: auto;
-  margin-bottom: 15px;
-}
-
-.footer-desc {
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  color: #bbb;
-}
-
-/* Redes Sociales */
-.footer-socials {
-  display: flex;
-  gap: 15px;
-}
-
-.footer-socials a {
-  color: #bbb;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  transition: color 0.3s;
-}
-
-.footer-socials a:hover {
-  color: #00ffff; /* Un toque cian gamer para el hover */
-}
-
-/* Listas de Enlaces */
-.footer-links ul {
+.footer-links-list {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer-links ul li {
+.footer-links-list li {
   margin-bottom: 10px;
 }
 
-.footer-links ul li a {
-  color: #ddd;
+.footer-links-list a {
   text-decoration: none;
-  font-size: 15px;
-  transition: color 0.3s, padding-left 0.3s;
+  color: #bbb;
+  transition: color 0.3s;
 }
 
-.footer-links ul li a:hover {
-  color: #00ffff; /* Toque cian gamer */
-  padding-left: 5px; /* Efecto sutil al pasar el mouse */
-}
-
-/* Parte Inferior (Copyright) */
-.footer-bottom {
-  text-align: center;
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid #333; /* Línea separadora sutil */
-  font-size: 13px;
-  color: #888;
-}
-
-/* --- Media Queries: El secreto para que se vea bien --- */
-
-/* Celulares normales a medianos: 2 columnas */
-@media (min-width: 600px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr; /* Info + Listas */
-  }
-  .footer-info {
-    grid-column: span 2; /* Info ocupa todo el ancho arriba */
-  }
-}
-
-/* Tablets y PC: 3 columnas */
-@media (min-width: 900px) {
-  .footer-grid {
-    grid-template-columns: 2fr 1fr 1fr; /* Info más ancha que las listas */
-  }
-  .footer-info {
-    grid-column: span 1; /* Vuelve a ocupar solo una columna */
-  }
+.footer-links-list a:hover {
+  color: #00ffff;
 }
