@@ -1,7 +1,8 @@
 /*
  * ══════════════════════════════════════════════════════════════
  *  RBLXNews — theme.css  (versión final unificada)
- z
+ *  Cubre: modo claro/oscuro, nav rediseñada, footer nuevo,
+ *         logo img, placeholders eliminados, responsive
  * ══════════════════════════════════════════════════════════════
  */
 
@@ -1220,61 +1221,96 @@ article figcaption,
     margin-left: 0;
   }
 }
-/* --- Magia Grid para el Pie de Página de RBLXNews --- */
-.footer-container {
-  display: grid;
-  grid-template-columns: 1fr; /* En celulares pequeños: 1 columna */
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   FOOTER COMPACTO — reemplaza el footer de 4 columnas
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* Neutraliza cualquier regla vieja del footer de columnas */
+.site-footer .footer-container,
+.site-footer .footer-col,
+.site-footer .footer-col-title,
+.site-footer .footer-links-list,
+.site-footer .footer-brand,
+.site-footer .footer-tagline,
+.site-footer .footer-disclaimer,
+.site-footer .footer-bottom,
+.site-footer .footer-bottom-links,
+.site-footer .footer-logo-link,
+.site-footer .footer-logo-img { display: none !important; }
+
+/* ── Contenedor principal ────────────────────────────────────────────────────── */
+.site-footer {
+  background:     var(--nav-bg, #0a0a0f);
+  border-top:     3px solid var(--red, #E8192C);
+  padding:        28px 20px 20px;
+  text-align:     center;
 }
 
-/* En Tablets: Se divide en 2 columnas */
-@media (min-width: 600px) {
-  .footer-container {
-    grid-template-columns: 1fr 1fr;
-  }
-  .footer-brand {
-    grid-column: span 2; /* El logo y texto ocupan el ancho arriba */
-    text-align: center;
-  }
+/* ── Logo ────────────────────────────────────────────────────────────────────── */
+.ft-logo-wrap {
+  display:       flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.ft-logo {
+  height:     52px;
+  width:      auto;
+  object-fit: contain;
 }
 
-/* En Computadoras: 4 columnas profesionales */
-@media (min-width: 900px) {
-  .footer-container {
-    grid-template-columns: 2fr 1fr 1fr 1fr; /* Logo más grande, 3 listas al lado */
-  }
-  .footer-brand {
-    grid-column: span 1; /* Vuelve a la normalidad */
-    text-align: left;
-  }
+/* ── Filas de links ──────────────────────────────────────────────────────────── */
+.ft-links,
+.ft-legal {
+  display:         flex;
+  flex-wrap:       wrap;
+  justify-content: center;
+  align-items:     center;
+  gap:             4px 2px;
+  margin-bottom:   10px;
 }
 
-/* Estilos extra para que se vea limpio */
-.footer-col-title {
-  color: #fff;
-  border-bottom: 2px solid #00ffff; /* Rayita gamer debajo del título */
-  padding-bottom: 5px;
-  display: inline-block;
-}
-
-.footer-links-list {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links-list li {
-  margin-bottom: 10px;
-}
-
-.footer-links-list a {
+.ft-links a,
+.ft-legal a {
+  color:           #b0b0cc;
+  font-family:     'Nunito', sans-serif;
+  font-size:       12px;
+  font-weight:     600;
   text-decoration: none;
-  color: #bbb;
-  transition: color 0.3s;
+  padding:         3px 6px;
+  transition:      color .15s;
+  white-space:     nowrap;
+}
+.ft-links a:hover,
+.ft-legal a:hover { color: var(--red, #E8192C); }
+
+/* Separadores | */
+.ft-links span,
+.ft-legal span {
+  color:       rgba(255,255,255,.25);
+  font-size:   11px;
+  user-select: none;
+  flex-shrink: 0;
 }
 
-.footer-links-list a:hover {
-  color: #00ffff;
+/* Segunda fila ligeramente más pequeña */
+.ft-legal a { font-size: 11px; color: #888899; }
+.ft-legal a:hover { color: var(--red, #E8192C); }
+
+/* ── Copyright ───────────────────────────────────────────────────────────────── */
+.ft-copy {
+  color:       #4a4a66;
+  font-family: 'Nunito', sans-serif;
+  font-size:   10px;
+  margin:      10px 0 0;
+  line-height: 1.5;
+}
+
+/* ── Responsive: móvil (<480px) más compacto aún ───────────────────────────── */
+@media (max-width: 480px) {
+  .site-footer    { padding: 22px 14px 16px; }
+  .ft-logo        { height: 44px; }
+  .ft-links a     { font-size: 11px; padding: 2px 5px; }
+  .ft-legal a     { font-size: 10px; }
+  .ft-copy        { font-size: 9px; }
 }
