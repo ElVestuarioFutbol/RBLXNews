@@ -66,23 +66,88 @@
   </style>
 </head>
 <body>
+<!-- ═══ NAV ════════════════════════════════════════════════ -->
 <nav class="main-nav" role="navigation" aria-label="Navegación principal">
   <a href="index.html" class="nav-logo-link" aria-label="RBLXNews — Inicio">
     <img src="img/logo.webp" alt="RBLXNews Logo" class="main-logo" />
   </a>
+
+  <!-- Menú desktop — oculto en móvil -->
   <div class="nav-links">
-    <a href="index.html">Inicio</a>
+    <a href="index.html" class="active" aria-current="page">Inicio</a>
     <a href="articulo-5-codigos.html">Códigos</a>
     <a href="articulo-7-eventos.html">Eventos</a>
     <a href="articulo-4-avatares.html">Avatares</a>
     <a href="articulo-1-roleplay.html">Roleplay</a>
     <a href="articulo-3-seguridad.html">Seguridad</a>
   </div>
-  <button class="theme-toggle" aria-label="Cambiar modo oscuro/claro">
-    <div class="toggle-track" aria-hidden="true"><div class="toggle-knob"></div></div>
-    <span class="toggle-label">🌙 Modo Oscuro</span>
-  </button>
+
+  <!-- Controles derecha: toggle + hamburguesa -->
+  <div class="nav-right">
+    <button class="theme-toggle" aria-label="Cambiar modo oscuro/claro">
+      <div class="toggle-track" aria-hidden="true"><div class="toggle-knob"></div></div>
+      <span class="toggle-label">🌙 Modo Oscuro</span>
+    </button>
+    <!-- Botón hamburguesa — solo visible en móvil -->
+    <button class="mob-menu-btn" id="mobMenuBtn"
+            aria-label="Abrir menú" aria-expanded="false"
+            aria-controls="mobMenuOverlay">
+      <span class="ham-bar"></span>
+      <span class="ham-bar"></span>
+      <span class="ham-bar"></span>
+    </button>
+  </div>
 </nav>
+
+<!-- ═══ MENÚ MÓVIL OVERLAY ══════════════════════════════════ -->
+<div class="mob-menu-overlay" id="mobMenuOverlay" role="dialog"
+     aria-modal="true" aria-label="Menú de navegación" aria-hidden="true">
+  <div class="mob-menu-panel">
+    <!-- Cabecera: logo + botón cerrar -->
+    <div class="mob-menu-header">
+      <a href="index.html" class="nav-logo-link mob-menu-logo"
+         aria-label="RBLXNews — Inicio" tabindex="-1">
+        <img src="img/logo.webp" alt="RBLXNews Logo" class="main-logo" />
+      </a>
+      <button class="mob-menu-close" id="mobMenuClose"
+              aria-label="Cerrar menú">✕</button>
+    </div>
+    <!-- Separador decorativo -->
+    <div class="mob-menu-divider"></div>
+    <!-- Links de navegación -->
+    <nav class="mob-menu-links" aria-label="Menú móvil">
+      <a href="index.html" class="mob-link active" aria-current="page">
+        <span class="mob-link-icon">🏠</span> Inicio
+      </a>
+      <a href="articulo-5-codigos.html" class="mob-link">
+        <span class="mob-link-icon">🎟️</span> Códigos FF
+      </a>
+      <a href="articulo-7-eventos.html" class="mob-link">
+        <span class="mob-link-icon">🎪</span> Eventos
+      </a>
+      <a href="articulo-4-avatares.html" class="mob-link">
+        <span class="mob-link-icon">👗</span> Avatares
+      </a>
+      <a href="articulo-1-roleplay.html" class="mob-link">
+        <span class="mob-link-icon">🎭</span> Roleplay
+      </a>
+      <a href="articulo-3-seguridad.html" class="mob-link">
+        <span class="mob-link-icon">🛡️</span> Seguridad
+      </a>
+      <a href="pagina-2.html" class="mob-link">
+        <span class="mob-link-icon">🔫</span> Guías Free Fire
+      </a>
+    </nav>
+    <!-- Toggle de tema dentro del menú móvil -->
+    <div class="mob-menu-footer">
+      <button class="theme-toggle mob-theme-toggle" aria-label="Cambiar modo oscuro/claro">
+        <div class="toggle-track" aria-hidden="true"><div class="toggle-knob"></div></div>
+        <span class="toggle-label">🌙 Modo Oscuro</span>
+      </button>
+    </div>
+  </div>
+</div>
+
 <div class="page-wrapper">
   <main>
     <nav class="breadcrumb" aria-label="Ruta de navegación">
