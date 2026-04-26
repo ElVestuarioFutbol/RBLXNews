@@ -1314,3 +1314,25 @@ article figcaption,
   .ft-legal a     { font-size: 10px; }
   .ft-copy        { font-size: 9px; }
 }
+/* --- RESCATE DEL BOTÓN HAMBURGUESA --- */
+.mob-menu-btn {
+  background: transparent !important;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+}
+
+.ham-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff !important;
+  border-radius: 3px;
+}
+
+/* Color oscuro para las rayitas si el usuario usa el Modo Claro */
+html:not(.dark) .ham-bar {
+  background-color: #333333 !important;
+}
